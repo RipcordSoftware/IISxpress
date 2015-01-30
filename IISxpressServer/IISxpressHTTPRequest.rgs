@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.IISxpressHTTPRequest.1 = s 'IISxpressHTTPRequest Class'
+	{
+		CLSID = s '{E9D82120-347A-41BD-BF61-1BD6BA23ED50}'
+	}
+	IISxpressServer.IISxpressHTTPRequest = s 'IISxpressHTTPRequest Class'
+	{
+		CLSID = s '{E9D82120-347A-41BD-BF61-1BD6BA23ED50}'
+		CurVer = s 'IISxpressServer.IISxpressHTTPRequest.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E9D82120-347A-41BD-BF61-1BD6BA23ED50} = s 'IISxpressHTTPRequest Class'
+		{
+			ProgID = s 'IISxpressServer.IISxpressHTTPRequest.1'
+			VersionIndependentProgID = s 'IISxpressServer.IISxpressHTTPRequest'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

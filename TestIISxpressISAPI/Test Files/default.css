@@ -1,0 +1,415 @@
+/*********************************************************************************************************************/
+
+body
+{
+	font-family: times new roman; 
+	color: white;
+	background-color: gray;
+	margin-left: 10px;
+	margin-top: 10px;
+	width: 980px;
+	font-size: 16px;
+}
+
+body.iframe
+{
+	color: black;
+	background-color: white;
+	margin-left: 0px;
+	margin-top: 0px;	
+	width: 96%;
+	font-size: 16px;
+}
+
+div.pagetop
+{
+	text-align: right;
+}
+
+a.pagetop
+{
+	color: #e0e0e0;
+	font-size: 13px;
+	text-align: right;
+	text-decoration: none;
+}
+
+a.pagetop:hover
+{
+	color: #f0f0f0;
+	text-decoration: underline;
+}
+
+div.page
+{
+	color: black;
+	background-color: white;
+}
+
+div.pagebanner
+{
+	height: 70px;
+	background-image: url(ripcordbanner.jpg);
+	background-repeat: no-repeat;
+	border-width: 1px;
+	border-style: solid;	
+	border-color: #909090;
+}
+
+div.pagecopyright
+{
+	color: gray;
+	font-size: 9px;
+	padding-left: 4px;
+}
+
+/*********************************************************************************************************************/
+
+div.menuleft
+{
+	float: left;
+	width: 180px;
+	background-color: #d0d0d0;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	font-size: 16px;
+	
+	/* we want a bottom border for this area */
+	border-right-width: 1px;
+	border-right-style: solid;	
+	border-right-color: #909090;
+}
+
+div.menuitemheader 
+{
+	color: black;
+	font-weight: bold;
+	background-color: #d0d0d0;
+}
+
+div.menudivider
+{
+	font-size: 1px;
+	height: 5px;
+}
+
+div.menuitem0
+{
+	padding-left: 2px;
+	padding-right: 10px;
+	font-weight: bold;
+}
+
+div.selectedmenuitem0
+{
+	padding-left: 2px;
+	padding-right: 10px;
+	background-color: #e0e0e0;
+	font-weight: bolder;
+}
+
+div.menuitem1
+{
+	margin-top: 6px;	
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+div.selectedmenuitem1
+{
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	background-color: #e0e0e0;
+	font-weight: bolder;	
+}
+
+div.menuitem2
+{
+	margin-top: 4px;
+	padding-left: 20px;
+	padding-right: 10px;
+	font-size: 12px;
+}
+
+div.selectedmenuitem2
+{
+	margin-top: 4px;
+	padding-left: 20px;
+	padding-right: 10px;
+	background-color: #e0e0e0;
+	font-size: 12px;
+	font-weight: bolder;
+}
+
+a.menuitem
+{
+	color: #0000f0;
+	text-decoration: none;
+}
+
+a.selectedmenuitem
+{
+	color: #0000f0;
+	text-decoration: none;
+}
+
+a.menuitem:hover
+{
+	background-color: #fafafa;
+	border-style: solid;
+	border: 1px;
+	border-color: #c0c0c0;
+}
+
+/*********************************************************************************************************************/
+
+div.selectioncontent
+{
+	float: right;
+	width: 790px;
+}
+
+h1.selectionheader1
+{
+	font-size: 24px;
+}
+
+h1.selectionheader2
+{
+	font-size: 22px;
+	background-color: #eaeaea;
+	padding-left: 10px;
+	margin-bottom: 4px;
+}
+
+h1.selectionheader3, div.selectionheader3
+{
+	font-size: 22px;
+	background-color: #eaeaea;
+	padding-left: 4px;
+	margin-right: 4px;
+	margin-left: 4px;
+}
+
+div.producthighlightheader
+{
+	background-color: #f3f3f3; 
+	color: black; 
+	font-weight: bold;
+	font-size: 16px;
+}
+
+ul.producthighlight
+{
+	list-style-position: outside; 
+	list-style-type: square; 
+	margin-top: 0px; 
+	color: #606060; 
+	font-size: 13px;
+}
+
+div.selectiontext
+{
+	padding-left: 4px; 
+	padding-top: 0px; 
+	padding-right: 4px; 
+	font-size: 13px;
+	color: #606060; 
+	text-align: justify;
+}
+
+/*********************************************************************************************************************/
+
+td.downloadnow
+{
+	background-color: #00b000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #008000; 
+	text-align: center; 
+	font-weight: bold;
+}
+
+div.downloadnow
+{
+	background-color: #00b000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #008000; 
+	text-align: center; 
+	font-weight: bold;
+}
+
+a.downloadnow
+{
+	text-decoration: none; 
+	color: #f0f0f0;
+}
+
+a.downloadnow:hover
+{
+	background-color: #00b700; 
+	text-decoration: underline; 
+	color: #ffffff;
+}
+
+/*********************************************************************************************************************/
+
+td.moreinfo
+{
+	background-color: #b00000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #800000; 
+	font-weight: bold;
+	text-align: center; 
+}
+
+div.moreinfo
+{
+	background-color: #b00000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #800000; 
+	font-weight: bold;
+	text-align: center; 	
+}
+
+a.moreinfo
+{
+	text-decoration: none; 
+	color: #f0f0f0;
+}
+
+a.moreinfo:hover
+{
+	background-color: #b70000; 
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+/*********************************************************************************************************************/
+
+td.buynow
+{
+	background-color: #b00000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #800000; 
+	font-weight: bold;
+	text-align: center; 
+}
+
+div.buynow
+{
+	background-color: #b00000; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #800000; 
+	font-weight: bold;
+	text-align: center; 	
+}
+
+a.buynow
+{
+	text-decoration: none; 
+	color: #f0f0f0;
+}
+
+a.buynow:hover
+{
+	background-color: #b70000; 
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+/*********************************************************************************************************************/
+
+td.gettrialkey
+{
+	background-color: #0000e0; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #000080; 
+	font-weight: bold;
+	text-align: center; 
+}
+
+div.gettrialkey
+{
+	background-color: #0000e0; 
+	border: 2px; 
+	border-style: solid; 
+	border-color: #000080; 
+	font-weight: bold;
+	text-align: center; 
+}
+
+a.gettrialkey
+{
+	text-decoration: none; 
+	color: #f0f0f0;
+}
+
+a.gettrialkey:hover
+{
+	background-color: #0000f0; 
+	text-decoration: underline;
+	color: #ffffff;
+}
+
+
+/*********************************************************************************************************************/
+
+a.emailus
+{
+	text-decoration: none; 
+	color: #0000e0;
+}
+
+a.emailus:hover
+{
+	text-decoration: underline;
+	color: #0000ff;
+}
+
+/*********************************************************************************************************************/
+
+a.internallink, a.externallink
+{
+	text-decoration: none;
+	color: #0000e0;
+}
+
+a.internallink:hover, a.externallink:hover
+{
+	text-decoration: underline;
+	color: #0000ff;
+}
+
+/*********************************************************************************************************************/
+
+h1.newsheader
+{
+	font-size: 20px;
+	background-color: #eaeaea;
+	padding-left: 4px;
+	margin-bottom: 4px;
+}
+
+ul.newslist
+{
+	list-style-position: outside; 
+	list-style-type: square; 
+	margin-top: 0px; 
+	color: #404040; 
+	font-size: 11px;
+}
+
+.newsitemheader
+{
+	font-weight: bolder;
+}

@@ -1,0 +1,246 @@
+<!DOCTYPE HTML PUBLIC "-//IETF//DTD HTML//EN">
+<HTML>
+<HEAD>
+<meta name="GENERATOR" content="Microsoft&reg; HTML Help Workshop 4.1">
+<!-- Sitemap 1.0 -->
+</HEAD><BODY>
+<UL>
+	<LI> <OBJECT type="text/sitemap">
+		<param name="Name" value="IISxpress">
+		</OBJECT>
+	<UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Overview">
+			<param name="Local" value="HIDD_ROOT_DIALOG.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Usage">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Exclusion Rules">
+				<param name="Local" value="exclusion_rules_overview.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exclude by Extension">
+					<param name="Local" value="exclude_by_extension.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exclude by Content Type">
+					<param name="Local" value="exclude_by_contenttype.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exclude by URI">
+					<param name="Local" value="exclude_by_uri.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exclude by User Agent">
+					<param name="Local" value="exclude_by_useragent.htm">
+					</OBJECT>					
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Exclude by Network (IP) Address">
+					<param name="Local" value="exclude_by_ipaddress.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Monitoring Performance">
+				<param name="Local" value="monitoring_performance.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Configuring the Compression Mode">
+				<param name="Local" value="configure_compression_mode.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Compression Cache">
+				<param name="Local" value="compression_cache.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Processor Workload Model">
+				<param name="Local" value="processor_workload.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Advanced">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Client Compatibility">
+					<param name="Local" value="client_compatibility.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Configuation Backup">
+					<param name="Local" value="config_backup.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Clean Configuation">
+					<param name="Local" value="blank_configuration.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Log Files">
+					<param name="Local" value="logging_output.htm">
+					</OBJECT>
+			</UL>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Components">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="ISAPI Filter for IIS 5.1 and 6.0">
+				<param name="Local" value="iisxpress_filter.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Module for IIS 7">
+				<param name="Local" value="iisxpress_module7.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Server">
+				<param name="Local" value="iisxpress_server.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Console">
+				<param name="Local" value="ConsoleOverview.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Status Window">
+			<param name="Local" value="iisxpress_tray.htm">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="General">
+				<param name="Local" value="HIDD_PAGE_GENERAL.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="History">
+				<param name="Local" value="HIDD_PAGE_HISTORY.htm">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Exclusions">
+				<param name="Local" value="HIDD_PAGE_EXCLUSIONS.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Extension Exclusions">
+					<param name="Local" value="HIDD_PAGE_EXTENSION_EXCLUSIONS.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Extension Exclusion Wizard">
+					<param name="Local" value="ExtnWizard.htm">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Manual Mode">
+						<param name="Local" value="ExtnWizardManualMode.htm">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Search Mode">
+						<param name="Local" value="ExtnWizardSearchMode.htm">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Content Type Exclusions">
+					<param name="Local" value="HIDD_PAGE_CONTENTTYPE_EXCLUSIONS.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Content Type Exclusion Wizard">
+					<param name="Local" value="ContentTypeWizard.htm">
+					</OBJECT>
+				<UL>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Manual Mode">
+						<param name="Local" value="ContentTypeWizardManualMode.htm">
+						</OBJECT>
+					<LI> <OBJECT type="text/sitemap">
+						<param name="Name" value="Search Mode">
+						<param name="Local" value="ContentTypeWizardSearchMode.htm">
+						</OBJECT>
+				</UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="URI Exclusions">
+					<param name="Local" value="HIDD_PAGE_FOLDER_EXCLUSIONS.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="User Agent Exclusions">
+					<param name="Local" value="exclude_by_useragent.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Network Exclusions">
+					<param name="Local" value="HIDD_PAGE_NETWORK_EXCLUSIONS.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="Configuration">
+				<param name="Local" value="HIDD_PAGE_CONFIG.htm">
+				</OBJECT>
+			<UL>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="General">
+					<param name="Local" value="configure_general.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Cache">
+					<param name="Local" value="configure_cache.htm">
+					</OBJECT>
+				<LI> <OBJECT type="text/sitemap">
+					<param name="Name" value="Advanced">
+					<param name="Local" value="configure_advanced.htm">
+					</OBJECT>
+			</UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="System">
+				<param name="Local" value="HIDD_PAGE_SYSTEM.htm">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Flash Tutorials">
+			</OBJECT>
+		<UL>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to add Exclusion Rules in the History window">
+				<param name="Local" value="Tutorials\IISxpress - History Exclude.html">
+				</OBJECT>			
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to Search for Extensions to Exclude">
+				<param name="Local" value="Tutorials\Exclude Extensions - Search.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to Manually Exclude Extensions">
+				<param name="Local" value="Tutorials\Exclude Extensions - Manual.html">
+				</OBJECT>
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to Search for Content Types to Exclude">
+				<param name="Local" value="Tutorials\IISxpress - Exclude Content Types - Search.html">
+				</OBJECT>								
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to Manually Exclude Content Types">
+				<param name="Local" value="Tutorials\IISxpress - Exclude Content Types - Manual.html">
+				</OBJECT>								
+			<LI> <OBJECT type="text/sitemap">
+				<param name="Name" value="See how to Exclude URIs">
+				<param name="Local" value="Tutorials\IISxpress - Exclude URIs.html">
+				</OBJECT>
+		</UL>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Performance Counters">
+			<param name="Local" value="PerfCounters.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Compression FAQ">
+			<param name="Local" value="compression_faq.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="License Terms">
+			<param name="Local" value="register_product.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Contact Us">
+			<param name="Local" value="contact_us.htm">
+			</OBJECT>
+		<LI> <OBJECT type="text/sitemap">
+			<param name="Name" value="Legal Acknowledgements">
+			<param name="Local" value="legal.htm">
+			</OBJECT>
+	</UL>
+</UL>
+</BODY></HTML>

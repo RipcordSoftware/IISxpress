@@ -1,0 +1,11 @@
+To register the performance counters:
+* lodctr /m:IISxpressNativeModulePerf.xml - (from the binary directory)
+
+To unregister the performance counters:
+* lodctr /m:IISxpressNativeModulePerf.xml
+
+To create the stub code for the performance counters:
+* ctrpp IISxpressNativeModulePerf.xml - (filename capitalisation is important for the generator)
+
+The V2 performance counters are stored in the following location:
+* HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Perflib\_V2Providers

@@ -1,0 +1,12 @@
+This file is written to this directory by the IISxpress installer. 
+
+When you enable logging in IISxpress this directory will be populated with log files. 
+
+If you enable ISAPI filter logging and the file is not written to this directory check 
+that the web server has permissions to write to this directory.
+
+If you are running IIS 6.0 or 7.0 then ensure that the NETWORK SERVICE account has "Full
+Control" permissions. If you have created application pools with custom identities
+then please ensure that the identity account also has "Full Control" permissions here.
+
+(C) Ripcord Software 2005-2010

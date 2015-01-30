@@ -1,0 +1,67 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Processor Workload">	
+	<PARAM NAME="Keyword" VALUE="Processor Workload Model">	
+</OBJECT>
+
+<script language="javascript">PageHeader("Processor Workload Model");</script>
+
+<p>
+On systems with more than one CPU or CPU core IISxpress uses the <b>Processor Workload Model</b> setting to determine how to divide the compression 
+tasks between the CPUs and/or CPU cores of your computer. Three settings are available, <b>Automatic</b>, <b>Manual</b> and <b>None</b>.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+If your system has one CPU with one core the Processor Workload Model setting is ignored.
+</p>
+
+<p>
+<img src="images/processor_workload_allcores.png" alt="In Automatic mode all cores are used in a round-robin fashion."/><br />
+The diagram above shows a system with a single CPU with four cores. In <b>Automatic</b> mode IISxpress allocates
+a core for each request/response processed. In this example IISxpress receives four requests each of which is allocated
+a seperate CPU core. The effect of this is that four requests/responses can be compressed simulaneously.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+IISxpress schedules compression tasks across the available cores in a round-robin fashion. Hence in the above example
+request 1 maps to core 1 and request 2 to core 2. Request 5 will map to core 1 since there are only four available 
+cores.
+
+</p>
+
+<p>
+<img src="images/processor_workload_twocores.png" alt="In Manual mode only the configured cores are used."/><br />
+The diagram above shows a system with a single CPU with four cores as before. In <b>Manual</b> mode IISxpress
+allocates a core for each request/response from the configured set of CPU cores. In this example IISxpress is configured
+to use only core 1 and 3, core 2 and 4 will not be used by IISxpress and can therefore be allocated to other tasks on
+your system like running a database or housekeeping tasks.
+</p>
+
+<p>
+If you configure your system to use <b>Manual</b> mode the operating system will schedule the compression workload. The
+effect of this will most likely mean that all available cores participate in compressing each response. This setting
+may be faster when dealing with only one request at a time but when deployed in a multi-client environment it will
+be less effective when dealing with many simultaneous requests. It is for this reason that <b>Manual</b> mode is not
+recommended. 
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="configure_advanced.htm">Configuration - Advanced</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

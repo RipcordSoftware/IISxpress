@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Compatibility">	
+	<PARAM NAME="Keyword" VALUE="Accept-Encoding">	
+	<PARAM NAME="Keyword" VALUE="RFC 2616">	
+	<PARAM NAME="Keyword" VALUE="Accept-Encoding">
+</OBJECT>
+
+<script language="javascript">PageHeader("Client Compatibility");</script>
+
+<p>
+All browser based web traffic is enclosed in a protocol called HTTP. This standard includes support for 
+three modes of compression - deflate (ZLIB), GZIP and compress. In reality deflate and GZIP are almost identical and 
+also have the greatest browser support. IISxpress supports both deflate (ZLIB) and GZIP.
+</p>
+
+<p>
+When a client browser makes a request to a web server it includes information which allows the server to determine
+whether the client can support compressed responses. This information is enclosed in a request parameter called
+'Accept-Encoding'. IISxpress uses this information from the client to decide whether a response is a candiate 
+for compression. If the client cannot support either deflate (ZLIB) or GZIP the response is not compressed.
+</p>
+
+<p>
+The only modern browser which does not support compression is Internet Explorer 5.2 for Mac OS X. No responses destined
+for this browser will be compressed since it does not send a suitable 'Accept-Encoding' parameter.
+</p>
+
+<p>
+Sometimes you may find an incompatibility or some undesirable behaviour, it is in these cases that you should 
+use IISxpress' exclusion rule engine to maintain compatibility and your end users' experience.
+</p>
+
+<p>
+<img src="images\finger_pointing.png" />
+We recommend that you test all popular browsers when you install IISxpress on your web server. You should 
+seriously consider testing with: Internet Explorer, Firefox, Opera, Safari and Chrome.
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="exclusion_rules_overview.htm">Exclusion Rules</a><br/>
+<a href="http://www.apps.ietf.org/rfc/rfc2616.html" target="_blank">Internet Engineering Task Force (IETF) - HTTP/1.1 - RFC 2616</a><br/>
+<a href="http://www.zlib.org" target="_blank">ZLIB</a><br/>
+<a href="http://www.gzip.org" target="_blank">GZIP</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

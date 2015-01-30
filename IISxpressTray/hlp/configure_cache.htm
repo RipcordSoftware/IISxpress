@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Cache">
+	<PARAM NAME="Keyword" VALUE="Enable Compression Cache">
+	<PARAM NAME="Keyword" VALUE="Maximum amount of memory">
+	<PARAM NAME="Keyword" VALUE="Maximum number of responses">	
+	<PARAM NAME="Keyword" VALUE="Flush">
+</OBJECT>
+
+<script language="javascript">PageHeader("Configuration - Cache");</script>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/configuration_tab_cache.png"/>
+</div>
+
+<div class="paragraphheading">Compression Cache</div>
+
+<p>
+The compression cache helps to speed up compression processing of static data (HTML, JS, CSS, XML, etc.) files on your 
+web server. When the cache is enabled all static data is cached to allow it to be retrieved as quickly as possible.
+The cache is enabled by default.
+</p>
+
+<p>
+When an uncached response is compressed by IISxpress it is added to the compression cache. The next time that
+page is requested the cache will retrieve the data from the cache rather than recompressing it. Compressed
+response data reteived from the cache is processed much faster than normal; the response can be processed up to 10
+times faster.
+</p>
+
+<p>
+When the <b>Enabled Compression Cache</b> option is checked the compression cache is enabled, it is disabled when unchecked.
+You can enable or disable the compression cache at any time.
+</p>
+
+<p>
+You can control the amount of memory used by the compression cache by entering the number of KB to use. You
+cannot enter a value higher than 10% of your computer's physical memory. The default setting for this option
+is 16384 KB (16 MB).
+</p>
+
+<p>
+The total number of compression responses can also be specified. If the number is too high the cache becomes
+less efficient since it will take longer to locate the data. The default value is 200.
+</p>
+
+<span style="clear:both;"></span>
+
+<p>
+The cache may be flushed by pressing the <b>Flush</b> button. All compressed responses held by the cache will
+be removed. The now empty cache will continue fill up with compressed responses as before.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+Response data that is created dynamically by technologies like ASP.NET, ASP, CGI cannot be cached by IISxpress since 
+the data will be different each time it is returned.
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="compression_cache.htm">Compression Cache</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,57 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">	
+    <PARAM NAME="Keyword" VALUE="Extension Exclusion">    
+</OBJECT>
+
+<script language="javascript">PageHeader("Exclude by Extension");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/Exclude Extensions - Search.html">
+See how to add an extension exclusion rule. Click here to view the tutorial.
+</a>
+
+<p>
+It is almost always possible to determine the contents of a file from its file extension. It is a 
+fairly sound assumption that a file with the extension HTM or HTML always contains HTML markup, a file 
+with the EXE extension is executable and a file with the extension TXT will be plain text.
+</p>
+
+<p>
+<img src="images\finger_pointing.png" />
+IISxpress does not treat content created static or dynamically differently. If a request for and ASP or 
+ASPX file creates compressable content and that extension is not excluded then it will be compressed.
+</p>
+
+<p>
+Files have compression characteristics related to the data they contain. For example, text files compress 
+very well since they usually contain repetative sequences of characters, however files that contain 
+highly random data sequences do not compress well, in fact these files may even be larger after compression 
+than they were originally.
+</p>
+
+<p>
+Extension exclusion rules are ideal for excluding files which will not compress well. Typically JPG files 
+are already well compressed (this is not always the case though), so it is likely that you will want to 
+define an exclusion rule for this file type.
+</p>
+
+<p>
+When IISxpress processes a response it determines whether the extension specified in the request is excluded 
+from compression. If it matches then the response will not be compressed by IISxpress.
+</p>
+
+<span class="seealso">See also</span><br/>
+<a href="exclusion_rules_overview.htm">Exclusion Rules Overview</a><br/>
+<a href="HIDD_PAGE_EXTENSION_EXCLUSIONS.htm">IISxpress Status Window - Extension Exclusions</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Network">	
+	<PARAM NAME="Keyword" VALUE="Network Exclusions">	
+	<PARAM NAME="Keyword" VALUE="Localhost">
+	<PARAM NAME="Keyword" VALUE="Localhost Exclusion">
+	<PARAM NAME="Keyword" VALUE="Network Rules">
+	<PARAM NAME="Keyword" VALUE="Localhost Rules">
+	<PARAM NAME="Keyword" VALUE="Exclude Localhost">
+	<PARAM NAME="Keyword" VALUE="Exclude Networks">
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Status Window - Network (IP) Address Exclusions");</script>
+
+<div style="float: right; padding-left: 16px; padding-top: 8px;">
+<img src="images/exclusion_tab_networks.png"/>
+</div>
+
+<p>
+The <b>Networks</b> window displays a list of IP addresses that IISxpress will not compress. 
+These addresses can represent networks or computers.
+</p>
+
+<p>
+The local computer (the computer running IIS and IISxpress) is treated as a special case. You would 
+not normally want to compress responses to this computer since this will cause an unnessesary load 
+on the CPU and will probably result in a slower browsing session. However, if you want to test your 
+compression configuration then unchecking <b>Exclude compression requests from the local computer</b> 
+will allow compressed responses to be returned.
+</p>
+
+<p>
+You can exclude networks or even individual computers by adding their IP address into the exclusion 
+list. To do this press the Add button and enter an address. For example to exclude all clients from 
+the network 192.168.0 from receiving compressed responses then type that address into the edit box 
+and press enter. Now any requests from that network, say from client 192.168.0.27 will not be 
+compressed.
+</p>
+
+<p>
+Network exclusion is useful since you may know that certain networks attached to your web server will 
+not benefit from compression, therefore to reduce the CPU overhead it is best to exclude these networks.
+</p>
+
+<br/>
+<span class="seealso">See also</span><br>
+<a href="exclusion_rules_overview.htm">Exclusion Rule Overview</a><br />
+<a href="exclude_by_ipaddress.htm">Exclude by Network (IP) Address</a><br />
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

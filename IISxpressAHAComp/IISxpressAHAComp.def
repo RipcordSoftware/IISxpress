@@ -1,0 +1,6 @@
+; IISxpressAHAComp.def : Declares the module parameters for the DLL.
+
+LIBRARY      "IISxpressAHAComp"
+
+EXPORTS
+    ; Explicit exports can go here

@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressTray.HTTPNotify.1 = s 'HTTPNotify Class'
+	{
+		CLSID = s '{4D9F3A14-338B-4C20-8CDD-915DE994057F}'
+	}
+	IISxpressTray.HTTPNotify = s 'HTTPNotify Class'
+	{
+		CLSID = s '{4D9F3A14-338B-4C20-8CDD-915DE994057F}'
+		CurVer = s 'IISxpressTray.HTTPNotify.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {4D9F3A14-338B-4C20-8CDD-915DE994057F} = s 'HTTPNotify Class'
+		{
+			ProgID = s 'IISxpressTray.HTTPNotify.1'
+			VersionIndependentProgID = s 'IISxpressTray.HTTPNotify'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{86823619-FFF4-4CAD-8714-71BAC0BE47DE}'
+		}
+	}
+}

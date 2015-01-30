@@ -1,0 +1,64 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">	
+    <PARAM NAME="Keyword" VALUE="Content Type Exclusion">
+    <PARAM NAME="Keyword" VALUE="Wildard Content Type Rule">
+</OBJECT>
+
+<script language="javascript">PageHeader("Exclude by Content Type");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - Exclude Content Types - Search.html">
+See how to add a content type exclusion rule. Click here to view the tutorial.
+</a>
+
+<p>
+All responses have a Content Type field. This field is defined in the HTTP/1.1 standards document, it contains 
+a predefined string denoting the type of the data in the response. For example, responses containing plain text 
+data would have a content type of <b>text/plain</b>.
+</p>
+
+<p>
+IISxpress supports exclusion of responses from compression based on their content type. This rule type allows 
+you to exclude classes of responses rather than just individual files by their extension.
+</p>
+
+<p>
+Content type rules are especially useful if you have dynamically generated content where the type of the 
+content can change depending on the parameters passed in the request. For example, an ASPX file may return 
+BMP (uncompressed Windows bitmap) or JPG content depending on the request parameters. You may wish to 
+compress the response if it contains uncompressed BMP data, and not compress if it contains JPG data.
+</p>
+
+<p>
+<img src="images\finger_pointing.png" />
+The content type for JPG data is <b>image/jpg</b>, to exclude all JPG data you should add this as an 
+exclusion rule.
+</p>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/excluded_contenttypes_panel.png"/>
+</div>
+<div class="paragraphheading">Exclusion Rule Forms</div>
+<p>
+IISxpress supports two rule forms for content type exclusion. You can specify the exact type, for example, 
+<b>image/jpg</b> or alternately you can exclude all images from being compressed by specifiying a wildcard 
+content type rule, for example <b>image/*</b>.
+</p>
+
+<span style="clear: both;"></span>
+
+<span class="seealso">See also</span><br/>
+<a href="exclusion_rules_overview.htm">Exclusion Rules Overview</a><br/>
+<a href="HIDD_PAGE_CONTENTTYPE_EXCLUSIONS.htm">IISxpress Status Window - Content Type Exclusions</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

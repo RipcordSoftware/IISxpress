@@ -1,0 +1,97 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+
+<html>
+<head>
+<title></title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</head>
+
+<body>
+
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext id="Object1">
+	<param name="Keyword" value="Content Type Exclusions">
+	<param name="Keyword" value="Content Type">		
+</object>
+
+<script language="javascript">PageHeader("Content Type Exclusion Wizard - Search Mode");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - Exclude Content Types - Search.html">
+See how to add a content type exclusion rule. Click here to view the tutorial.
+</a>
+
+<div style="float:right; padding-left: 12px; padding-top: 8px;">
+<img src="images/ContentTypeWizardSelectWebSite.png" />
+</div>
+
+<p>
+In Search mode the wizard will search your web site directories for candidate content types. Before 
+progressing you must select which web sites to search. The default is to search all web sites configured 
+in IIS. If you have a lot of sites with complex directory structures then this may take a while, so 
+the wizard allows you to elect which web sites to search.
+</p>
+
+<p>
+Click <b>Select from the list</b> to enable the list of the available web sites, then click the checkbox 
+next to each of the web sites you wish to search.
+</p>
+
+<p>
+Click the <b>Next</b> button when you are happy with your selection.
+</p>
+
+<span style="clear: both;"></span>
+
+<div style="float:right; padding-left: 12px; padding-top: 8px;">
+<img src="images/ContentTypeWizardSearching.png" />
+</div>
+
+<p>
+Once the wizard has collected all the file information from your web sites it will send an HTTP request 
+to IIS for each of the files in order to get a list of available content types.
+</p>
+
+<p>
+If you click <b>Back</b> the search will stop and you will be returned to the previous page.
+</p>
+
+<span style="clear: both;"></span>
+
+<div style="float:right; padding-left: 12px; padding-top: 8px;">
+<img src="images/ContentTypeWizardSelectSearched.png" />
+</div>
+
+<p>
+Once the wizard has completed searching your web site directories for candidate extensions it will 
+display all the unique content types found. Place a check mark next to each content type you wish to 
+exclude. You can select as many items as you wish here.
+</p>
+
+<p>
+Once you are happy with your selection press the <b>Next</b> button to progress to the next wizard page. 
+You can also click the <b>Back</b> button to return to previous pages.
+</p>
+
+<span style="clear: both;"></span>
+
+<div style="float:right; padding-left: 12px; padding-top: 8px;">
+<img src="images/ContentTypeWizardManualConfirm.png" />
+</div>
+
+<p>
+The confirm page allows you to review the selections you have made on previous pages. When you click 
+the <b>Next</b> button your selections will be committed to IISxpress's configuration database.
+</p>
+
+<span style="clear: both;"></span>
+
+<div class="seealso">See also</div>
+<a href="HIDD_PAGE_EXCLUSIONS.htm">Exclusion Rules</a><br/>
+<a href="exclude_by_contenttype.htm">Exclude by Content Type</a><br/>
+<a href="ContentTypeWizardManualMode.htm">Content Type Wizard - Manual Mode</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</body>
+</html>

@@ -1,0 +1,3 @@
+#pragma once
+
+#define RESPONSESTREAM_SETSIZE_RESETANDALLOC	0xabc9

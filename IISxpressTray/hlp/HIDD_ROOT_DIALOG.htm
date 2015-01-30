@@ -1,0 +1,77 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+<BODY>
+
+<script language="javascript">PageHeader("IISxpress Overview");</script>
+
+<div class="paragraphheading">What is it?</div>
+
+<p>
+IISxpress is an HTTP compression plug-in for IIS 7.0, 6.0 and 5.1. IISxpress 
+installs a filter module into your IIS server configuration, this module 
+intercepts responses from IIS and compresses them on-the-fly reducing bandwidth 
+usage and improving site responsiveness.
+</p>
+
+<p>
+A typical HTML file will reduce in size by between 50% (2:1) and 75% (4:1); XML 
+files can be reduced by as much as 90% (10:1).
+</p>
+
+<div class="paragraphheading">How does it work?</div>
+
+<p>
+The IISxpress filter intercepts IIS response traffic, it then passes the data to 
+the IISxpress Server which performs the compression and returns the data to the 
+client.
+</p>
+
+<p>
+The IISxpress Server uses its powerful rule engine to determine whether the response should be compressed. 
+If the response matches any of the exclusion rules in the database then the response will not be compressed.
+The rule engine supports exclusion by file extension, content type, URI and IP address.
+</p>
+
+<p>
+To prevent your web server from becoming overloaded IISxpress evaluates whether there is sufficient CPU 
+and memory resources available to handle each response. If the server is highly loaded IISxpress will  
+stop compressing responses until the high load period has ended.
+</p>
+
+<div class="paragraphheading">How do I see what IISxpress is doing?</div>
+
+<p>
+IISxpress comes with a status and configuration tool called the <b>IISxpress Status 
+Window</b>. This installs itself in your system notification bar, simply 
+double click to activate it. From here you can see the number of responses 
+processed, the compression ratio and other useful information about IISxpress.
+</p>
+
+<p>
+IISxpress also exposes a set of performance counters which you can view and log via the Windows PerfMon tool. For more
+information click <a href="PerfCounters.htm">here</a>.
+</p>
+
+<div class="paragraphheading">License Terms</div>
+
+<p>
+There are two licenses for IISxpress: Community and Commercial. Please check which license
+you should use by clicking <a href="register_product.htm">here</a>.
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="exclusion_rules_overview.htm">Exclusion Rules</a><br/>
+<a href="iisxpress_tray.htm">Status Window</a><br/>
+<a href="compression_faq.htm">Compression FAQ</a><br/>
+<a href="register_product.htm">License Terms</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

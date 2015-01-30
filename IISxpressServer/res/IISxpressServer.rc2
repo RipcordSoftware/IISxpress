@@ -1,0 +1,62 @@
+//
+// IISxpressTray.RC2 - resources Microsoft Visual C++ does not edit directly
+//
+
+#ifdef APSTUDIO_INVOKED
+#error this file is not editable by Microsoft Visual C++
+#endif //APSTUDIO_INVOKED
+
+/////////////////////////////////////////////////////////////////////////////
+// Add manually edited resources here...
+
+#include "..\Common\IISxpressVersion.h"
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION IISXPRESS_FILEVERSION
+ PRODUCTVERSION IISXPRESS_PRODUCTVERSION
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080904e4"
+        BEGIN
+            VALUE "CompanyName", IISXPRESS_COMPANYNAME_STRING
+            VALUE "FileDescription", "IISxpress Server"
+            VALUE "FileVersion", IISXPRESS_FILEVERSION_STRING
+            VALUE "InternalName", "IISxpressServer.exe"
+            VALUE "LegalCopyright", IISXPRESS_COPYRIGHT_STRING
+            VALUE "OriginalFilename", "IISxpressServer.exe"
+            VALUE "ProductName", "IISxpress"
+            VALUE "ProductVersion", IISXPRESS_PRODUCTVERSION_STRING
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x809, 1252
+    END
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////

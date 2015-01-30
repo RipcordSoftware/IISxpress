@@ -1,0 +1,93 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Logging output">
+	<PARAM NAME="Keyword" VALUE="Logging files">	
+	<PARAM NAME="Keyword" VALUE="Log files">	
+	<PARAM NAME="Keyword" VALUE="Log file format">	
+	<PARAM NAME="Keyword" VALUE="Log format">	
+</OBJECT>
+
+<script language="javascript">PageHeader("Log Files");</script>
+
+<p>
+IISxpress provides a log output option for both the filter and server 
+components. Normally you would have the logging switched off since it can use a 
+large amount of disk space and also it slows the compression process down. 
+However, if you need to track a problem with IISxpress or you would like to 
+capture server activity over a period of time it is a useful feature.
+</p>
+<p>
+Here is an example of log output from the filter when logging is set to <b>Full</b>:
+</p>
+<div style="font-family: monospace; font-size: 8pt;">
+2005-01-04 20:56:10 - IISxpressFilter started<br />
+2005-01-04 20:56:10 - IISxpressFilter: Computer name: 'testhost'<br />
+2005-01-04 20:56:10 - IISxpressFilter: Windows version: 5.1 'Service Pack 1'<br />
+2005-01-04 20:56:10 - IISxpressFilter: Physical memory: 1048048 Kb, available 
+memory: 549556 Kb, virtual memory: 2097024 Kb, available virtual memory: 
+2029940 Kb<br />
+2005-01-04 20:56:10 - IISxpressFilter: 'x86 Family 6 Model 10 Stepping 0', 'AMD 
+Athlon(tm) XP 2800+', 2079 Mhz<br />
+2005-01-04 20:56:14 - IISxpressFilter: IIS version='Microsoft-IIS/5.1'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: server name='localhost'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: server port='80'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: instance id='1'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: instance meta 
+path='/LM/W3SVC/1'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: app physical 
+path='c:\inetpub\wwwroot\'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): IIS: app mb 
+path='/LM/W3SVC/1/ROOT'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): REQUEST: 
+hostname='localhost'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): REQUEST: user 
+agent='Mozilla/4.0 (compatible; MSIE 6.0; Windows NT 5.1; .NET CLR 1.0.3705; 
+.NET CLR 1.1.4322)'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): REQUEST: URI='/smalllog.txt'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): REQUEST: 
+accept-encoding='gzip, deflate'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): REQUEST: client 
+address='127.0.0.1'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): RESPONSE: 
+content-type='text/plain'<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): RESPONSE: 
+content-length=3631215<br />
+2005-01-04 20:56:14 - IISxpressFilter(0x01c6fc3c): RESPONSE: response code=200<br />
+2005-01-04 20:56:15 - IISxpressFilter(0x01c6fc3c): will handle response 
+(0x00000000)<br />
+2005-01-04 20:56:15 - IISxpressFilter(0x01c6fe70): server has returned 153969 
+bytes (0x00000000)<br />
+2005-01-04 20:56:35 - IISxpressFilter stopped<br />
+</div>
+<p>
+The log files will be written to the <b>Logs</b> folder under the main 
+IISxpress folder.
+</p>
+
+<p>
+On Windows 2003, Vista and 2008 the filter logging feature may require additional configuration. The IISxpress 
+web server plugin will run with the same priviledges as the application pool used to run the web site. If this account
+does not have permission to write to the IISxpress Log directory then you will not see any log files written to your
+disk. Usually this account is called <b>NETWORK SERVICE</b>, but if you have configured your application pool to run 
+under another account then you must also give this account permission to write to the IISxpress log directory.
+</p>
+
+<img src="images\logdir_perms.png" alt="You must specify the correct permissions for the IISxpress log directory" />
+
+<br />
+<span class="seealso">See also</span><br>
+<a href="HIDD_PAGE_CONFIG.htm">Configuration Tab</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

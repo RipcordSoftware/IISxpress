@@ -1,0 +1,18 @@
+// IISxpressCompressionStudio.idl : IDL source for IISxpressCompressionStudio
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IISxpressCompressionStudio.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(03B20F26-CDBA-449A-A3B2-68E5D44CBA2A),
+	version(1.0),
+	helpstring("IISxpressCompressionStudio 1.0 Type Library")
+]
+library IISxpressCompressionStudioLib
+{
+	importlib("stdole2.tlb");
+};

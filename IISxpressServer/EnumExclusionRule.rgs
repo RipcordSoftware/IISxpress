@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.EnumExclusionRule.1 = s 'EnumExclusionRule Class'
+	{
+		CLSID = s '{E94AB2C7-B1AB-40BA-B905-94CEC70A1180}'
+	}
+	IISxpressServer.EnumExclusionRule = s 'EnumExclusionRule Class'
+	{
+		CLSID = s '{E94AB2C7-B1AB-40BA-B905-94CEC70A1180}'
+		CurVer = s 'IISxpressServer.EnumExclusionRule.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {E94AB2C7-B1AB-40BA-B905-94CEC70A1180} = s 'EnumExclusionRule Class'
+		{
+			ProgID = s 'IISxpressServer.EnumExclusionRule.1'
+			VersionIndependentProgID = s 'IISxpressServer.EnumExclusionRule'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

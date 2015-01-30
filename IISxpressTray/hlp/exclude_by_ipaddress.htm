@@ -1,0 +1,53 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">	
+    <PARAM NAME="Keyword" VALUE="Network Address Exclusion">
+    <PARAM NAME="Keyword" VALUE="IP Address Exclusion">
+</OBJECT>
+
+<script language="javascript">PageHeader("Exclude by Network (IP) Address");</script>
+
+<p>
+All  requests sent to the web server include the IP address of the client computer making the request. 
+IISxpress supports exclusion rules based on the source IP address, this allows you to exclude individual 
+clients or groups of clients on an IP subnet.
+</p>
+
+<p>
+If you have a web server which is serving clients on a number of different network types, for example LAN, 
+WAN, VPN (dialup, ADSL, etc.) or internet then you may wish to exclude certain client types from compression. LAN 
+clients are connected on a fast network and will therefore receive little benefit from compression, however 
+WAN, VPN and internet clients are usually on much slower networks and can benefit significantly from 
+compression.
+</p>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/excluded_networks_panel.png" />
+</div>
+<p>
+The picture on the right shows four excluded networks. All requests with the IP prefix 10, 172.16, 
+172.17 and 192.168.0 will be excluded from compression. A request from 172.18 will be compressed as
+will all other requests not matching this list.
+</p>
+<p>
+If you wish you can also specify an individual IP address to match, for example if you were to add 
+a rule for 192.168.1.23 then it would be excluded whereas all other computers on that network would not.
+</p>
+
+<span style="clear: both;"></span>
+
+<span class="seealso">See also</span><br/>
+<a href="exclusion_rules_overview.htm">Exclusion Rules Overview</a><br/>
+<a href="HIDD_PAGE_NETWORK_EXCLUSIONS.htm">IISxpress Status Window - Network Exclusions</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

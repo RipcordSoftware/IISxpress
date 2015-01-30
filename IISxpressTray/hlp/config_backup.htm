@@ -1,0 +1,68 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Backup">
+	<PARAM NAME="Keyword" VALUE="Backup Configuration">
+	<PARAM NAME="Keyword" VALUE="IISxpress.config">
+</OBJECT>
+
+<script language="javascript">PageHeader("Configuration Backup");</script>
+
+<p>
+Once you have created your ideal IISxpress configuration it is a good idea to create a backup file 
+and store it in a safe place.
+</p>
+
+<p>
+Your IISxpress configuration is stored in a file called <b>IISxpress.config</b>.
+This file is stored in your IISxpress installation directory. If you accepted the default settings when 
+you installed IISxpress then this will be <b>Program Files\Ripcord Software\IISxpress</b>.
+</p>
+
+<p>
+Follow these steps to backup your configuration file:
+</p>
+
+<ul class="squareitem">
+<li>
+	Stop the IISxpress service with either the Status Window or your computer's Service Manager.
+</li>
+<li>
+	Copy the <b>IISxpress.config</b> file to a safe location.
+</li>
+<li>
+	Restart the IISxpress service.
+</li>
+</ul>
+
+<p>
+To restore a backup configuration file follow these steps:
+</p>
+
+<ul class="squareitem">
+<li>
+	Stop the IISxpress service with the Status Window or your computer's Service Manager.
+</li>
+<li>
+	Copy your backup <b>IISxpress.config</b> over the file in your IISxpress directory.
+</li>
+<li>
+	Restart the IISxpress service.
+</li>
+</ul>
+
+<span class="seealso">See also</span><br/>
+<a href="blank_configuration.htm">Clean Configuration</a><br/>
+<a href="HIDD_PAGE_CONFIG.htm">Configuration Tab</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

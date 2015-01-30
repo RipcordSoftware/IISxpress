@@ -1,0 +1,788 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU_HISTORYHEADERCONTEXT MENU 
+BEGIN
+    POPUP "HistoryHeaderContext"
+    BEGIN
+        MENUITEM "Time",                        ID_HISTORYHEADERCONTEXT_TIME, CHECKED, INACTIVE
+        MENUITEM "URI",                         ID_HISTORYHEADERCONTEXT_URI
+        MENUITEM "Hostname",                    ID_HISTORYHEADERCONTEXT_HOSTNAME
+        MENUITEM "Port",                        ID_HISTORYHEADERCONTEXT_PORT
+        MENUITEM "Query String",                ID_HISTORYHEADERCONTEXT_QUERYSTRING
+        MENUITEM "Cached",                      ID_HISTORYHEADERCONTEXT_CACHED
+        MENUITEM "Original Size",               ID_HISTORYHEADERCONTEXT_ORIGINALSIZE
+        MENUITEM "Compressed Size",             ID_HISTORYHEADERCONTEXT_COMPRESSEDSIZE
+        MENUITEM "Ratio",                       ID_HISTORYHEADERCONTEXT_RATIO
+        MENUITEM "Compression Time",            ID_HISTORYHEADERCONTEXT_COMPRESSIONTIME
+        MENUITEM "Content Type",                ID_HISTORYHEADERCONTEXT_CONTENTTYPE
+        MENUITEM "Client IP",                   ID_HISTORYHEADERCONTEXT_CLIENTIP
+        MENUITEM "Location",                    ID_HISTORYHEADERCONTEXT_LOCATION
+        MENUITEM "Browser",                     ID_HISTORYHEADERCONTEXT_BROWSER
+        MENUITEM "User Agent",                  ID_HISTORYHEADERCONTEXT_USERAGENT
+    END
+END
+
+IDR_MENU_WEBDIRHEADERCONTEXT MENU 
+BEGIN
+    POPUP "WebDirectoryHeaderContext"
+    BEGIN
+        MENUITEM "Name",                        ID_WEBDIRECTORYHEADERCONTEXT_FILENAME, CHECKED, INACTIVE
+        MENUITEM "File Size",                   ID_WEBDIRECTORYHEADERCONTEXT_FILESIZE
+        MENUITEM "Compress",                    ID_WEBDIRECTORYHEADERCONTEXT_COMPRESS
+        MENUITEM "Content Type",                ID_WEBDIRECTORYHEADERCONTEXT_CONTENTTYPE
+        MENUITEM "Original Size",               ID_WEBDIRECTORYHEADERCONTEXT_ORIGINALSIZE
+        MENUITEM "Compressed Size",             ID_WEBDIRECTORYHEADERCONTEXT_COMPRESSEDSIZE
+        MENUITEM "Ratio",                       ID_WEBDIRECTORYHEADERCONTEXT_RATIO
+        MENUITEM "Responses",                   ID_WEBDIRECTORYHEADERCONTEXT_RESPONSES
+        MENUITEM "Last Download",               ID_WEBDIRECTORYHEADERCONTEXT_LASTDOWNLOAD
+    END
+END
+
+IDR_MENU_WEBDIRCONTEXT MENU 
+BEGIN
+    POPUP "WebDirContext"
+    BEGIN
+        POPUP "Analysis"
+        BEGIN
+            MENUITEM "&Analyze",                    ID_WEBDIRCONTEXT_ANALYZE
+            MENUITEM "&ZLIB",                       ID_WEBDIRCONTEXT_ZLIB
+            MENUITEM "C&SS",                        ID_WEBDIRCONTEXT_CSS
+            MENUITEM "&Clear",                      ID_WEBDIRCONTEXT_CLEAR
+        END
+        MENUITEM SEPARATOR
+        POPUP "Compress"
+        BEGIN
+            MENUITEM "&Automatic",                  ID_WEBDIRCONTEXT_COMPRESSAUTOMATIC
+            MENUITEM "A&lways",                     ID_WEBDIRCONTEXT_COMPRESSALWAYS
+            MENUITEM "&Never",                      ID_WEBDIRCONTEXT_COMPRESSNEVER
+        END
+        POPUP "Exclude"
+        BEGIN
+            MENUITEM "Exclude this &Extension",     ID_WEBDIRCONTEXT_EXCLUDETHISEXTENSION
+            MENUITEM "Exclude this &Content Type",  ID_WEBDIRCONTEXT_EXCLUDETHISCONTENTTYPE
+            MENUITEM "Exclude &Matching Content Types", ID_WEBDIRCONTEXT_EXCLUDEMATCHINGCONTENTTYPES
+        END
+        MENUITEM SEPARATOR
+        POPUP "Browse"
+        BEGIN
+            MENUITEM "Browse with &Internet Explorer", ID_WEBDIRCONTEXT_BROWSEWITHINTERNETEXPLORER
+            MENUITEM "Browse with &Firefox",        ID_WEBDIRCONTEXT_BROWSEWITHFIREFOX
+            MENUITEM "Browse with &Opera",          ID_WEBDIRCONTEXT_BROWSEWITHOPERA
+            MENUITEM "Browse with &Safari",         ID_WEBDIRCONTEXT_BROWSEWITHSAFARI
+        END
+        POPUP "Open"
+        BEGIN
+            MENUITEM "Open with &Default Application", ID_WEBDIRCONTEXT_OPENWITHDEFAULTAPPLICATION
+            MENUITEM "Open with &Notepad",          ID_WEBDIRCONTEXT_OPENWITHNOTEPAD
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Write to CSV",               ID_WEBDIRCONTEXT_WRITETOCSV
+        MENUITEM "&Explore Folder",             ID_WEBDIRCONTEXT_EXPLOREFOLDER
+    END
+END
+
+IDR_MENU_HISTORYCONTEXT MENU 
+BEGIN
+    POPUP "HistoryContext"
+    BEGIN
+        POPUP "Exclude"
+        BEGIN
+            MENUITEM "Exclude this &Extension",     32785
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this Content &Type",  32786
+            MENUITEM "Exclude &Matching Content Types", 32787
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this &Directory",     32788
+            MENUITEM "Exclude this Directory T&ree", 32789
+            MENUITEM "Exclude this &Web Site",      32790
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this &Client IP",     32791
+            MENUITEM "Exclude this Client &Subnet", 32792
+        END
+        MENUITEM "C&lear",                      ID_HISTORYCONTEXT_CLEAR
+        MENUITEM "&Auto Scroll",                ID_HISTORYCONTEXT_AUTOSCROLL
+        MENUITEM SEPARATOR
+        MENUITEM "&Explore Containing Folder",  ID_HISTORYCONTEXT_EXPLORECONTAININGFOLDER
+        MENUITEM "&Write to CSV",               ID_HISTORYCONTEXT_WRITETOCSV
+    END
+END
+
+IDR_MAINFRAME MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New\tCtrl+N",                ID_FILE_NEW
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Save\tCtrl+S",               ID_FILE_SAVE
+        MENUITEM "Save &As...",                 ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_APP_EXIT
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Cu&t\tCtrl+X",                ID_EDIT_CUT
+        MENUITEM "&Copy\tCtrl+C",               ID_EDIT_COPY
+        MENUITEM "&Paste\tCtrl+V",              ID_EDIT_PASTE
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECTALL
+    END
+    POPUP "&View"
+    BEGIN
+        POPUP "Toolbars"
+        BEGIN
+            MENUITEM "&Locate",                     ID_TOOLBARS_LOCATE
+            MENUITEM "&Browsers",                   ID_TOOLBARS_BROWSERS
+            MENUITEM "Exclusion &Rules",            ID_TOOLBARS_EXCLUSIONRULES
+        END
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "S&plit",                      ID_WINDOW_SPLIT
+        MENUITEM SEPARATOR
+        MENUITEM "&Refresh\tF5",                ID_VIEW_REFRESH
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&IIS Administration",         ID_TOOLS_IISADMINISTRATION
+        MENUITEM "Locate &IP",                  ID_TOOLS_LOCATEIP
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&Help Topics",                ID_HELP_FINDER
+        MENUITEM SEPARATOR
+        MENUITEM "&About...",                   ID_APP_ABOUT
+    END
+END
+
+IDR_MENUWEBTREECONTEXT MENU 
+BEGIN
+    POPUP "WebTreeContext"
+    BEGIN
+        POPUP "Browse"
+        BEGIN
+            MENUITEM "Browse with &Internet Explorer", ID_WEBTREECONTEXT_BROWSEWITHINTERNETEXPLORER
+            MENUITEM "Browse with &Firefox",        ID_WEBTREECONTEXT_BROWSEWITHFIREFOX
+            MENUITEM "Browse with &Opera",          ID_WEBTREECONTEXT_BROWSEWITHOPERA
+            MENUITEM "Browse with &Safari",         ID_WEBTREECONTEXT_BROWSEWITHSAFARI
+        END
+        MENUITEM "&Explore Folder",             ID_WEBTREECONTEXT_EXPLOREFOLDER
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TOOLBAR_EXCLUSIONRULES DIALOGEX 0, 0, 241, 26
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "EXTN",IDC_BUTTON_TOOLBAR_EXCLUDEEXTN,"Button",BS_OWNERDRAW | WS_TABSTOP,5,1,26,14
+    CONTROL         "CT",IDC_BUTTON_TOOLBAR_EXCLUDECT,"Button",BS_OWNERDRAW | WS_TABSTOP,33,1,26,14
+    CONTROL         "MCT",IDC_BUTTON_TOOLBAR_EXCLUDECT_MATCH,"Button",BS_OWNERDRAW | WS_TABSTOP,61,1,26,14
+    CONTROL         "DIR",IDC_BUTTON_TOOLBAR_EXCLUDEDIR,"Button",BS_OWNERDRAW | WS_TABSTOP,89,1,26,14
+    CONTROL         "TREE",IDC_BUTTON_TOOLBAR_EXCLUDEDIRTREE,"Button",BS_OWNERDRAW | WS_TABSTOP,117,1,26,14
+    CONTROL         "SITE",IDC_BUTTON_TOOLBAR_EXCLUDEWEBSITE,"Button",BS_OWNERDRAW | WS_TABSTOP,145,1,26,14
+    CONTROL         "IP",IDC_BUTTON_TOOLBAR_EXCLUDECLIENTIP,"Button",BS_OWNERDRAW | WS_TABSTOP,173,1,26,14
+    CONTROL         "NET",IDC_BUTTON_TOOLBAR_EXCLUDENETWORK,"Button",BS_OWNERDRAW | WS_TABSTOP,201,1,26,14
+END
+
+IDD_TOOLBAR_BROWSERS DIALOGEX 0, 0, 133, 26
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "IE",IDC_BUTTON_TOOLBAR_IE,"Button",BS_OWNERDRAW | WS_TABSTOP,5,1,26,14
+    CONTROL         "FF",IDC_BUTTON_TOOLBAR_FIREFOX,"Button",BS_OWNERDRAW | WS_TABSTOP,33,1,26,14
+    CONTROL         "OP",IDC_BUTTON_TOOLBAR_OPERA,"Button",BS_OWNERDRAW | WS_TABSTOP,61,1,26,14
+    CONTROL         "SAF",IDC_BUTTON_TOOLBAR_SAFARI,"Button",BS_OWNERDRAW | WS_TABSTOP,90,1,26,14
+END
+
+IDD_DIALOG_COMPRESSIONOPTIMIZER DIALOGEX 0, 0, 522, 353
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Compression Optimizer"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_STATIC_WHITEBACKGROUND,"Static",SS_BLACKFRAME,186,49,304,58
+    CONTROL         "",IDC_STATIC_WHITEBACKGROUND2,"Static",SS_BLACKFRAME,186,169,304,58
+    CONTROL         "",IDC_LIST_FILES,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOCOLUMNHEADER | WS_BORDER | WS_TABSTOP,8,11,153,308
+    PUSHBUTTON      "Apply",IDC_BUTTON_APPLY,399,331,50,14,WS_DISABLED
+    PUSHBUTTON      "Close",IDCANCEL,461,331,50,14
+    PUSHBUTTON      "Refresh",IDC_BUTTON_STANDARDCALCULATE,447,133,50,14
+    PUSHBUTTON      "Calculate",IDC_BUTTON_OPTCALCULATE,447,253,50,14
+    CONTROL         "Use Standard Compression",IDC_RADIO_USESTANDARD,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,187,298,102,10
+    CONTROL         "Use Optimized Compression",IDC_RADIO_USEOPTIMIZED,
+                    "Button",BS_AUTORADIOBUTTON | WS_TABSTOP,295,298,104,10
+    COMBOBOX        IDC_COMBO_OPTIMIZEDMODE,411,296,87,30,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "Optimized Compression",IDC_STATIC,177,159,335,114
+    GROUPBOX        "Standard Compression",IDC_STATIC,177,39,335,114
+    RTEXT           "Size",IDC_SIZE_LABEL,269,56,20,8
+    RTEXT           "Time (µs)",IDC_TIME_LABEL,379,56,37,8
+    RTEXT           "Responses/sec.",IDC_RESPONSESSEC_LABEL,431,56,60,8
+    RTEXT           "Default",IDC_DEFAULT_LABEL,192,73,36,8,0,WS_EX_RIGHT
+    RTEXT           "Fastest",IDC_FASTEST_LABEL,193,92,35,8,0,WS_EX_RIGHT
+    RTEXT           "Smallest",IDC_SMALLEST_LABEL,190,111,38,8,0,WS_EX_RIGHT
+    RTEXT           "Size",IDC_OPTSIZE_LABEL,269,178,20,8
+    RTEXT           "Time (µs)",IDC_OPTTIME_LABEL,379,178,37,8
+    RTEXT           "Responses/sec.",IDC_OPTRESPONSESSEC_LABEL,431,178,60,8
+    CONTROL         "",IDC_PROGRESS_OPTIMIZE,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,358,253,80,14
+    LTEXT           "",IDC_DEFAULT_SIZE,244,73,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_FASTEST_SIZE,244,92,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_SMALLEST_SIZE,244,111,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_DEFAULT_TIME,369,73,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_FASTEST_TIME,369,92,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_SMALLEST_TIME,369,111,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_DEFAULT_RESPONSESSEC,439,73,51,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_FASTEST_RESPONSESSEC,439,92,51,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_SMALLEST_RESPONSESSEC,439,111,51,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTDEFAULT_SIZE,244,194,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTFASTEST_SIZE,244,213,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTSMALLEST_SIZE,244,232,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTDEFAULT_TIME,369,194,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTFASTEST_TIME,369,213,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTSMALLEST_TIME,369,232,43,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTDEFAULT_RESPONSESSEC,439,194,51,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTFASTEST_RESPONSESSEC,439,213,51,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTSMALLEST_RESPONSESSEC,439,232,51,8,0,WS_EX_RIGHT
+    CONTROL         "",IDC_PROGRESS_STANDARD,"msctls_progress32",NOT WS_VISIBLE | WS_BORDER,358,133,80,14
+    RTEXT           "Ratio",IDC_RATIO_LABEL,323,56,25,8
+    LTEXT           "",IDC_DEFAULT_RATIO,303,73,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_FASTEST_RATIO,303,92,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_SMALLEST_RATIO,303,111,45,8,0,WS_EX_RIGHT
+    RTEXT           "Ratio",IDC_OPTRATIO_LABEL,323,178,25,8
+    LTEXT           "",IDC_OPTDEFAULT_RATIO,303,194,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTFASTEST_RATIO,303,213,45,8,0,WS_EX_RIGHT
+    LTEXT           "",IDC_OPTSMALLEST_RATIO,303,232,45,8,0,WS_EX_RIGHT
+    RTEXT           "Default",IDC_OPTDEFAULT_LABEL,192,194,36,8,0,WS_EX_RIGHT
+    RTEXT           "Fastest",IDC_OPTFASTEST_LABEL,193,213,35,8,0,WS_EX_RIGHT
+    RTEXT           "Smallest",IDC_OPTSMALLEST_LABEL,190,232,38,8,0,WS_EX_RIGHT
+    LTEXT           "View the standard compression properties of a file and then optimize for the best possible performance. Some files can be optimized much more effectively than others.",IDC_STATIC,216,13,289,20
+    CONTROL         173,IDC_STATIC_OPTIMIZEDTIMINGSHELP,"Static",SS_BITMAP | NOT WS_VISIBLE,191,255,11,10
+    LTEXT           "For optimized timings click calculate.",IDC_STATIC_OPTIMIZEDTIMINGSHELPTEXT,210,256,115,8,NOT WS_VISIBLE
+    CONTROL         "",IDC_STATIC_HEADERTEXTBITMAP,"Static",SS_BLACKFRAME,179,8,20,20
+    GROUPBOX        "Compression Mode",IDC_STATIC,177,280,335,40
+END
+
+IDD_TOOLBAR_LOCATEIP DIALOGEX 0, 0, 269, 25
+STYLE DS_SETFONT | DS_3DLOOK | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_IPADDRESS_LOCATE,"SysIPAddress32",WS_TABSTOP,6,5,100,15
+    PUSHBUTTON      "&Locate",IDC_BUTTON_LOCATE,112,5,37,14
+    EDITTEXT        IDC_EDIT_LOCATION,156,5,100,15,ES_AUTOHSCROLL | ES_READONLY
+END
+
+IDD_DIALOG_LOCATEIP DIALOGEX 0, 0, 249, 67
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Locate IP"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_IPADDRESS_LOCATE,"SysIPAddress32",WS_TABSTOP,67,11,100,15
+    PUSHBUTTON      "&Locate",IDC_BUTTON_LOCATE,183,11,50,14
+    EDITTEXT        IDC_EDIT_LOCATION,67,38,100,15,ES_AUTOHSCROLL | ES_READONLY
+    DEFPUSHBUTTON   "&Close",IDOK,183,38,50,14
+    LTEXT           "IP Address:",IDC_STATIC,16,14,38,8
+    LTEXT           "Location:",IDC_STATIC,23,41,30,8
+END
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 235, 55
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,21,20
+    LTEXT           "IISxpress Compression Studio Version 1.0",IDC_STATIC,40,10,143,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2007",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "OK",IDOK,177,25,50,16,WS_GROUP
+END
+
+IDR_MAINFRAME DIALOGEX 0, 0, 330, 16
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "TODO: layout dialog bar ",IDC_STATIC,12,4,300,8
+END
+
+IDD_DIALOG_WEBSITESELECT DIALOGEX 0, 0, 217, 357
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_WEBSITES,2,4,159,128,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Refresh",IDC_BUTTONREFRESH,167,3,16,14,BS_ICON
+    CONTROL         "",IDC_TREE_WEBSITEDIRECTORIES,"SysTreeView32",TVS_HASBUTTONS | TVS_SHOWSELALWAYS | WS_BORDER | WS_TABSTOP,2,19,181,317
+    GROUPBOX        "",IDC_STATIC_WEBSITESELECTDLGMARGINS,0,0,185,339,NOT WS_VISIBLE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_TOOLBAR_BROWSERS, DIALOG
+    BEGIN
+        RIGHTMARGIN, 130
+        BOTTOMMARGIN, 25
+    END
+
+    IDD_DIALOG_COMPRESSIONOPTIMIZER, DIALOG
+    BEGIN
+        RIGHTMARGIN, 519
+        BOTTOMMARGIN, 348
+    END
+
+    IDD_DIALOG_LOCATEIP, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 242
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 60
+    END
+
+    IDD_DIALOG_WEBSITESELECT, DIALOG
+    BEGIN
+        BOTTOMMARGIN, 335
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_COMPASS             ICON                    "res\\compass.ico"
+IDR_MAINFRAME           ICON                    "res\\compass.ico"
+IDI_ICONREFRESH         ICON                    "res\\Refresh.ico"
+IDI_PERFORMANCE         ICON                    "res\\performance.ico"
+IDI_BLANK16             ICON                    "res\\blank16.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+IDB_BITMAP_WEBSERVER16  BITMAP                  "res\\tree_type_websrv.bmp"
+IDB_BITMAP_FOLDER16     BITMAP                  "res\\tree_type_folder.bmp"
+IDB_BITMAP_WEBDIR16     BITMAP                  "res\\tree_type_webdir.bmp"
+IDB_BITMAP_BLANK        BITMAP                  "res\\bitmap_blank.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR  16, 15
+BEGIN
+    BUTTON      ID_FILE_NEW
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_CUT
+    BUTTON      ID_EDIT_COPY
+    BUTTON      ID_EDIT_PASTE
+    SEPARATOR
+    BUTTON      ID_FILE_PRINT
+    BUTTON      ID_APP_ABOUT
+    BUTTON      ID_CONTEXT_HELP
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS 
+BEGIN
+    VK_F1,          ID_CONTEXT_HELP,        VIRTKEY, SHIFT, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F1,          ID_HELP,                VIRTKEY, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_F5,          ID_VIEW_REFRESH,        VIRTKEY, NOINVERT
+    "A",            ID_EDIT_SELECTALL,      VIRTKEY, CONTROL, NOINVERT
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""res\\IISxpressCompressionStudio.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#include ""afxprint.rc""       // printing/print preview resources\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "1 TYPELIB ""IISxpressCompressionStudio.tlb""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_IISXPRESSCOMPRESSIONSTUDIO REGISTRY                "IISxpressCompressionStudio.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+IDRDLL16.PNG            PNG                     "res\\idr_dll16.png"
+GENMIXEDMEDIADOC16.PNG  PNG                     "res\\GenMixedMediaDoc16.png"
+NETWORKGROUP16.PNG      PNG                     "res\\networkgroup16.png"
+FOLDEROPEN16.PNG        PNG                     "res\\folderopen16.png"
+IEXPLORE16.PNG          PNG                     "res\\iexplore16.png"
+HIERARCHY48.PNG         PNG                     "res\\hierarchy48.png"
+MAGNIFY48.PNG           PNG                     "res\\magnify48.png"
+CHART48.PNG             PNG                     "res\\chart48.png"
+COG48.PNG               PNG                     "res\\cog48.png"
+DOCUMENT48.PNG          PNG                     "res\\document48.png"
+WHITEBACKGROUND.PNG     PNG                     "res\\WhiteBackground.png"
+GLOBE48.PNG             PNG                     "res\\Globe48.png"
+HELP16.PNG              PNG                     "res\\help16.png"
+IEXPLORE32.PNG          PNG                     "res\\IEXPLORE32.PNG"
+FIREFOX32.PNG           PNG                     "res\\Firefox32.png"
+OPERA32.PNG             PNG                     "res\\Opera32.png"
+SAFARI32.PNG            PNG                     "res\\safari32.png"
+STAMP32.PNG             PNG                     "res\\Stamp32.png"
+DOCUMENT32.PNG          PNG                     "res\\Document32.png"
+DOCUMENTGROUP32.PNG     PNG                     "res\\DocumentGroup32.png"
+WEBDIRECTORY32.PNG      PNG                     "res\\WebDirectory32.png"
+DETAILEDGLOBE32.PNG     PNG                     "res\\DetailedGlobe32.png"
+FIGURE32.PNG            PNG                     "res\\Figure32.png"
+FIGUREGROUP32.PNG       PNG                     "res\\FigureGroup32.png"
+WEBHIERARCHY32.PNG      PNG                     "res\\WebHierarchy32.png"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDR_MAINFRAME           "IISxpress Compression Studio\n\nIISxpressCompre\n\n\nIISxpressCompressionStudio.Document\nIISxpressCompressionStudio.Document"
+    IDS_FILEVIEW_COLUMN_FILENAME "Name"
+    IDS_FILEVIEW_COLUMN_CONTENTTYPE "Content Type"
+    IDS_FILEVIEW_COLUMN_FILESIZE "File Size"
+    IDS_STATUSBAR_COMPRESSIONRATIO "Ratio:              "
+    IDS_STATUSBAR_NUMRESPONSES "Responses:                      "
+    IDS_STATUSBAR_CACHEHITS "Cache Hits:                    "
+    IDS_STATUSBAR_DATAIN    "Data In:                        "
+    IDS_STATUSBAR_DATAOUT   "Data Out:                        "
+    IDS_KB_UNITS            "KB"
+    IDS_MB_UNITS            "MB"
+    IDS_FILEVIEW_COLUMN_COMPSIZE "Comp. Size"
+    IDS_FILEVIEW_COLUMN_COMPRESPONSES "Responses"
+    IDS_FILEVIEW_COLUMN_COMPRATIO "Ratio"
+    IDS_FILEVIEW_COLUMN_ORIGSIZE "Orig. Size"
+    IDS_FILEVIEW_COLUMN_LASTDOWNLOAD "Last Download"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "IISxpress Compression Studio"
+    AFX_IDS_IDLEMESSAGE     "For Help, press F1"
+    AFX_IDS_HELPMODEMESSAGE "Select an object on which to get Help"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document\nNew"
+    ID_FILE_OPEN            "Open an existing document\nOpen"
+    ID_FILE_CLOSE           "Close the active document\nClose"
+    ID_FILE_SAVE            "Save the active document\nSave"
+    ID_FILE_SAVE_AS         "Save the active document with a new name\nSave As"
+    ID_FILE_PAGE_SETUP      "Change the printing options\nPage Setup"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options\nPrint Setup"
+    ID_FILE_PRINT           "Print the active document\nPrint"
+    ID_FILE_PRINT_PREVIEW   "Display full pages\nPrint Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program information, version number and copyright\nAbout"
+    ID_APP_EXIT             "Quit the application; prompts to save documents\nExit"
+    ID_HELP_INDEX           "Opens Help\nHelp Topics"
+    ID_HELP_FINDER          "List Help topics\nHelp Topics"
+    ID_HELP_USING           "Display instructions about how to use help\nHelp"
+    ID_CONTEXT_HELP         "Display help for clicked on buttons, menus and windows\nHelp"
+    ID_HELP                 "Display help for current task or command\nHelp"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+    ID_FILE_MRU_FILE9       "Open this document"
+    ID_FILE_MRU_FILE10      "Open this document"
+    ID_FILE_MRU_FILE11      "Open this document"
+    ID_FILE_MRU_FILE12      "Open this document"
+    ID_FILE_MRU_FILE13      "Open this document"
+    ID_FILE_MRU_FILE14      "Open this document"
+    ID_FILE_MRU_FILE15      "Open this document"
+    ID_FILE_MRU_FILE16      "Open this document"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane\nNext Pane"
+    ID_PREV_PANE            "Switch back to the previous window pane\nPrevious Pane"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WINDOW_SPLIT         "Split the active window into panes\nSplit"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection\nErase"
+    ID_EDIT_CLEAR_ALL       "Erase everything\nErase All"
+    ID_EDIT_COPY            "Copy the selection and put it on the Clipboard\nCopy"
+    ID_EDIT_CUT             "Cut the selection and put it on the Clipboard\nCut"
+    ID_EDIT_FIND            "Find the specified text\nFind"
+    ID_EDIT_PASTE           "Insert Clipboard contents\nPaste"
+    ID_EDIT_REPEAT          "Repeat the last action\nRepeat"
+    ID_EDIT_REPLACE         "Replace specific text with different text\nReplace"
+    ID_EDIT_SELECT_ALL      "Select the entire document\nSelect All"
+    ID_EDIT_UNDO            "Undo the last action\nUndo"
+    ID_EDIT_REDO            "Redo the previously undone action\nRedo"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar\nToggle ToolBar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle StatusBar"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+END
+
+STRINGTABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode\nCancel Preview"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_HISTORYVIEW_COLUMN_URI "URI"
+    IDS_HISTORYVIEW_COLUMN_TIME "Time"
+    IDS_HISTORYVIEW_COLUMN_ORIGSIZE "Orig. Size"
+    IDS_HISTORYVIEW_COLUMN_COMPSIZE "Comp. Size"
+    IDS_HISTORYVIEW_COLUMN_RATIO "Ratio"
+    IDS_HISTORYVIEW_COLUMN_HOSTNAME "Hostname"
+    IDS_HISTORYVIEW_COLUMN_CLIENTIP "Client IP"
+    IDS_HISTORYVIEW_COLUMN_CONTENTTYPE "Content Type"
+    IDS_HISTORYVIEW_COLUMN_BROWSER "Browser"
+    IDS_HISTORYVIEW_COLUMN_LOCATION "Location"
+    IDS_ERROR_CSVFILEWRITE  "An error occured while writing to the file '%s'."
+    IDS_CSVFILEFILTER       "CSV Files (*.csv)|*.csv|All Files (*.*)|*.*||"
+    IDS_EXCLUSIONRULEALREADYPRESENT 
+                            "The exclusion rule has already been specified and will not be added again."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERRORADDINGEXCLUSIONRULE 
+                            "There was an error adding the exclusion rule."
+    IDS_EXTENSIONEXCLUSIONADDED 
+                            "The extension exclusion rule '%s' has been added."
+    IDS_CONTENTTYPEEXCLUSIONADDED 
+                            "The content type exclusion rule '%s' has been added."
+    IDS_URIEXCLUSIONRULEADDED "The URI exclusion rule '%s' has been added."
+    IDS_IPEXCLUSIONRULEADDED 
+                            "The IP address exclusion rule '%s' has been added."
+    IDS_HISTORYVIEW_COLUMN_CACHED "Cached"
+    IDS_CACHESTATUS_YES     "Yes"
+    IDS_CACHESTATUS_NO      "No"
+    IDS_HISTORYVIEW_COLUMN_USERAGENT "User Agent"
+    IDS_HISTORYVIEW_COLUMN_QUERYSTRING "Query String"
+    IDS_HISTORYVIEW_COLUMN_PORT "Port"
+    IDS_HISTORYVIEW_COLUMN_COMPTIME "Comp. Time"
+    IDS_ERRORFILECOMPRESSIONRULE 
+                            "There was an error setting the compression rule for this file."
+    IDS_FILEVIEW_COLUMN_COMPRESS "Compress"
+    IDS_COMPRESSSTATE_AUTO  "Auto"
+END
+
+STRINGTABLE 
+BEGIN
+    ID_WEBDIRCONTEXT_EXPLOREFOLDER "Open an Explorer window"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_COMPRESSSTATE_ALWAYS "Always"
+    IDS_COMPRESSSTATE_NEVER "Never"
+    IDS_ERROR_LAUNCHINGBROWSER 
+                            "There was an error launching the browser application."
+    IDS_OPTIMIZEBUTTON_REFRESH "Refresh"
+    IDS_OPTIMIZEBUTTON_CALCULATE "Calculate"
+    IDS_TOOLBARTITLE_BROWSERS "Browsers"
+    IDS_TOOLBARTITLE_LOCATE "Locate IP"
+    IDS_TOOLBARTITLE_EXCLUSIONRULES "Exclusion Rules"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_CUSTOMCOMPMODE_DEFAULT "Default"
+    IDS_CUSTOMCOMPMODE_FASTEST "Fastest"
+    IDS_CUSTOMCOMPMODE_SMALLEST "Smallest"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_BUTTON_TOOLBAR_IE   "Launch Internet Explorer"
+    IDC_BUTTON_TOOLBAR_FIREFOX "Launch Firefox"
+    IDC_BUTTON_TOOLBAR_OPERA "Launch Opera"
+    IDC_BUTTON_TOOLBAR_SAFARI "Launch Safari"
+    IDC_BUTTON_TOOLBAR_EXCLUDEDIR "Exclude Directory"
+    IDC_BUTTON_TOOLBAR_EXCLUDEDIRTREE "Exclude Directory Tree"
+    IDC_BUTTON_TOOLBAR_EXCLUDEWEBSITE "Exclude Web Site"
+    IDC_BUTTON_TOOLBAR_EXCLUDECLIENTIP "Exclude IP Address"
+    IDC_BUTTON_TOOLBAR_EXCLUDENETWORK "Exclude Network"
+    IDC_BUTTON_TOOLBAR_EXCLUDEEXTN "Exclude Extension"
+    IDC_BUTTON_TOOLBAR_EXCLUDECT "Exclude Content Type"
+    IDC_BUTTON_TOOLBAR_EXCLUDECT_MATCH "Exclude Matching Content Types"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_IPADDRESS_LOCATE    "IP Address"
+    IDC_BUTTON_LOCATE       "Click to Locate the IP Address"
+    IDC_EDIT_LOCATION       "Location of the IP Address"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#include "res\IISxpressCompressionStudio.rc2"  // non-Microsoft Visual C++ edited resources
+#include "afxres.rc"         // Standard components
+#include "afxprint.rc"       // printing/print preview resources
+#endif
+
+1 TYPELIB "IISxpressCompressionStudio.tlb"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

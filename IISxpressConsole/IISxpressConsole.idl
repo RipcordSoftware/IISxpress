@@ -1,0 +1,20 @@
+import "oaidl.idl";
+import "ocidl.idl";
+
+[	
+	uuid(67BB5C5A-2481-4708-978D-8F6A4FAA83B3),
+	version(1.0),
+	helpstring("IISxpressConsole 1.0 Type Library")
+]
+library IISxpressConsoleLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(A1DF7769-43FE-4b96-8557-438CC036E8CF),
+		helpstring("IISxpressConsoleNotify Class")
+	]
+	coclass IISxpressConsoleNotify
+	{
+		[default] interface IUnknown;
+	};
+};

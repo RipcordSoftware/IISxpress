@@ -1,0 +1,158 @@
+[OPTIONS]
+Title=IISxpress Help
+Auto Index=Yes
+Compatibility=1.1 or later
+Compiled file=IISxpressTray.chm
+Contents file=IISxpressTray.hhc
+Default topic=HIDD_ROOT_DIALOG.HTM
+Display compile progress=No
+Full-text search=Yes
+Index file=IISxpressTray.hhk
+Language=0x409 English (United States)
+
+
+[FILES]
+HIDD_ROOT_DIALOG.HTM
+HIDD_PAGE_GENERAL.HTM
+HIDD_PAGE_HISTORY.HTM
+HIDD_PAGE_EXCLUSIONS.HTM
+HIDD_PAGE_EXTENSION_EXCLUSIONS.HTM
+HIDD_PAGE_CONTENTTYPE_EXCLUSIONS.HTM
+HIDD_PAGE_FOLDER_EXCLUSIONS.HTM
+HIDD_PAGE_NETWORK_EXCLUSIONS.HTM
+HIDD_PAGE_CONFIG.HTM
+HIDD_PAGE_SYSTEM.HTM
+compression_faq.htm
+default.css
+iisxpress_filter.htm
+iisxpress_server.htm
+logging_output.htm
+legal.htm
+iisxpress_tray.htm
+register_product.htm
+contact_us.htm
+ExtnWizard.htm
+ContentTypeWizard.htm
+config_backup.htm
+blank_configuration.htm
+client_compatibility.htm
+exclusion_rules_overview.htm
+monitoring_performance.htm
+exclude_by_extension.htm
+exclude_by_contenttype.htm
+exclude_by_uri.htm
+exclude_by_ipaddress.htm
+configure_compression_mode.htm
+ExtnWizardManualMode.htm
+ExtnWizardSearchMode.htm
+ConsoleOverview.htm
+configure_general.htm
+configure_cache.htm
+configure_advanced.htm
+compression_cache.htm
+processor_workload.htm
+iisxpress_module7.htm
+PerfCounters.htm
+exclude_by_useragent.htm
+PageUtils.js
+images\compass_64_24_cornflowerblue.png
+images\arrow_in_circle.png
+images\three_arrows.png
+images\service_manager.png
+images\activity_panel.png
+images\compression_comparison.png
+images\configuration_tab.PNG
+images\configuration_tab_cache.PNG
+images\configuration_tab_advanced.PNG
+images\excluded_contenttypes_panel.png
+images\excluded_networks_panel.png
+images\excluded_uris_panel.png
+images\exclusion_tab_contenttypes.PNG
+images\exclusion_tab_extensions.PNG
+images\exclusion_tab_folders.PNG
+images\exclusion_tab_networks.PNG
+images\extn_exclusion_wizard.png
+images\finger_pointing.png
+images\general_tab.PNG
+images\history_panel.png
+images\history_tab.png
+images\iisadmin_filterdlg.PNG
+images\iisxpress_system_panel.png
+images\system_tab.PNG
+images\ExtnWizardManualSelect.png
+images\ExtnWizardManualConfirm.png
+images\ExtnWizardSelectSearchedExtns.png
+images\ExtnWizardSelectWebSite.png
+images\IISxpressNativeModule_AdminTool.png
+images\cache_miss.png
+images\cache_hit.png
+images\processor_workload_allcores.png
+images\processor_workload_twocores.png
+images\32px-Adobe_Flash_9.png
+images\64px-Adobe_Flash_9.png
+images\PerfCounters.png
+images\AddPerfCounters.png
+images\logdir_perms.png
+images\exclusion_tab_useragents.png
+images\AddUserAgentRule.png
+
+Tutorials\IISxpress - History Exclude.html
+Tutorials\IISxpress - History Exclude - Simple.swf
+Tutorials\IISxpress - History Exclude - Simple_skin.swf
+
+Tutorials\Exclude Extensions - Manual.html
+Tutorials\IISxpress - Exclude Extensions - Manual.swf
+Tutorials\IISxpress - Exclude Extensions - Manual_skin.swf
+
+Tutorials\Exclude Extensions - Search.html
+Tutorials\IISxpress - Exclude Extensions - Search.swf
+Tutorials\IISxpress - Exclude Extensions - Search_skin.swf
+
+Tutorials\IISxpress - Exclude Content Types - Search.html
+Tutorials\IISxpress - Exclude Content Types - Search.swf
+Tutorials\IISxpress - Exclude Content Types - Search_skin.swf
+
+Tutorials\IISxpress - Exclude Content Types - Manual.html
+Tutorials\IISxpress - Exclude Content Types - Manual.swf
+Tutorials\IISxpress - Exclude Content Types - Manual_skin.swf
+
+Tutorials\IISxpress - Exclude URIs.html
+Tutorials\IISxpress - Exclude URIs.swf
+Tutorials\IISxpress - Exclude URIs_skin.swf
+
+[ALIAS]
+HIDD_IISXPRESSTRAY_DIALOG = HIDD_ROOT_DIALOG.htm
+HIDD_PAGE_GENERAL = HIDD_PAGE_GENERAL.htm
+HIDD_PAGE_HISTORY = HIDD_PAGE_HISTORY.htm
+HIDD_PAGE_EXCLUSIONS = HIDD_PAGE_EXCLUSIONS.htm
+HIDD_DIALOG_EXCLUDEEXTENSIONS = HIDD_PAGE_EXTENSION_EXCLUSIONS.htm
+HIDD_DIALOG_EXCLUDECONTENTTYPES = HIDD_PAGE_CONTENTTYPE_EXCLUSIONS.htm
+HIDD_DIALOG_EXCLUDEFOLDERS = HIDD_PAGE_FOLDER_EXCLUSIONS.htm
+HIDD_DIALOG_EXCLUDENETWORK = HIDD_PAGE_NETWORK_EXCLUSIONS.htm
+HIDD_PAGE_ABOUT = register_product.htm
+HIDD_PAGE_CONFIG = HIDD_PAGE_CONFIG.htm
+HIDD_PAGE_SYSTEM = HIDD_PAGE_SYSTEM.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_WELCOME = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_MANUALADD = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_WEBSITESEL = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_SEARCH = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_SELECTCONTENTTYPE = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_CONFIRM = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDCONTENTTYPE_FINISH = ContentTypeWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_WELCOME = ExtnWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_MANUALADD = ExtnWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_AUTOADD_WEBSITESEL = ExtnWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_AUTOADD_SELECTEXTN = ExtnWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_CONFIRM = ExtnWizard.htm
+HIDD_WIZARDPAGE_ADDEXTN_FINISH = ExtnWizard.htm
+HIDD_DIALOG_EXCLUDEUSERAGENTS = exclude_by_useragent.htm
+HIDD_DIALOG_ADDUSERAGENTRULE = exclude_by_useragent.htm
+
+[MAP]
+#include HTMLDefines.h
+
+[TEXT POPUPS]
+HTMLDefines.h
+
+[INFOTYPES]
+

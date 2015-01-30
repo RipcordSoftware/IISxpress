@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+    <PARAM NAME="Keyword" VALUE="Advanced">	
+	<PARAM NAME="Keyword" VALUE="Processor Workload Model">	
+	<PARAM NAME="Keyword" VALUE="Processor Workload">	
+	<PARAM NAME="Keyword" VALUE="Logging">	
+	<PARAM NAME="Keyword" VALUE="Troubleshooting">	
+	<PARAM NAME="Keyword" VALUE="Repair">		
+</OBJECT>
+
+<script language="javascript">PageHeader("Configuration - Advanced");</script>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/configuration_tab_advanced.png"/>
+</div>
+
+<div class="paragraphheading">Processor Workload Model</div>
+
+<p>
+If your system has more than one CPU or CPU core then IISxpress will attempt to divide the compression
+workload evenly between them. You can select from three Workload Models: <b>Automatic</b>, <b>Manual</b>
+or <b>None</b>.
+</p>
+
+<p>
+When <b>Automatic</b> is specified each response is allocated to a CPU or CPU core. Each core will concentrate
+solely on compressing its allocated responses. Therefore performance is increased by increasing the number or
+available CPU cores. In an eight core system eight responses can be compressed independantly and simulaneously.
+</p>
+
+<p>
+To control which CPU cores are used by IISxpress for compression tasks select <b>Manual</b>. In this mode you
+can specify which CPU cores can be used by compression; the checked cores are used, the unchecked ones are not.
+The unused cores can therefore be dedicated to non-compression tasks like a relational database or background
+processing.
+</p>
+
+<p>
+When <b>None</b> is selected the operating system will decide how to schedule the IISxpress compression tasks
+across the available CPU cores.
+</p>
+
+<div class="paragraphheading">Logging</div>
+
+<p>
+The logging level option allows you to specify a logging output level for the IISxpress Filter and Server. This option is 
+mainly for diagnostic purposes since it will have a performance impact on your web server. The default level is <b>None</b>, 
+the options are <b>Basic</b>, <b>Enhanced</b> and <b>Full</b>. The log files will be created in the <b>Logs</b> folder under 
+the main IISxpress installation folder.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+If you run IISxpress on Windows 2003 then the filter logging will NOT work unless the NETWORK SERVICE account has permission 
+to write to the log directory. If you have created application pools with custom identities then those identity accounts 
+will also need permission to write to the log directory.
+</p>
+
+<span style="clear:both;"></span>
+
+<br/>
+<div class="paragraphheading">Troubleshooting</div>
+
+<p>
+If you re-install IIS or install another IIS plugin you may encounter problems with IISxpress. This 
+would most likely be because the ISAPI filter configuration has been changed, clicking the 
+<b>Repair...</b> button will reset the filter settings in IIS to the default configuration. 
+</p>
+
+<br/>
+<span class="seealso">See also</span><br>
+<a href="processor_workload.htm">Processor Workload Model</a><br>
+<a href="logging_output.htm">IISxpress Log Files</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

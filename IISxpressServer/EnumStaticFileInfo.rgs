@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.EnumStaticFileInfo.1 = s 'EnumStaticFileInfo Class'
+	{
+		CLSID = s '{1A291EBF-8B9C-4986-9389-D08073ACF75C}'
+	}
+	IISxpressServer.EnumStaticFileInfo = s 'EnumStaticFileInfo Class'
+	{
+		CLSID = s '{1A291EBF-8B9C-4986-9389-D08073ACF75C}'
+		CurVer = s 'IISxpressServer.EnumStaticFileInfo.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {1A291EBF-8B9C-4986-9389-D08073ACF75C} = s 'EnumStaticFileInfo Class'
+		{
+			ProgID = s 'IISxpressServer.EnumStaticFileInfo.1'
+			VersionIndependentProgID = s 'IISxpressServer.EnumStaticFileInfo'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

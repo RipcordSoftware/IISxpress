@@ -1,0 +1,140 @@
+body
+{
+	background-color: white; 
+	color: black; 
+	font-size: 12pt;
+}
+
+p
+{
+	text-align: justify;
+}
+
+hr
+{
+	color: gray;
+	height: 1px;
+}
+
+a
+{
+	color: #0000c0;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a:hover
+{
+	color: #0000c0;
+	font-style: normal;
+	font-weight: bold;
+	text-decoration: underline;
+}
+
+.mypageheader 
+{ 
+	/* background-color: cornflowerblue; */
+	background-color: #6495ED;
+	color: white; 
+	font-family: Trebuchet MS;
+	font-weight: bold; 
+	font-size: 24px;
+	padding-top: 6px; 
+	padding-bottom: 6px;
+	padding-left: 6px;	
+}
+
+.mytable 
+{ 
+	border: 1px; 
+	border-style: solid; 
+	border-color: black; 
+	font-size: 16pt; 
+}
+
+.myhiddentable 
+{ 
+	border-style: none;	
+	font-size: 16pt; 
+}
+
+.tableheading 
+{ 
+	color: white; 
+	background-color: gray; 
+	font-weight: bold; 
+}
+
+.copyright 
+{ 
+	color: gray; 
+	font-size: 8pt; 
+}
+
+.seealso
+{
+	color: Teal;
+	font-weight: bold;
+	font-size: 12pt;
+	background-image: url(\images\three_arrows.png);
+	background-repeat: no-repeat;
+	padding-left: 24px;
+	vertical-align: middle;
+}
+
+.paragraphheading
+{
+	font-family: Verdana;
+	font-size: 12pt;	
+	font-weight: bolder;
+	padding-top: 4px;
+	padding-bottom: 4px;	
+	background-image: url(\images\arrow_in_circle.png); 
+	background-repeat: no-repeat; 
+	padding-left: 32px;
+	background-color: #f3f3f3; 
+	vertical-align: middle;
+	height: 28px;
+}
+
+ul.squareitem
+{
+	list-style-position: outside; 
+	list-style-type: square; 
+	font-size: 14px;
+	margin-top: 0.2em;
+	margin-left: 24px;
+	text-align: justify;
+}
+
+.question
+{
+	font-weight: bold;
+}
+
+a.highlightbar, a.highlightbar:hover, a.tutorialhighlightbar, a.tutorialhighlightbar:hover
+{
+	padding-top: 6px;
+	padding-bottom: 6px;
+	padding-left: 10px;
+	padding-right: 10px;	
+	display: block;
+	background-color: #ece45c;
+	color: #282880;		
+	text-decoration: none;
+	font-family: Trebuchet MS;
+	font-style: italic;
+	font-size: 13px;	
+	border-style: dotted;
+	border-color: Black;
+	border-width: 1px;
+}
+
+a.tutorialhighlightbar, a.tutorialhighlightbar:hover
+{	
+	padding-left: 40px;	
+	background-image: url(\images\32px-Adobe_Flash_9.png); 	
+	background-repeat: no-repeat; 	
+	background-position: center left;
+}

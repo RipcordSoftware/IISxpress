@@ -1,0 +1,125 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css" />
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="History tab">
+	<PARAM NAME="Keyword" VALUE="History">
+	<PARAM NAME="Keyword" VALUE="Activity history">
+	<PARAM NAME="Keyword" VALUE="Compression history">
+	<PARAM NAME="Keyword" VALUE="Browser identification">
+	<PARAM NAME="Keyword" VALUE="User Agent">
+	<PARAM NAME="Keyword" VALUE="Content type">
+	<PARAM NAME="Keyword" VALUE="MIME type">
+	<PARAM NAME="Keyword" VALUE="URI">
+	<PARAM NAME="Keyword" VALUE="Query string">
+	<PARAM NAME="Keyword" VALUE="Hostname">
+	<PARAM NAME="Keyword" VALUE="Client IP">
+	<PARAM NAME="Keyword" VALUE="Client identification">
+	<PARAM NAME="Keyword" VALUE="Auto scroll">
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Status Window - History Tab");</script>
+		
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - History Exclude.html">
+See how to add exclusion rules from this window. Click here to view the tutorial.
+</a><br />		
+		
+<p>
+The history tab gives a detailed view of the recent compression history.
+</p>
+
+<div style="float: right; padding-left: 16px; padding-top: 8px;">
+<img src="images/history_tab.png"/>
+</div>
+
+<div class="paragraphheading">Compression History</div>
+<p>
+The compression history window shows the recent compression activity recorded by IISxpress. 
+This window displays the time the response was compressed, the URI used by the client browser,
+the original size of the response, the compressed size and the compression ratio achieved.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+The text is colored blue in the history window if the response was served from the
+compression cache.
+</p>
+
+<p>
+If you select an item from the list the detail area at the bottom of the window will show more 
+information about the request and the response. If you then right click on an item in the control
+a context menu will be displayed:
+</p>
+
+<img src="images/history_panel_contextmenu.png" />
+
+<p>
+From this menu you can clear the history window, control the scrolling behavior and add exclusion
+rules based on the item selected. The supported rules are:
+</p>
+
+<ul class="squareitem">
+<li>Exclude this Extension - exclude the extension of the currently selected item.</li>
+<li>Exclude this Content Type - exclude the content type of the currently selected item.</li>
+<li>Exclude Matching Content Types - exclude the content type family of the currently selected item. For example, if the item content type is <i>image/jpg</i> the added rule will be <i>image/*</i>.</li>
+<li>Exclude this Direcory - exclude the selected item's directory.</li>
+<li>Exclude this Direcory Tree - exclude the selected item's directory and all its sub-directories.</li>
+<li>Exclude this Web Site - exclude the web site where the selected item is located.</li>
+<li>Exclude this Client IP - exclude the IP address of the client.</li>
+<li>Exclude this Client Subnet - exclude the subnet where the client is located. If the client IP address is <i>192.168.2.22</i> then the subnet will be treated as <i>192.168.2</i>.</li>
+</ul>
+
+<div class="paragraphheading">Details</div>
+
+<p>
+The <b>Details</b> area shows extended information about a client browser request and the 
+compressed response. When you select an item from the activity history list the URI, query string, 
+hostname, client IP address, content type and browser type are displayed. For more information on the 
+browser type string see the following section.
+</p>
+
+<p>
+<img src="images/finger_pointing.png" />
+If the details information overflows its screen area hover the mouse over it to request a tooltip
+display the entire string.
+</p>
+
+<span style="clear: both;"></span>
+
+<br/>
+<div class="paragraphheading">Browser Identification</div>
+
+<p>
+IISxpress will try and identify the client browser by analysing the <b>User-Agent</b> string it passes to IIS 
+in the HTTP request. Currently IISxpress recognises the following browsers:
+</p>
+
+<ul class="squareitem">
+
+<li>Internet Explorer 8.0, 7.0, 6.0, 5.5, 5 and 4. Earlier versions will be identified as MSIE.</li>
+<li>Firefox 2.0, 1.5 and 1.0.x. Earlier versions will be identified as Firefox.</li>
+<li>Mozilla 1.7.x and numerous earlier versions.</li>
+<li>SeaMonkey 1.1 and 1.0.</li>
+<li>Netscape 9, 8, 7 and 6. Earlier versions will be identified as Netscape.</li>
+<li>Opera 9.0, 8.5, 8.0, 7 and 6. Earlier versions will be identified as Opera.</li>
+<li>Safari 3.0, 2.0, 1.3, 1.2 and 1.0.</li>
+
+</ul>
+
+<p>
+If IISxpress cannot identify the browser it will display the <b>User-Agent</b> string as it was sent by 
+the client browser.
+</p>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

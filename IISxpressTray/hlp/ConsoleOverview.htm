@@ -1,0 +1,72 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<TITLE></TITLE>
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="console">
+	<PARAM NAME="Keyword" VALUE="command line">		
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Console");</script>
+
+<p class="paragraphheading">Overview</p>
+
+<p>
+The IISxpress Console application is a command line tool which can be found in the IISxpress installation 
+directory on our hard disk. This tool allows access to much the same functionality as the Status Window 
+tool: you can add rules, monitor activity, enable or disable the ISAPI filter and change the compression mode.
+The following section outlines the command line parameters.
+</p>
+
+<p class="paragraphheading">Command Line Arguments</p>
+
+<table class="border-style: none;">
+<tr>
+<td>add [extn | ct | uri | ip | file]</td>
+<td style="width: 40px;"></td>
+<td>Add an extension, content type, URI, IP or file exclusion rule.</td>
+</tr>
+<tr>
+<td>remove [extn | ct | uri | ip | file]</td>
+<td></td>
+<td>Remove an extension, content type, URI, IP or file exclusion rule.</td>
+</tr>
+<tr>
+<td>list [extn | ct | uri | ip | file]</td>
+<td></td>
+<td>List extension, content type, URI, IP or file rules.</td>
+</tr>
+<tr>
+<td>filter [enable | disable]</td>
+<td></td>
+<td>Enable or disable the ISAPI filter.</td>
+</tr>
+<tr>
+<td>compmode [default | speed | size]</td>
+<td></td>
+<td>Query or set the compression mode.</td>
+</tr>
+<tr>
+<td>monitor</td>
+<td></td>
+<td>Monitor IISxpress compression activity.</td>
+</tr>
+</table>
+
+<p>
+For more information on the above command line arguments consult the help provided by the console tool.
+For example: <i>IISxpress help add</i> will give detailed help on the add function.
+</p>
+
+<img src="/images/console_add_help.png" />
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

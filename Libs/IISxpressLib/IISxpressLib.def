@@ -1,0 +1,6 @@
+; IISxpressLib.def : Declares the module parameters for the DLL.
+
+LIBRARY      "IISxpressLib"
+
+EXPORTS
+    ; Explicit exports can go here

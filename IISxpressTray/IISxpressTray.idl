@@ -1,0 +1,34 @@
+// IISxpressTray.idl : IDL source for IISxpressTray
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IISxpressTray.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(02E738CE-9999-425F-87B1-7DC9BB199D8A),
+	helpstring("IHTTPNotify Interface"),
+	pointer_default(unique)
+]
+interface IHTTPNotify : IUnknown{
+};
+[
+	uuid(86823619-FFF4-4CAD-8714-71BAC0BE47DE),
+	version(1.0),
+	helpstring("IISxpressTray 1.0 Type Library")
+]
+library IISxpressTrayLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(4D9F3A14-338B-4C20-8CDD-915DE994057F),
+		helpstring("HTTPNotify Class")
+	]
+	coclass HTTPNotify
+	{
+		[default] interface IHTTPNotify;
+	};
+};

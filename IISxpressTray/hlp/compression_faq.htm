@@ -1,0 +1,256 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<span style="display: none;">
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="FAQ">
+	<PARAM NAME="Keyword" VALUE="Compression FAQ">	
+	<param name="keyword" value="Versions">
+	<param name="keyword" value="Windows versions">
+	<param name="keyword" value="IIS versions">
+	<param name="keyword" value="Registry">
+	<param name="keyword" value="Compression mode">
+	<param name="keyword" value="Compress localhost">
+	<param name="keyword" value="Compression ratios">
+	<param name="keyword" value="deflate">
+	<param name="keyword" value="GZIP">
+	<param name="keyword" value="BZIP2">	
+</OBJECT>
+</span>
+
+<script language="javascript">PageHeader("Compression FAQ");</script>
+
+<p class="paragraphheading">Basics</p>
+
+<div class="question">Why do I need IISxpress?</div>
+<div>The data sent by your web server to your users is probably not compressed. This means the original file 
+will be sent without any attempt to reduce it's size. Many file types can be compressed very effectively, 
+sometimes to as much as 10% of their original size. This means that a 1MB file in compressed form will occupy 
+the same space as a 100KB file. The effect of this is to reduce the amount of bandwidth used by your web server 
+and also to reduce the download time experienced by your users.<br><br>
+Most common web content files will compress to between 50% and 25% (2:1 and 4:1) of their original size.</div><br>
+
+<div class="question">Does IIS already compress my web site?</div>
+<div>
+Server versions of IIS support basic compression functionality. Workstation versions do not support compression. 
+Compression is not enabled as default when IIS is installed, you need to switch it on via the Administration tool. 
+There is no user interface for fine tuning your configuration or monitoring effectiveness.
+</div><br/>
+
+<div class="question">How does compression work?</div>
+<div>Data compression is a well established technology which can reduce the size of a file by a significant margin 
+without losing any of the original data. The compression mechanism looks for repeated patterns in the source file 
+and removes the unnecessary data from the file. IISxpress uses the ZLIB and GZIP 'deflate' algorithm as specified in the 
+HTTP/1.0 and HTTP/1.1 standards for maximum compatibility and performance.</div><br>
+
+<div class="question">What versions of IIS does IISxpress support?</div>
+<div>IISxpress supports IIS versions 5.1 and above. This effectively means Windows XP Professional, Windows 2003, Windows Vista 
+and Windows 2008 are supported.</div><br>
+
+<div class="question">What versions of Windows does IISxpress support?</div>
+<div>IISxpress supports Windows XP Professional, Windows 2003, Windows Vista and Windows 2008.</div><br>
+
+<div class="question">Is compressing web site data a hack?</div>
+<div>No, compression is included in the HTTP/1.0 and HTTP/1.1 standards for transfer of web site data. Almost all client 
+browsers support compressed responses, even if they don't they will still operate since IISxpress will not send 
+compressed responses to clients which can't or won't accept it.</div><br>
+
+<div class="question">What will I gain by compressing my web sites?</div>
+<div>
+Your users will notice your web site being more responsive because less data is being transferred to them, also 
+your bandwidth usage will be reduced allowing you to serve more users simultaneously. However there is a price to 
+pay, normally your web server will not use much CPU time (unless you have a lot of intensive ASP, ASP.NET or CGI 
+running), with compression enabled your CPU will take more of the strain.
+</div><br>
+
+<div class="question">How can I tell that IISxpress will make my web site run faster?</div>
+<div>
+To get an idea of how well your web site will compress use a program like GZIP or WINZIP to compress the 
+files in your web site's directories. This will give you a fairly accurate idea of what kind of gains you 
+are likely to get. Alternately, once IISxpress is installed, you can use a tool like 
+<a href="http://www.fiddlertool.com" target="_blank">Fiddler</a> or <a href="http://www.webload.org/" target="_blank">WebLoad</a> 
+to profile the responsiveness of your server and the size of the pages being downloaded by your users. 
+</div><br>
+
+<div class="question">I've installed IISxpress and nothing is being compressed, what could be the problem?</div>
+<div>
+There are a number of possible reasons for this. You may have exclusion rules which are preventing 
+the responses from being compressed, try running with a <a href="blank_configuration.htm">clean configuration</a>.
+If that is unsuccessful try switching on <a href="logging_output.htm">filter logging</a> and view the 
+resulting log files. If there is no request/response activity data in the log file then the ISAPI filter has not 
+been installed correctly, try using the <a href="HIDD_PAGE_CONFIG.htm">Repair</a> option in the IISxpress Status Window.
+If you contine to experience problems then please contact Technical Support for assistence.
+</div><br/>
+
+<p class="paragraphheading">Client Compatibility</p>
+
+<div class="question">What browsers does IISxpress support?</div>
+<div>
+IISxpress has been tested with today's most popular browsers, the list includes Internet Explorer 
+(5, 6, and 7), Opera (7, 8 and 9), Mozilla (1.x), Firefox (1, 2 and 3), Safari (1, 2 and 3) and Google Chrome.
+</div><br/>
+
+<div class="question">Will my site users have to install any special software?</div>
+<div>No, all popular browsers support compression out of the box. Your users will not have to change anything. Older 
+client browsers will not require special treatment since IISxpress recognises them and does not send them compressed 
+responses.</div><br>
+
+<p class="paragraphheading">IIS Compatibility</p>
+
+<div class="question">Is IISxpress compatible with Perl, ASP, ASP.NET, JSP, etc.?</div>
+<div>Yes, essentially IISxpress does not care if the content of the response is static or dynamic. If, however the 
+response already has transfer encoding or content encoding IISxpress will not attempt compression. If you are 
+not sure look in the IISxpress Status window's 'History' tab while you are running a browser session to see what is going on.</div><br>
+
+<div class="question">Is IISxpress compatible with IIS's built in compression?</div>
+<div>We recommend that you switch off the build in IIS compression. The IISxpress installer will do this for you.</div><br>
+
+<div class="question">Is IISxpress compatible with 32 bit and 64 bit versions of IIS?</div>
+<div>Yes, but you need to know what mode IIS is running in first. On 32 bit operating systems you should only install the 32 bit version of IISxpress. On
+64 bit versions of Windows you need to know which mode your IIS installation is configured to use. If it is running in 32 bit mode then you should use the
+32 bit version of IISxpress, if it is running in 64 bit mode then you should install the 64 bit version. If you change the 'bitness' of your IIS installation
+after installing IISxpress then you will need to uninstall IISxpress and install the other version for it to function properly again.
+</div>
+
+<p class="paragraphheading">Compression Performance</p>
+
+<div class="question">What kind of files will compress well and which ones won't?</div>
+<div>In general text files compress best since they repeat the same information over and over allowing the compression 
+algorithm the greatest gains. Fortunately HTML and associated web site files fall into this category, so in 
+general there are good gains to be had. Image files with JPG, GIF, PNG, etc. extensions are already compressed 
+so there is no gain in compressing them again. Also MP3 audio and MPEG video files will not compress well for the 
+same reason.</div><br>
+
+<div class="question">What kind of compression ratio will I get with....?</div>
+<ul class="squareitem">
+<li>Text files (like HTML, TXT and Microsoft Word documents): you should see a ratio of the order of 2:1 to 4:1 (50% to 25%).</li>
+<li>XML files: you can expect ratios between 4:1 to 10:1 (25% to 10%).</li>  
+<li>Pre-compressed files: it is unlikely you will get any gain at all. These will be files like JPG, GIF, PNG, 
+MP3, AVI, etc. The best way to find out is to try compressing the file with WINZIP or GZIP, or better still 
+install IISxpress and look in the 'History' window to see how successful it has been.</li>
+</ul>
+
+<div class="question">Does IISxpress cache the compressed data so that it doesn't have to compress it each time?</div>
+<div>
+Starting with version 2.1 IISxpress will cache compressed responses. Only static content will be cached, this includes HTML, 
+text, CSS, JS and many other static file types. Responses created dynamically, for example by ASP.NET, ASP and CGI, will not 
+be cached. 
+</div><br />
+
+<div class="question">What compression algorithms does IISxpress support?</div>
+<div>
+IISxpress supports the HTTP standard deflate and GZIP algorithms, in addition we have added support for BZIP2 which is a high
+performing compression technique which usually yields smaller file sizes than deflate/GZIP. When IISxpress handles a request
+from a client it can determine which compression algorithm the client supports and selects the most appropriate.
+</div>
+
+<p class="paragraphheading">Controlling and Monitoring</p>
+
+<div class="question">How do I see what IISxpress is doing?</div>
+<div>The IISxpress Status window is the place to see what IISxpress is doing. Here you can see the overall compression 
+ratio, the individual file compression histories, the recent CPU usage and also configure IISxpress. IISxpress also maintains a set of
+performance counters which you can access via the standard Windows Performance Monitor tool. To open the tool from the Windows run
+dialog (or a command prompt) type <i>perfmon</i>. Now click the + button on the toolbar (or press ctrl-i) and then select the IISxpress 
+counter set from the list. IISxpress maintains a comprehensive set of counters you can use the monitor the performance of your web site.</div><br>
+
+<div class="question">Can I configure IISxpress to only compress data from certain web sites in my IIS configuration?</div>
+<div>
+Yes, IISxpress defaults to compressing everything, so you have to exclude the URIs you don't want. This is 
+done via the IISxpress Status window, select 'Exclusions' and then 'URIs'. Select the '/' item in the control, 
+right click and select 'Branch' from the menu. All the items in the tree should now show in red, this means 
+they are excluded.
+</div><br/>
+
+<div class="question">How do I see what amount of memory IISxpress is using?</div>
+<div>The 'System' tab of the IISxpress Status window shows the amount of memory used by both IISxpress and IIS.</div><br>
+
+<div class="question">How do I see what CPU load IISxpress is using?</div>
+<div>The 'System' tab of the IISxpress Status window shows the amount of CPU used by both IISxpress and IIS.</div><BR>
+
+<div class="question">Why do I have to configure all these extensions and content types?</div>
+<div>Hopefully you won't have to worry much about configuration unless you run into problems. The most likely issue 
+you will encounter is browsers not supporting a certain response type with compression enabled. A common problem 
+area is compressed PDF (Adobe) file responses, the default for IISxpress is to not compress PDF files. This is a problem 
+with the browser and not IISxpress. Under these circumstances you can exclude the file by extension, content (MIME) 
+type or by excluding the URI where it is located. When the file is excluded IISxpress will no longer compress it.</div><br>
+
+<div class="question">How do I stop IISxpress compressing a file of type...?</div>
+<div>IISxpress supports excluding a file by extension, content (MIME) type or URI. For example to exclude all 
+ZIP files from being compressed add ZIP to the excluded extensions list on the 'Exclusions' tab in the IISxpress 
+Status window.</div><br>
+
+<div class="question">Why does IISxpress not compress my files?</div>
+<div>IISxpress will not compress a file if its extension, content (MIME) type or URI matches one of it's 
+exclusion rules. IISxpress also knows which files did not compress well the last time it attempted to compress 
+them, in this case IISxpress will not attempt to compress them again unless the file has changed.</div><br>
+
+<div class="question">What problems are there with browsers and compression?</div>
+<div>Sometimes browsers do not handle compressed responses properly, one example is PDF (Adobe) files. Most browsers 
+simply hand the compressed response to the PDF plug-in they are configured to use. The plug-in cannot handle the 
+response correctly resulting in a lock up. Under these circumstances it is best to exclude the file type from being compressed.</div><br>
+
+<div class="question">How do I test that my web site is compressing data now?</div>
+<div>Display the IISxpress Status window, if IISxpress is compressing responses you will see the results here.</div><br>
+
+<p class="paragraphheading">Installing</p>
+
+<div class="question">I've installed IISxpress and now parts of my web site don't work, what could be the problem?</div>
+<div>It's difficult to say what the problem could be. The first place to start tracking the problem down is to 
+disable the IISxpress filter. To do this open the IISxpress status window, select the 'Configuration' tab and 
+uncheck the 'Allow filter to process responses option'. When unchecked IISxpress will NOT intercept the responses. 
+If the problem persists then IISxpress is not the problem. However if this solves the problem then there may be an 
+issue with your configuration. If you need any further assistance please contact our support team at 
+<a href="mailto:support@ripcordsoftware.com">support@ripcordsoftware.com</a>.</div>
+
+<p class="paragraphheading">Uninstalling</p>
+
+<div class="question">How do I uninstall IISxpress?</div>
+<div>IISxpress can be uninstalled via 'Add or remove programs' in the Windows Control Panel.</div>
+
+<p id="advanced" class="paragraphheading">Advanced</p>
+
+<div class="question">I've perfected my IISxpress configuration, how do I backup my configuration?</div>
+<div>IISxpress stores its configuration in a file called IISxpress.config which will be located in your 
+'Program Files\Ripcord Software\IISxpress' folder. Simply copy this file to a safe place. If you want to 
+restore this backup file you need to stop the IISxpress Server process. Open the IISxpress Status window, 
+select the 'Configuration' tab and press the Stop button at the bottom of the window. Remember to start 
+IISxpress once you have copied the file back.</div><br>
+
+<div class="question">How do I switch compression on for a local browser?</div>
+<div>
+The default setting for IISxpress is to not compresses responses destined for the local computer. This is 
+to reduce the CPU load since compression will actually slow down local access rather than speed it up. If 
+you wish to test your compression configuration you may wish to allow compression for the local computer. 
+To do this open the IISxpress Status Window, select the Exclusions tab and then select the Networks item 
+on the left of the window. You should now remove the check on the 'Exclude compression requests from the 
+local computer option'. The new setting will be applied immediately.
+</div><br/>
+
+<div class="question">Does IISxpress support different levels of compression?</div>
+<div>
+Yes. IISxpress supports the Default, Best Speed and Best Size modes. The compression mode can be changed 
+on the Configuration tab of the IISxpress Status Window.
+</div><br>
+
+<div class="question">I want IISxpress to run on a different computer from IIS, how do I do that?</div>
+<div>Currently IISxpress does not support this configuration. Future versions may include this feature.</div><br/>
+
+<div class="question">I have a computer with more that one CPU core, how will IISxpress use all the cores?</div>
+<div>IISxpress partitions compression requests on a core by core basis. This allows IISxpress to serve the greatest number 
+of simultaneous requests keeping your web site running smoothly. In the Configuration/Advanced tab of the IISxpress 
+you can control core affinity. Basically you can specify which cores are used for compression and which should be excluded. 
+This allows you to reserve cores for specific system processes like a SQL database, ASP.NET, etc.</div><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

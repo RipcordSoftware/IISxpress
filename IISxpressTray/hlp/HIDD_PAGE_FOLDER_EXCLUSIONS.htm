@@ -1,0 +1,69 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="URI Exclusions">	
+	<PARAM NAME="Keyword" VALUE="URI">	
+	<PARAM NAME="Keyword" VALUE="Wildcard URI rule">
+	<PARAM NAME="Keyword" VALUE="Exact URI rule">	
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Status Window - URI Exclusions");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - Exclude URIs.html">
+See how to add a URI exclusion rule. Click here to view the tutorial.
+</a>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/exclusion_tab_folders.png"/>
+</div>
+
+<p>
+The <b>URI</b> window displays the URIs that IISxpress will NOT compress. If you wish to 
+prevent responses from certain URI paths from being compressed then you should add them to this list.
+</p>
+
+<p>
+The URI exclusion rule works in two modes, 'Folder' and 'Branch'. In folder mode the path to
+the response must match the request URI path exactly. In branch mode IISxpress will match 
+all sub-folders of the excluded URI.
+</p>
+
+<p>
+The URI match rule is applied in the context of the web server instance that has handled the 
+request. If you have one web server instance which responds to www.abc.com and another which uses 
+www.xyz.com then you apply independent exclusion rules for each.
+</p>
+
+<p>
+For example, to prevent the <i>/streams</i> URI path on web server instance <i>www.abc.com</i> from being 
+compressed select the correct instance, select the streams item in the URI tree and right click to display 
+the context menu. Select <b>Exclude Folder</b> from the menu. The streams item should now be displayed in red 
+text indicating that it is excluded.
+</p>
+
+<p>
+To remove the exclusion rule from a item in the tree simply select the excluded item, right click with 
+the mouse to display the context menu and then select <b>Include</b>.
+</p>
+
+<span style="clear: both;"></span>
+
+<br/>
+<span class="seealso">See also</span><br>
+<a href="exclusion_rules_overview.htm">Exclusion Rule Overview</a><br />
+<a href="exclude_by_uri.htm">Exclude by URI</a><br />
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

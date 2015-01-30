@@ -1,0 +1,589 @@
+// IISxpressServer.idl : IDL source for IISxpressServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IISxpressServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+//**************************************************************************************
+
+typedef struct 
+{
+	LPCSTR		pszServerName;
+	LPCSTR		pszServerPort;
+	LPCSTR		pszInstanceId;	
+	LPCSTR		pszURLMapPath;
+} IISInfo;
+
+//**************************************************************************************
+
+typedef struct
+{	
+	LPCSTR		pszUserAgent;
+	LPCSTR		pszHostname;
+	LPCSTR		pszURI;
+	LPCSTR		pszQueryString;
+	LPCSTR		pszAcceptEncoding;
+	LPCSTR		pszRemoteAddress;
+} RequestInfo;
+
+//**************************************************************************************
+
+typedef struct
+{
+	DWORD		dwResponseCode;
+	LPCSTR		pszContentType;
+	DWORD		dwContentLength;
+	LPCSTR		pszLastModified;
+} ResponseInfo;
+
+//**************************************************************************************
+
+typedef struct tagStaticFileInfo
+{
+	BSTR		bsPath;
+	BSTR		bsFilename;	
+	int			nUserCompression;
+	int			nSystemCompression;
+} StaticFileInfo;
+
+//**************************************************************************************
+
+typedef struct tagFileCompressionHistory
+{
+	DWORD		dwDownloads;
+	VARIANT		vLastDownload;			// vt = DATETIME
+	DWORD		dwRawSize;
+	BOOL		bCompressed;
+	DWORD		dwCompressedSize;
+} FileCompressionHistory;
+
+//**************************************************************************************
+
+typedef struct tagExclusionRuleInfo
+{
+	BSTR							bsRule;					// the generic rule data
+	BSTR							bsInstance;				// the instance string (for folder rules)
+	DWORD							dwFlags;				// rule data flags
+	int								nUserAgents;
+	[size_is(nUserAgents)] BSTR*	pbsUserAgentIDs;	
+} ExclusionRuleInfo;
+
+const DWORD RULEFLAGS_FOLDER_NOMATCH = 0;
+const DWORD RULEFLAGS_FOLDER_WILDCARDMATCH = 1;
+const DWORD RULEFLAGS_FOLDER_EXACTMATCH = 2;
+
+//**************************************************************************************
+
+typedef enum 
+{
+	LicenseModeNone = 0,
+	LicenseModeCommunity = 1,
+	LicenseModeEvaluation = 2,
+	LicenseModeFull = 3,
+	LicenseModeAHA = 4
+} LicenseMode;
+
+typedef enum
+{
+	BZIP2ModeDisabled = 0,
+	BZIP2ModeStaticOnly = 1,
+	BZIP2ModeAll = 2
+} BZIP2Mode;
+
+[
+	object,
+	uuid(968AF704-C7F8-409F-821B-5B4EC9AA81A2),
+	helpstring("IComIISxpressRegSettings Interface"),
+	pointer_default(unique)
+]
+interface IComIISxpressRegSettings : IUnknown
+{
+	HRESULT get_Enabled([out, retval] BOOL* pbEnabled);
+	HRESULT put_Enabled([in] BOOL bEnabled);
+	HRESULT get_DebugEnabled([out, retval] BOOL* pbEnabled);
+	HRESULT put_DebugEnabled([in] BOOL bEnabled);
+	HRESULT get_LoggingLevel([out, retval] DWORD* pdwLevel);
+	HRESULT put_LoggingLevel([in] DWORD dwLevel);	
+	HRESULT get_CheckPhysicalMemory([out] BOOL* pbCheck);
+	HRESULT get_CheckCPULoad([out] BOOL* pbCheck);
+	HRESULT get_CheckNeverRules([out] BOOL* pbCheck);
+	HRESULT get_CheckUserRules([out] BOOL* pbCheck);
+	HRESULT get_LicenseMode([out] LicenseMode* pMode);
+	HRESULT put_LicenseMode(LicenseMode Mode);
+	HRESULT get_BZIP2Mode([out, retval] BZIP2Mode* pMode);
+	HRESULT put_BZIP2Mode([in] BZIP2Mode mode);
+	HRESULT get_AHAEnabled([out, retval] DWORD* pdwEnabled);
+	HRESULT put_AHAEnabled([in] DWORD dwEnabled);
+	HRESULT get_AHADetectOverheat([out, retval] DWORD* pdwDetectOverheat);
+	HRESULT put_AHADetectOverheat([in] DWORD dwDetectOverheat);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(C371FBDC-9888-43BD-B1A6-46917A9630BE),
+	helpstring("ICompressionRuleManager Interface"),
+	pointer_default(unique)
+]
+interface ICompressionRuleManager : IUnknown
+{	
+	HRESULT Init([in] IStorage* pStorage, [in] IComIISxpressRegSettings* pRegSettings);
+	HRESULT CanCompressFile([in] LPCSTR pszPath, [in] LPCSTR pszFilename, [in] DWORD dwFileSize);
+};
+
+//**************************************************************************************
+
+typedef enum
+{
+	CompressionModeNone = 0,
+	CompressionModeSpeed = 1,
+	CompressionModeSize = 2,
+	CompressionModeDefault = 3
+} CompressionMode;
+
+const DWORD IISXPRESS_SERVER_PROCESSORAFFINITY_OFF = 0;
+const DWORD IISXPRESS_SERVER_PROCESSORAFFINITY_AUTO = -1;
+
+[
+	object,
+	uuid(2371FBDC-288C-43BD-B1A3-46917A9630B4),
+	helpstring("IIISxpressSettings Interface"),
+	pointer_default(unique)
+]
+interface IIISxpressSettings : IUnknown
+{	
+	HRESULT get_CompressionMode([out, retval] CompressionMode* pMode);
+	HRESULT put_CompressionMode([in] CompressionMode Mode);
+	HRESULT get_ProcessorAffinity([out] DWORD* pdwProcessorAffinity);
+	HRESULT put_ProcessorAffinity([in] DWORD dwProcessorAffinity);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(CE62A8D6-DA1D-4664-B170-172A59EDB676),
+	helpstring("IEnumStaticFileInfo Interface"),
+	pointer_default(unique)
+]
+interface IEnumStaticFileInfo : IUnknown
+{
+	HRESULT Next([in] ULONG celt, [out] StaticFileInfo* rgelt, [out] ULONG* pceltFetched);
+	HRESULT Skip([in] ULONG celt);
+	HRESULT Reset(void);
+	HRESULT Clone([out] IEnumStaticFileInfo** ppenum);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(A371FBDC-9888-43BD-11A6-46917A9630B2),
+	helpstring("IStaticFileRules Interface"),
+	pointer_default(unique)
+]
+interface IStaticFileRules : IUnknown
+{
+
+	HRESULT Init([in] IStorage* pStorage);
+
+	HRESULT IsKnownFile([in] LPCSTR pszFullFilePath);
+
+	HRESULT AddFileRule([in] LPCSTR pszFullFilePath, [in] int nUserCompress, [in] int nSystemCompress);
+	HRESULT RemoveFileRule([in] LPCSTR pszFullFilePath);
+
+	HRESULT GetFileRule([in] LPCSTR pszFullFilePath, [out] int* pnUserCompress, [out] int* pnSystemCompress);
+	HRESULT SetFileRule([in] LPCSTR pszFullFilePath, [in] int nUserCompress, [in] int nSystemCompress);
+	
+	HRESULT EnumByPath([in] LPCSTR pszPath, [out] IEnumStaticFileInfo** ppEnum);
+};
+
+//**************************************************************************************
+
+typedef struct tagCustomCompressionSettings
+{
+	BOOL bEnabled;
+	CompressionMode mode;	
+	int nLevel;
+	int nWindowBits;
+	int nMemoryLevel;
+} CustomCompressionSettings;
+
+[
+	object,
+	uuid(A371FBDC-9888-43BD-11A6-469173963067),
+	helpstring("IStaticFileRules2 Interface"),
+	pointer_default(unique)
+]
+interface IStaticFileRules2 : IUnknown
+{
+	HRESULT GetFileRule([in] LPCSTR pszFullFilePath, [out] int* pnUserCompress, [out] int* pnSystemCompress, [out] CustomCompressionSettings* pCustomCompressionSettings);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(A371FBDC-9888-43BD-11A6-46917A963613),
+	helpstring("ICustomCompressionMode Interface"),
+	pointer_default(unique)
+]
+interface ICustomCompressionMode : IUnknown
+{
+	HRESULT GetFileCompressionParams([in] LPCSTR pszFullFilePath, [out] CustomCompressionSettings* pCustomCompressionSettings);
+	HRESULT SetFileCompressionParams([in] LPCSTR pszFullFilePath, [in] CustomCompressionSettings* pCustomCompressionSettings);
+	HRESULT RemoveFileCompressionParams([in] LPCSTR pszFullFilePath);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(088876BE-75D9-40E8-BA49-8BB7EE5677E6),
+	helpstring("IEnumExclusionRule Interface"),
+	pointer_default(unique)
+]
+interface IEnumExclusionRule : IUnknown 
+{
+	HRESULT Next([in] ULONG celt, [out] ExclusionRuleInfo* rgelt, [out] ULONG* pceltFetched);
+	HRESULT Skip([in] ULONG celt);
+	HRESULT Reset(void);
+	HRESULT Clone([out] IEnumExclusionRule** ppenum);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(4321FBDC-3888-43BD-11A6-46917A9630B1),
+	helpstring("INeverCompressRules Interface"),
+	pointer_default(unique)
+]
+interface INeverCompressRules : IUnknown
+{
+	HRESULT Init([in] IStorage* pStorage);
+
+	HRESULT AddExtensionRule([in] LPCSTR pszExtension, [in] LPCSTR pszUserAgent, [in] LPCSTR pszTypeString, [in] DWORD dwUpdateCookie);
+	HRESULT AddContentTypeRule([in] LPCSTR pszContentType, [in] LPCSTR pszUserAgent, [in] LPCSTR pszTypeString, [in] DWORD dwUpdateCookie);
+	HRESULT AddFolderRule([in] LPCSTR pszInstance, [in] LPCSTR pszFolder, [in] DWORD dwFlags, [in] DWORD dwUpdateCookie);
+	HRESULT AddIPRule([in] LPCSTR pszIPAddress, [in] DWORD dwUpdateCookie);
+
+	HRESULT RemoveExtensionRule([in] LPCSTR pszExtension, [in] LPCSTR pszUserAgent, [in] DWORD dwUpdateCookie);
+	HRESULT RemoveContentTypeRule([in] LPCSTR pszContentType, [in] LPCSTR pszUserAgent, [in] DWORD dwUpdateCookie);
+	HRESULT RemoveFolderRule([in] LPCSTR pszInstance, [in] LPCSTR pszFolder, [in] DWORD dwUpdateCookie);
+	HRESULT RemoveIPRule([in] LPCSTR pszIPAddress, [in] DWORD dwUpdateCookie);
+
+	HRESULT MatchRule(
+		[in] LPCSTR pszExtension, 
+		[in] LPCSTR pszContentType, 
+		[in] LPCSTR pszInstance, [in] LPCSTR pszFolder, 
+		[in] LPCSTR pszUserAgent,
+		[in] LPCSTR pszIPAddress);
+
+	HRESULT EnumExtensions([out] IEnumExclusionRule** ppEnum);
+	HRESULT EnumContentTypes([out] IEnumExclusionRule** ppEnum);
+	HRESULT EnumFolders([out] IEnumExclusionRule** ppEnum);
+	HRESULT EnumIPAddresses([out] IEnumExclusionRule** ppEnum);
+};
+
+//**************************************************************************************
+
+typedef enum 
+{
+	NeverRuleChangeHintUnknown = 0,
+	NeverRuleChangeHintExtension = 1,
+	NeverRuleChangeHintContentType = 2,
+	NeverRuleChangeHintURI = 3,
+	NeverRuleChangeHintIP = 4,
+	NeverRuleChangeHintUserAgent = 5
+} NeverRuleChangeHint;
+
+[
+	object,
+	uuid(2321FBDC-3888-43BC-11AA-46947A9330B2),
+	helpstring("INeverCompressRulesNotify Interface"),
+	pointer_default(unique)
+]
+interface INeverCompressRulesNotify : IUnknown
+{
+	HRESULT OnRuleChanged([in] NeverRuleChangeHint hint, [in] DWORD dwUpdateCookie);
+}
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(C321FBDC-3888-43B1-11AA-E6947A9330B8),
+	helpstring("INotifyCookie Interface"),
+	pointer_default(unique)
+]
+interface INotifyCookie : IUnknown
+{
+	HRESULT GetCookie([out] DWORD* pdwCookie);
+}
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(F32AFBD1-3888-43BD-41A6-46917A9230B1),
+	helpstring("ICompressionResults Interface"),
+	pointer_default(unique)
+]
+interface ICompressionHistory : IUnknown
+{
+	HRESULT Init([in] IStorage* pStorage);
+	
+	HRESULT UpdateEntry([in] LPCSTR pszFullFilePath, [in] DWORD dwRawSize, [in] BOOL bCompressed, [in] DWORD dwCompressedSize);
+	HRESULT QueryEntry([in] LPCSTR pszFullFilePath, [out] FileCompressionHistory* pHistory);
+	HRESULT RemoveEntry([in] LPCSTR pszPath);
+
+	HRESULT EnumEntriesByPath([in] LPCSTR pszFullFilePath, [out] IEnumString** ppEnum);
+};
+
+[
+	object,
+	uuid(F32AFBD1-3888-43BD-41A2-4691769230B2),
+	helpstring("ICompressionResults2 Interface"),
+	pointer_default(unique)
+]
+interface ICompressionHistory2 : IUnknown
+{		
+	HRESULT UpdateEntry([in] LPCSTR pszFullFilePath, [in] DWORD dwRawSize, [in] BOOL bCompressed, [in] DWORD dwCompressedSize, [in] BOOL bCacheHit);	
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(432AFBD3-3888-43BD-11A6-36917A9231B2),
+	helpstring("ICompressionStats Interface"),
+	pointer_default(unique)
+]
+interface ICompressionStats : IUnknown
+{
+	HRESULT ResetStats(void);
+	HRESULT GetStats([out] DWORD* pdwFilesCompressed, [out] DWORD* pdwRawSize, [out] DWORD* pdwCompressedSize);
+};
+
+[
+	object,
+	uuid(4321FBD3-3882-43BD-91A6-36917A9231BC),
+	helpstring("ICompressionStats2 Interface"),
+	pointer_default(unique)
+]
+interface ICompressionStats2 : IUnknown
+{	
+	HRESULT GetCacheStats([out] DWORD* pdwCacheHits, [out] DWORD* pdwRawSize, [out] DWORD* pdwCompressedSize);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(C7C8114E-6767-43E7-A7EF-86C3C74B8554),
+	helpstring("IProductLicenseManager Interface"),
+	pointer_default(unique)
+]
+interface IProductLicenseManager : IUnknown
+{
+	HRESULT IsValidKey(void);	
+	HRESULT IsRegisteredKey(void);
+	HRESULT SetKey([in] LPCSTR pszKey, [in] BOOL bAllowTrial);
+	HRESULT GetExpiry([out] SYSTEMTIME* pstExpiry);
+};
+
+//**************************************************************************************
+
+typedef enum
+{
+	Installed = 0,
+	Reinstall = 1,
+	FailedInstall = 2,
+	FinishInstall = 3
+} AHABoardInstallState;
+
+typedef struct
+{
+	BOOL bEnabled;
+	WCHAR szDescription[256];
+	AHABoardInstallState InstallState;
+} AHABoardInfo;
+
+[
+	object,
+	uuid(B13887AA-DC0A-4803-9148-8E1D24DB45EC),
+	helpstring("IAHAState Interface"),
+	pointer_default(unique)
+]
+interface IAHAState : IUnknown
+{	
+	HRESULT GetBoardTemps([out] DWORD* pdwFPGA, [out] DWORD* pdwBoard);
+	HRESULT GetBoardInfo([out] AHABoardInfo* pBoardInfo);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(86BEC801-0653-42BE-A20A-84D71DEECE51),
+	helpstring("IIISxpressHTTPRequest Interface"),
+	pointer_default(unique)
+]
+interface IIISxpressHTTPRequest : IUnknown
+{	
+	HRESULT Init(
+		[in] IStorage* pStorage, 
+		[in] ICompressionRuleManager* pCompressionRuleManager,
+		[in] IProductLicenseManager* pProductLicenseManager,
+		[in] IComIISxpressRegSettings* pRegSettings,
+		[in] IIISxpressSettings* pSettings);
+
+	HRESULT GetFilterVersion([in] IStream* pFilterVersion);
+
+	HRESULT OnSendResponse(
+		[in] IISInfo* pIISInfo,
+		[in] RequestInfo* pRequestInfo, 
+		[in] ResponseInfo* pResponseInfo,
+		[out] DWORD* pdwFilterContext);
+
+	HRESULT OnSendRawData(
+		[in] DWORD dwFilterContext, 
+		[in] IStream* pRawDataStream, 
+		[in] DWORD dwStreamDataLength, 
+		[in] BOOL bHasHeader,
+		[ptr, in, out, size_is(dwResponseContentEncodingBufferSize)] signed char* pszResponseContentEncoding,
+		[in] DWORD dwResponseContentEncodingBufferSize);
+
+	HRESULT OnEndOfRequest(
+		[in] DWORD dwFilterContext, 
+		[in] IStream* pRawDataStream, 
+		[in] DWORD dwStreamDataLength,
+		[in] BOOL bHasHeader,
+		[ptr, in, out, size_is(dwResponseContentEncodingBufferSize)] signed char* pszResponseContentEncoding,
+		[in] DWORD dwResponseContentEncodingBufferSize);
+
+	HRESULT OnReadRawData([in] IStream* pRawDataStream);
+
+	HRESULT OnEndOfNetSession([in] DWORD dwFilterContext);
+
+	HRESULT IsAlive([out] DWORD* pdwData);
+
+	HRESULT AbortRequest([in] DWORD dwFilterContext);
+
+	HRESULT NotifyCacheHit(
+		[in] IISInfo* pIISInfo,
+		[in] RequestInfo* pRequestInfo, 
+		[in] ResponseInfo* pResponseInfo,
+		[in] DWORD dwCompressedSize);
+};
+
+//**************************************************************************************
+
+[
+	object,
+	uuid(26BEC803-0653-42BE-A202-a4D71DEECE58),
+#ifndef IISXPRESS_NT40
+	async_uuid(ED80D683-F433-47c6-A6B3-7CFD010DE78F),
+#endif
+	helpstring("IIISxpressHTTPNotify Interface"),
+	pointer_default(unique)
+]
+interface IIISxpressHTTPNotify : IUnknown
+{	
+	HRESULT OnResponseStart(
+		[in] IISInfo* pIISInfo,
+		[in] RequestInfo* pRequestInfo, 
+		[in] ResponseInfo* pResponseInfo,
+		[in] DWORD dwFilterContext);	
+
+	HRESULT OnResponseComplete([in] DWORD dwFilterContext, [in] BOOL bCompressed, [in] DWORD dwRawSize, [in] DWORD dwCompressedSize);
+
+	HRESULT OnResponseEnd([in] DWORD dwFilterContext);
+
+	HRESULT OnResponseAbort([in] DWORD dwFilterContext);
+
+	HRESULT OnCacheHit(
+		[in] IISInfo* pIISInfo,
+		[in] RequestInfo* pRequestInfo, 
+		[in] ResponseInfo* pResponseInfo,
+		[in] DWORD dwCompressedSize);
+};
+
+//**************************************************************************************
+
+[
+	uuid(54EBE40E-1A09-4E5B-923B-06B8BDC1F665),
+	version(1.0),
+	helpstring("IISxpressServer 1.0 Type Library")
+]
+library IISxpressServerLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(E9D82120-347A-41BD-BF61-1BD6BA23ED50),
+		helpstring("IISxpressHTTPRequest Class")
+	]
+	coclass IISxpressHTTPRequest
+	{
+		[default] interface IIISxpressHTTPRequest;
+		interface IConnectionPointContainer;
+	};
+
+	[
+		uuid(B05C2A2F-E6BE-4769-BDC2-0E0C0686CFA7),
+		helpstring("CompressionRuleManager Class")
+	]
+	coclass CompressionRuleManager
+	{
+		[default] interface ICompressionRuleManager;		
+		interface IStaticFileRules;
+		interface IStaticFileRules2;
+		interface ICustomCompressionMode;
+		interface INeverCompressRules;		
+		interface ICompressionHistory;
+		interface ICompressionStats;
+		interface IConnectionPointContainer;
+		interface INotifyCookie;
+	};
+
+	[
+		uuid(1A291EBF-8B9C-4986-9389-D08073ACF75C),
+		helpstring("EnumStaticFileInfo Class")
+	]
+	coclass EnumStaticFileInfo
+	{
+		[default] interface IEnumStaticFileInfo;
+	};
+
+	[
+		uuid(2A22C83C-1E59-4BAB-8F5E-94513D8E91F5),
+		helpstring("ComIISxpressRegSettings Class")
+	]
+	coclass ComIISxpressRegSettings
+	{
+		[default] interface IComIISxpressRegSettings;
+	};
+
+	[
+		uuid(E94AB2C7-B1AB-40BA-B905-94CEC70A1180),
+		helpstring("EnumExclusionRule Class")
+	]
+	coclass EnumExclusionRule
+	{
+		[default] interface IEnumExclusionRule;
+	};
+
+	[
+		uuid(51EDAF3B-EF01-41FF-91D6-A4EB5DC34FA7),
+		helpstring("ProductLicenseManager Class")
+	]
+	coclass ProductLicenseManager
+	{
+		[default] interface IProductLicenseManager;
+	};
+};

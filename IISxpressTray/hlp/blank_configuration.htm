@@ -1,0 +1,58 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Clean Configuration">
+	<PARAM NAME="Keyword" VALUE="Blank Configuration">
+	<PARAM NAME="Keyword" VALUE="IISxpress.config">
+</OBJECT>
+
+<script language="javascript">PageHeader("Clean Configuration");</script>
+
+<p>
+Sometimes it is best to embark on a configuration process from a 'clean' start point. To do this you
+need to remove your existing configuration file. When IISxpress starts if it cannot find a configuration 
+file then it creates a new one - this file will have no exclusion rules and no compression history database.
+</p>
+
+<p>
+Your IISxpress configuration is stored in a file called <b>IISxpress.config</b>.
+This file is stored in your IISxpress installation directory. If you accepted the default settings when 
+you installed IISxpress then this will be <b>Program Files\Ripcord Software\IISxpress</b>.
+</p>
+
+<p>
+Follow these steps to 'clean' your configuration:
+</p>
+
+<ul class="squareitem">
+<li>
+	Stop the IISxpress service with either the Status Window or your computer's Service Manager.
+</li>
+<li>
+	Rename your existing <b>IISxpress.config</b> file if you wish to keep it, otherwise delete it.
+</li>
+<li>
+	Restart the IISxpress service.
+</li>
+</ul>
+
+<p>
+You can restore your original configuration file by deleting the new file and renaming
+your original configuration file or alternately by restoring it from a previous backup.
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="config_backup.htm">Configuration Backup</a><br>
+<a href="HIDD_PAGE_CONFIG.htm">Configuration Tab</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

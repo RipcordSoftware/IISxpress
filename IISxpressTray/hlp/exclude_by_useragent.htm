@@ -1,0 +1,136 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">	
+    <PARAM NAME="Keyword" VALUE="User Agent Exclusion">
+    <PARAM NAME="Keyword" VALUE="User Agent">
+</OBJECT>
+
+<script language="javascript">PageHeader("Exclude by User Agent");</script>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/exclusion_tab_useragents.png" alt="Define User Agent Rules"/>
+</div>
+
+<p>
+When clients (browsers, web crawlers, etc) request content from web sites they identify themselves to the web server via the 
+User Agent directive of the HTTP request header. The User Agent directive consists of a string of identifiers which can be 
+used to identify the type of the client (for example: Internet Explorer, Firefox, Safari, etc). 
+</p>
+
+<p>
+There are cases where support for HTTP compression was not been correctly implemented in the client which results in malformed
+page rendering by the client. In these cases IISxpress can be instructed to exclude these clients from compression.
+</p>
+
+<p>
+<img src="images\finger_pointing.png" />
+User Agent strings identify the type of the client, its version number and extensions or plugins 
+which are installed. The majority of clients will send useful information in this field.
+</p>
+
+<p>
+When User Agent rules are enabled IISxpress will not compress requests from the clients specified in the User Agent rule list. To define User Agent
+rules click the Add button and select a Predefined User Agent or alternately you can specify a custom string if you cannot
+find a suitable match.
+</p>
+
+<span style="clear: both;"></span>
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/AddUserAgentRule.png" alt="Adding a User Agent Rule"/>
+</div>
+
+<div class="paragraphheading">User Agent Matching</div>
+<p>
+IISxpress uses a simple matching scheme to enforce exclusion rules. To understand how matches are performed you need to understand 
+the format of User Agent strings.
+</p>
+
+<p>
+User Agent strings consist of one or more PRODUCT and/or COMMENT blocks, where the product block is a section of text containing no 
+whitespace characters and a comment block is enclosed in brackets, for example:
+</p>
+
+<ul class="squareitem">
+<li>Mozilla/4.0 (compatible; MSIE 7.0)</li>
+<li>Mozilla/5.0 (Windows; en-US) Gecko Firefox/3.0</li>
+</ul>
+
+<p>
+As can be seen above there can be multiple PRODUCT and COMMENT blocks in the User Agent string. The key to identifying a given browser
+is selecting which elements are always present from the optional and less important elements.
+</p>
+
+<p>
+If the two browser strings in the example were the only two that existed (in reality there are thousands of combinations) then IISxpress 
+would understand the following rule as an exclusion of the first string:
+</p>
+
+<ul class="squareitem">
+<li>Mozilla (MSIE)</li>
+</ul>
+
+<p>
+The match is made as follows: <b>Mozilla</b>/4.0 <b>(</b>compatible; <b>MSIE</b> 7.0<b>)</b>. The text in bold shows the characters in 
+the string that are matched. The second string would not match since it does not contain (MSIE).
+</p>
+
+<p>
+The site <a target="_blank" href="http://whatsmyuseragent.com">whatismyuseragent.com</a> is a useful way to determine the user agent strings of your favourite browsers.
+</p>
+
+<div class="paragraphheading">Exclusion Rule Forms</div>
+<p>
+IISxpress supports two types of User Agent rules which when combined allow you to define a powerful set of rules which 
+allow you to maximize user agent compatibility.
+</p>
+
+<p>
+When no User Agent rules are defined or when User Agent rules are disabled all requests will be compressed (unless other
+rules exclude them). When enabled you define User Agent rules in the following way:
+</p>
+
+<ul class="squareitem">
+<li>
+	Exclude - excluded User Agents are not compressed by IISxpress. 
+</li>
+<li>
+	Include - included User Agents are always compressed unless another rule type is matched.
+</li>
+</ul>
+
+<p>
+Include rules allow you to specify exceptions to general User Agent exclusion rules. Consider the following two rules:
+</p>
+
+<ul class="squareitem">
+<li>INCLUDE: Mozilla Firefox</li>
+<li>EXCLUDE: Mozilla</li>
+</ul>
+
+<p>
+Since most User Agent strings start with Mozilla the exclusion rule will prevent most browsers from being compressed. However 
+since there is an inclusion rule specified for Firefox only those clients will receive compressed responses.
+</p>
+
+<p>
+<img src="images\finger_pointing.png" />
+User Agent exclusion rules are evaluated by comparing the include rules before the exclude rules. This ensures that clients matching 
+include rules are always compressed.
+</p>
+
+<span style="clear: both;"></span>
+
+<span class="seealso">See also</span><br/>
+<a href="exclusion_rules_overview.htm">Exclusion Rules Overview</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

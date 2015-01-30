@@ -1,0 +1,100 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Configuration tab">
+	<PARAM NAME="Keyword" VALUE="Configuration">	
+	<PARAM NAME="Keyword" VALUE="Filter status">
+	<PARAM NAME="Keyword" VALUE="Service status">
+	<PARAM NAME="Keyword" VALUE="Server status">
+	<PARAM NAME="Keyword" VALUE="IISxpress status">
+	<PARAM NAME="Keyword" VALUE="IISxpress filter">
+	<PARAM NAME="Keyword" VALUE="Compression filter">		
+	<PARAM NAME="Keyword" VALUE="Disable filter">
+	<PARAM NAME="Keyword" VALUE="Enable filter">
+	<PARAM NAME="Keyword" VALUE="Allow filter to process responses">	
+	<PARAM NAME="Keyword" VALUE="ISAPI filter">
+	<PARAM NAME="Keyword" VALUE="IISxpress filter">
+	<PARAM NAME="Keyword" VALUE="Start service">
+	<PARAM NAME="Keyword" VALUE="Stop service">
+	<PARAM NAME="Keyword" VALUE="Compression Mode">
+	<PARAM NAME="Keyword" VALUE="BZIP2 Mode">
+	<PARAM NAME="Keyword" VALUE="BZIP2">
+	<PARAM NAME="Keyword" VALUE="deflate">
+	<PARAM NAME="Keyword" VALUE="GZIP">
+</OBJECT>
+
+<script language="javascript">PageHeader("Configuration - General");</script>
+
+<div style="float: right; padding-top: 8px; padding-left: 16px;">
+<img src="images/configuration_tab.png"/>
+</div>
+
+<div class="paragraphheading">IISxpress Filter</div>
+
+<p>
+The <b>IISxpress Filter</b> area shows the status of the IISxpress ISAPI filter and allows you to enable or disable 
+response processing.
+</p>
+
+<p>
+The IISxpress filter will only process responses when it is enabled. If the <b>Allow filter to process responses</b> 
+checkbox is checked (the default) then IISxpress will process and compress responses. If the checkbox is not 
+checked then IISxpress will not process any responses and IIS will return uncompressed data as normal. 
+It is recommended to leave this option checked unless you are experiencing problems with IISxpress.
+</p>
+
+<br/>
+<div class="paragraphheading">IISxpress Server</div>
+
+<p>
+The <b>IISxpress Server</b> area shows the status of IISxpress Server, it allows you to start 
+or stop the server, set the compression mode and reset the compression statistics.
+</p>
+
+<p>
+Click the <b>Start</b> button to start the IISxpress Server and the <b>Stop</b> button to stop 
+the IIS Server. When the service is stopped responses will not be compressed.
+</p>
+
+<p>
+To change the compression mode select from <b>Default</b>, <b>Best Speed</b> or <b>Best Size</b>. The 
+compression mode is changed instantly so there is no need to restart IISxpress.
+</p>
+
+<p>
+In addition to the HTTP standard deflate and GZIP compression algorithms IISxpress also includes support for BZIP2 which is a highly
+efficient alternative. While BZIP2 compresses content to a much smaller size that deflate/GZIP it is also much slower and will therefore
+use more CPU resources. For this reason you can disable BZIP2 support if you wish. The alternate technique is to allow IISxpress to
+compress static content (HTML, CSS, JS, etc.) which can be stored in the compression cache resulting in it being compressed much less
+frequently reducing the CPU load but gaining the benefit of the enhanced compression. You can also elect to use BZIP2 for all content, for
+example ASP.NET, ASP, CGI, etc.
+</p>
+
+<p>
+The default BZIP2 compression mode is 'Static Content'.
+</p>
+
+<p>
+To reset the overall compression statistics click the <b>Reset</b> button. All global metrics will be
+reset.
+</p>
+
+<span style="clear:both;"></span>
+
+<span class="seealso">See also</span><br>
+<a href="configure_compression_mode.htm">Configure Compression Mode</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

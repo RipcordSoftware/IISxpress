@@ -1,0 +1,18 @@
+// IISxpressPerf.idl : IDL source for IISxpressPerf
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (IISxpressPerf.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	uuid(8AE9FA06-AD82-4802-8A6D-30C68B52DC79),
+	version(1.0),
+	helpstring("IISxpressPerf 1.0 Type Library")
+]
+library IISxpressPerfLib
+{
+	importlib("stdole2.tlb");
+};

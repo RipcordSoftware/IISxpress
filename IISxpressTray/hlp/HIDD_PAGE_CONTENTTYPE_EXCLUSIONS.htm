@@ -1,0 +1,64 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Content Type Exclusions">	
+	<PARAM NAME="Keyword" VALUE="Content type">
+	<PARAM NAME="Keyword" VALUE="MIME type">
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Status Window - Content Type Exclusions");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - Exclude Content Types - Search.html">
+See how to add a content type exclusion rule. Click here to view the tutorial.
+</a><br />
+
+<table class="border-style: none; border-width: 0px;">
+<tr>
+<td width="500px" valign="top">
+
+<p>
+The <b>Content Types</b> window displays the response content types which IISxpress will not compress. 
+It is recommended that any responses containing pre-compressed data, data which will not compress well 
+or where there is a known issue with the client browser accepting compressed data for this content type 
+should be added to the list.
+</p>
+
+<p>
+It is highly recommended that any streaming data like a live audio feed, webcam or other live video feed
+should be excluded from being compressed. Ask the appropriate software vendor for their content types 
+(MIME types) and then add them to this list.
+</p>
+
+<p>
+To add a content type to the list click the <b>Add</b> button. To remove content types from the list select
+the unwanted items and press the <b>Delete</b> button.
+</p>
+
+</td>
+<td width="30px"></td>
+<td valign="top">
+<img src="images/exclusion_tab_contenttypes.png"/>
+</td>
+</tr>
+</table>
+
+<br/>
+<span class="seealso">See also</span><br>
+<a href="exclusion_rules_overview.htm">Exclusion Rule Overview</a><br />
+<a href="exclude_by_contenttype.htm">Exclude by Content Type</a><br />
+<a href="ContentTypeWizard.htm">IISxpress Status Window - Content Type Exclusion Wizard</a><br />
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

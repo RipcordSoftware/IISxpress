@@ -1,0 +1,58 @@
+<!doctype html public "-//w3c//dtd html 3.2 final//en">
+
+<html>
+<head>
+<title></title>
+<meta name="GENERATOR" content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</head>
+
+<body>
+
+<object type="application/x-oleobject" classid="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" viewastext id="Object1">
+	<param name="Keyword" value="Content Type Exclusions">
+	<param name="Keyword" value="Content Type">		
+</object>
+
+<script language="javascript">PageHeader("IISxpress Status Window - Content Type Exclusion Wizard");</script>
+
+<div style="float:right; padding-left: 12px; padding-top: 8px;">
+<img src="images/ContentTypeWizard.png" />
+</div>
+
+<p> 
+The Content Type Exclusion Wizard allows you to specify that responses with matching content types 
+are to be excluded from the compression process.
+</p>
+
+<div>
+The Content Type Exclusion Wizard has two modes of operation: you can search for content types or enter 
+them manually. If you elect to search for content types the wizard will perform the following steps:
+</div>
+<ul class="squareitem">
+<li>
+All your web site directories will be searched and a list of files found will be created.
+</li>
+<li>
+Each file found will be requested from IIS to acquire its content type. For example, if the wizard 
+finds a file called <b>readme.txt</b> it will ask IIS for this file. The response from IIS will 
+contain the content type <b>text/plain</b>, this type will be added to selection list.
+</li>
+</ul>
+
+<p>
+To specify which content types to exclude you should select to 'enter them manually now'. You are not 
+limited to content types which already exist on your web server.
+</p>
+
+<span style="clear: both;"></span>
+
+<span class="seealso">See also</span><br>
+<a href="HIDD_PAGE_EXCLUSIONS.htm">Exclusion Rules</a><br/>
+<a href="exclude_by_contenttype.htm">Exclude by Content Type</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</body>
+</html>

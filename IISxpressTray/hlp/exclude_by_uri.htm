@@ -1,0 +1,71 @@
+<HTML>
+<HEAD>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio 8.0">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+<TITLE></TITLE>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">	
+    <PARAM NAME="Keyword" VALUE="URI Exclusion">    
+</OBJECT>
+
+<script language="javascript">PageHeader("Exclude by URI");</script>
+
+<a class="tutorialhighlightbar" href="/Tutorials/IISxpress - Exclude URIs.html">
+See how to add a URI exclusion rule. Click here to view the tutorial.
+</a>
+
+<p>
+All requests made to a web server specify a URI, this is the portion of the request specified after 
+the hostname. For example, http://www.ripcordsoftware<b>/downloads/example.zip</b> is a URL which 
+contains the URI <b>/downloads/example.zip</b>.
+</p>
+
+<p>
+IISxpress does not consider the filename in the request to be part of the URI, and so in this case the URI 
+is treated as just <b>/downloads</b>. IISxpress supports the exclusion of whole directory structures 
+with URI exclusion rules.
+</p>
+
+<p>
+Since a URI is web site specific IISxpress allows you to specify rules on a per web site instance basis. If, 
+for example, your web server is configured with two web sites www.abc.com and www.xyz.com, then you can 
+specify a set of URI rules for each site. Extension and Content Type rules are applied to all web sites on 
+the server, URI rules are specific to the site where they are defined.
+</p>
+
+<div style="float: right; padding-left: 16px; padding-top: 8px;">
+<img src="images/excluded_uris_panel.png" />
+</div>
+<p>
+With IISxpress you can specifiy that a specific directory (or web folder or virtual directory) is to be 
+excluded from compression. This rule can be extended to include all child directories if desired.
+</p>
+<p>
+The picture on the right shows an example web server directory structure. The IISHelp directory has been 
+excluded with a wildcard rule, this approximates to an exclusion rule of <b>/IISHelp/*</b>. When this rule 
+is applied all content under the IISHelp directory will not be compressed (denoted by the red font).
+</p>
+<p>
+In contrast the directory Printers has been excluded but its children will still be compressed. All other 
+directories on this web server are candidates for compression.
+</p>
+
+<span style="clear: both;"></span>
+
+<p>
+<img src="images\finger_pointing.png" />
+To exclude an entire web site instance from compression you simply apply a wildcard exclusion rule on the 
+root directory. All requests to this site will match the rule and will not be compressed.
+</p>
+
+<span class="seealso">See also</span><br/>
+<a href="exclusion_rules_overview.htm">Exclusion Rules Overview</a><br/>
+<a href="HIDD_PAGE_FOLDER_EXCLUSIONS.htm">IISxpress Status Window - URI Exclusions</a><br/>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

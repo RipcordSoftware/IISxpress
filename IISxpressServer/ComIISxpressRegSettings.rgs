@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.ComIISxpressRegSettin.1 = s 'ComIISxpressRegSettings Class'
+	{
+		CLSID = s '{2A22C83C-1E59-4BAB-8F5E-94513D8E91F5}'
+	}
+	IISxpressServer.ComIISxpressRegSettings = s 'ComIISxpressRegSettings Class'
+	{
+		CLSID = s '{2A22C83C-1E59-4BAB-8F5E-94513D8E91F5}'
+		CurVer = s 'IISxpressServer.ComIISxpressRegSettin.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {2A22C83C-1E59-4BAB-8F5E-94513D8E91F5} = s 'ComIISxpressRegSettings Class'
+		{
+			ProgID = s 'IISxpressServer.ComIISxpressRegSettin.1'
+			VersionIndependentProgID = s 'IISxpressServer.ComIISxpressRegSettings'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

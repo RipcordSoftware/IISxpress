@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.ProductLicenseManager.1 = s 'ProductLicenseManager Class'
+	{
+		CLSID = s '{51EDAF3B-EF01-41FF-91D6-A4EB5DC34FA7}'
+	}
+	IISxpressServer.ProductLicenseManager = s 'ProductLicenseManager Class'
+	{
+		CLSID = s '{51EDAF3B-EF01-41FF-91D6-A4EB5DC34FA7}'
+		CurVer = s 'IISxpressServer.ProductLicenseManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {51EDAF3B-EF01-41FF-91D6-A4EB5DC34FA7} = s 'ProductLicenseManager Class'
+		{
+			ProgID = s 'IISxpressServer.ProductLicenseManager.1'
+			VersionIndependentProgID = s 'IISxpressServer.ProductLicenseManager'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

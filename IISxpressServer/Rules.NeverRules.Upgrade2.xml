@@ -1,0 +1,11 @@
+<upgrade>
+
+<add>
+</add>
+
+<remove>
+<extnrule>css</extnrule>
+<extnrule>js</extnrule>
+</remove>
+
+</upgrade>

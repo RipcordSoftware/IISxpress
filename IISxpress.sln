@@ -1,0 +1,434 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressServer", "IISxpressServer\IISxpressServer.vcproj", "{50D1B171-9D7C-41F5-85B9-13A09668B430}"
+	ProjectSection(ProjectDependencies) = postProject
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3} = {F820EA6D-9293-4D13-9502-95F719A5D9C3}
+		{87355A7F-D69F-4BBA-B076-592730B67655} = {87355A7F-D69F-4BBA-B076-592730B67655}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressServerPS", "IISxpressServer\IISxpressServerPS.vcproj", "{3F0C1CB1-753B-4813-8034-21C45EBBD130}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IISxpressServer", "IISxpressServer", "{4C82BD93-6EA0-4085-8F23-1BE3D9FDCBB8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpress", "IISxpress\IISxpress.vcproj", "{981D98EB-5CC6-43D5-9122-328B8BA3274F}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD} = {489BFD56-A5DE-42D3-A38A-49487CF11AAD}
+		{A3D4B74C-69FF-4452-919B-19687262D61E} = {A3D4B74C-69FF-4452-919B-19687262D61E}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tools", "Tools", "{B7FE12F2-CE08-402F-A009-E0236277709D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GenProductKey", "GenProductKey\GenProductKey.vcproj", "{E811346D-0655-4F6B-AA49-8937A65F195A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FixupBMP", "FixupBMP\FixupBMP.vcproj", "{7D107240-FD02-4C18-9705-C9B839702587}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GenAboutKeyBmp", "GenAboutKeyBmp\GenAboutKeyBmp.vcproj", "{87355A7F-D69F-4BBA-B076-592730B67655}"
+	ProjectSection(ProjectDependencies) = postProject
+		{7D107240-FD02-4C18-9705-C9B839702587} = {7D107240-FD02-4C18-9705-C9B839702587}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressTray", "IISxpressTray\IISxpressTray.vcproj", "{DFD9E47C-2C50-4D80-A38F-70954969E55D}"
+	ProjectSection(ProjectDependencies) = postProject
+		{A3D4B74C-69FF-4452-919B-19687262D61E} = {A3D4B74C-69FF-4452-919B-19687262D61E}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Installer", "Installer\Installer.vcproj", "{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B039892C-B727-4A29-949F-74395DFAB68D} = {B039892C-B727-4A29-949F-74395DFAB68D}
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9} = {74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}
+		{97D43765-F574-442C-B38D-078C96EC5949} = {97D43765-F574-442C-B38D-078C96EC5949}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62} = {6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F} = {981D98EB-5CC6-43D5-9122-328B8BA3274F}
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A} = {BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB} = {D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D} = {DFD9E47C-2C50-4D80-A38F-70954969E55D}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{42DDED62-B377-4334-A671-92CD1CDB7837}"
+	ProjectSection(SolutionItems) = preProject
+		Changes.txt = Changes.txt
+		CommunityLicense.rtf = CommunityLicense.rtf
+		EvaluationLicense.rtf = EvaluationLicense.rtf
+		Common\IISxpressVersion.h = Common\IISxpressVersion.h
+		License.rtf = License.rtf
+		LogFiles.txt = LogFiles.txt
+		RipcordSoftware.com.url = RipcordSoftware.com.url
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressInstallerExtensions", "IISxpressInstallerExtensions\IISxpressInstallerExtensions.vcproj", "{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressConsole", "IISxpressConsole\IISxpressConsole.vcproj", "{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressNativeModule", "IISxpressNativeModule\IISxpressNativeModule.vcproj", "{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressAPI", "IISxpressAPI\IISxpressAPI.vcproj", "{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}"
+	ProjectSection(ProjectDependencies) = postProject
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Batch Files", "Batch Files", "{715C3265-FC3C-4A1F-8F22-16340DFC9884}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Vista", "Vista", "{51F32E5D-03AE-41B7-9A4E-750098C790D8}"
+	ProjectSection(SolutionItems) = preProject
+		Batch files\Vista\install.cmd = Batch files\Vista\install.cmd
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signing", "Signing", "{2D1E0EDA-C710-46D6-8A00-CFD368ADED8A}"
+	ProjectSection(SolutionItems) = preProject
+		Certificates\Software\mykey.pvk = Certificates\Software\mykey.pvk
+		Certificates\Software\mypfx.pfx = Certificates\Software\mypfx.pfx
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressIIS7ModuleInstaller", "IISxpressIIS7ModuleInstaller\IISxpressIIS7ModuleInstaller.vcproj", "{B039892C-B727-4A29-949F-74395DFAB68D}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressCompressionStudio", "IISxpressCompressionStudio\IISxpressCompressionStudio.vcproj", "{97D43765-F574-442C-B38D-078C96EC5949}"
+	ProjectSection(ProjectDependencies) = postProject
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {50D1B171-9D7C-41F5-85B9-13A09668B430}
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {3F0C1CB1-753B-4813-8034-21C45EBBD130}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Testing", "Testing", "{3B232531-6FB5-4AAE-9391-2B0BA2655D26}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "TestIISxpressISAPI", "TestIISxpressISAPI\TestIISxpressISAPI.vcproj", "{6B706544-AA95-4B5D-9690-529009A7E9D0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F} = {981D98EB-5CC6-43D5-9122-328B8BA3274F}
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "NUnit", "NUnit", "{945ACE97-DD3E-4011-BD0A-FEAF70CED8AB}"
+	ProjectSection(SolutionItems) = preProject
+		NUnit\nunit.framework.dll = NUnit\nunit.framework.dll
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressPerf", "IISxpressPerf\IISxpressPerf.vcproj", "{489BFD56-A5DE-42D3-A38A-49487CF11AAD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IISxpress ISAPI", "IISxpress ISAPI", "{6DE7A31C-1C91-4782-9893-60979CB0E016}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressAHAComp", "IISxpressAHAComp\IISxpressAHAComp.vcproj", "{F820EA6D-9293-4D13-9502-95F719A5D9C3}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ComtechAHASetup", "ComtechAHASetup\ComtechAHASetup.vcproj", "{03D91954-003F-44E4-A8E2-E79512AC6983}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ValidateIISxpress", "ValidateIISxpress\ValidateIISxpress.vcproj", "{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Libs", "Libs", "{6295E90F-7D39-4946-8C56-4F5B8C8DC66A}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "IISxpressLib", "Libs\IISxpressLib\IISxpressLib.vcproj", "{2727B558-AA54-4838-931E-99FD23FB4729}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "RipcordSoftwareLib", "Libs\RipcordSoftwareLib\RipcordSoftwareLib.vcproj", "{A3D4B74C-69FF-4452-919B-19687262D61E}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 22
+		SccLocalPath0 = .
+		CanCheckoutShared = false
+		SccProjectUniqueName1 = IISxpressServer\\IISxpressServer.vcproj
+		SccProjectTopLevelParentUniqueName1 = IISxpress.sln
+		SccLocalPath1 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection1 = IISxpressServer\\
+		SccProjectUniqueName2 = IISxpressServer\\IISxpressServerPS.vcproj
+		SccProjectTopLevelParentUniqueName2 = IISxpress.sln
+		SccLocalPath2 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection2 = IISxpressServer\\
+		SccProjectUniqueName3 = IISxpress\\IISxpress.vcproj
+		SccProjectTopLevelParentUniqueName3 = IISxpress.sln
+		SccLocalPath3 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection3 = IISxpress\\
+		SccProjectUniqueName4 = GenProductKey\\GenProductKey.vcproj
+		SccProjectTopLevelParentUniqueName4 = IISxpress.sln
+		SccLocalPath4 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection4 = GenProductKey\\
+		SccProjectUniqueName5 = FixupBMP\\FixupBMP.vcproj
+		SccProjectTopLevelParentUniqueName5 = IISxpress.sln
+		SccLocalPath5 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection5 = FixupBMP\\
+		SccProjectUniqueName6 = GenAboutKeyBmp\\GenAboutKeyBmp.vcproj
+		SccProjectTopLevelParentUniqueName6 = IISxpress.sln
+		SccLocalPath6 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection6 = GenAboutKeyBmp\\
+		SccProjectUniqueName7 = IISxpressTray\\IISxpressTray.vcproj
+		SccLocalPath7 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection7 = IISxpressTray\\
+		SccProjectUniqueName8 = Installer\\Installer.vcproj
+		SccProjectTopLevelParentUniqueName8 = IISxpress.sln
+		SccLocalPath8 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection8 = Installer\\
+		SccProjectUniqueName9 = IISxpressInstallerExtensions\\IISxpressInstallerExtensions.vcproj
+		SccProjectTopLevelParentUniqueName9 = IISxpress.sln
+		SccLocalPath9 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection9 = IISxpressInstallerExtensions\\
+		SccProjectUniqueName10 = IISxpressConsole\\IISxpressConsole.vcproj
+		SccLocalPath10 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection10 = IISxpressConsole\\
+		SccProjectUniqueName11 = IISxpressNativeModule\\IISxpressNativeModule.vcproj
+		SccLocalPath11 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection11 = IISxpressNativeModule\\
+		SccProjectUniqueName12 = IISxpressAPI\\IISxpressAPI.vcproj
+		SccLocalPath12 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection12 = IISxpressAPI\\
+		SccProjectUniqueName13 = IISxpressIIS7ModuleInstaller\\IISxpressIIS7ModuleInstaller.vcproj
+		SccProjectTopLevelParentUniqueName13 = IISxpress.sln
+		SccLocalPath13 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection13 = IISxpressIIS7ModuleInstaller\\
+		SccProjectUniqueName14 = IISxpressCompressionStudio\\IISxpressCompressionStudio.vcproj
+		SccLocalPath14 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection14 = IISxpressCompressionStudio\\
+		SccProjectUniqueName15 = TestIISxpressISAPI\\TestIISxpressISAPI.vcproj
+		SccProjectTopLevelParentUniqueName15 = IISxpress.sln
+		SccLocalPath15 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection15 = TestIISxpressISAPI\\
+		SccProjectUniqueName16 = IISxpressPerf\\IISxpressPerf.vcproj
+		SccProjectTopLevelParentUniqueName16 = IISxpress.sln
+		SccLocalPath16 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection16 = IISxpressPerf\\
+		SccProjectUniqueName17 = IISxpressAHAComp\\IISxpressAHAComp.vcproj
+		SccProjectTopLevelParentUniqueName17 = IISxpress.sln
+		SccLocalPath17 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection17 = IISxpressAHAComp\\
+		SccProjectUniqueName18 = ComtechAHASetup\\ComtechAHASetup.vcproj
+		SccProjectTopLevelParentUniqueName18 = IISxpress.sln
+		SccLocalPath18 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection18 = ComtechAHASetup\\
+		SccProjectUniqueName19 = ValidateIISxpress\\ValidateIISxpress.vcproj
+		SccProjectTopLevelParentUniqueName19 = IISxpress.sln
+		SccLocalPath19 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection19 = ValidateIISxpress\\
+		SccProjectUniqueName20 = Libs\\IISxpressLib\\IISxpressLib.vcproj
+		SccProjectTopLevelParentUniqueName20 = IISxpress.sln
+		SccLocalPath20 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection20 = Libs\\IISxpressLib\\
+		SccProjectUniqueName21 = Libs\\RipcordSoftwareLib\\RipcordSoftwareLib.vcproj
+		SccProjectTopLevelParentUniqueName21 = IISxpress.sln
+		SccLocalPath21 = .
+		CanCheckoutShared = false
+		SccProjectFilePathRelativizedFromConnection21 = Libs\\RipcordSoftwareLib\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Debug|x64 = Debug|x64
+		Release|Win32 = Release|Win32
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Debug|Win32.ActiveCfg = Debug|Win32
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Debug|Win32.Build.0 = Debug|Win32
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Debug|x64.ActiveCfg = Debug|x64
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Debug|x64.Build.0 = Debug|x64
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Release|Win32.ActiveCfg = Release|Win32
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Release|Win32.Build.0 = Release|Win32
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Release|x64.ActiveCfg = Release|x64
+		{50D1B171-9D7C-41F5-85B9-13A09668B430}.Release|x64.Build.0 = Release|x64
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Debug|Win32.Build.0 = Debug|Win32
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Debug|x64.ActiveCfg = Debug|x64
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Debug|x64.Build.0 = Debug|x64
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Release|Win32.ActiveCfg = Release|Win32
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Release|Win32.Build.0 = Release|Win32
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Release|x64.ActiveCfg = Release|x64
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130}.Release|x64.Build.0 = Release|x64
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Debug|Win32.ActiveCfg = Debug|Win32
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Debug|Win32.Build.0 = Debug|Win32
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Debug|x64.ActiveCfg = Debug|x64
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Debug|x64.Build.0 = Debug|x64
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Release|Win32.ActiveCfg = Release|Win32
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Release|Win32.Build.0 = Release|Win32
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Release|x64.ActiveCfg = Release|x64
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F}.Release|x64.Build.0 = Release|x64
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Debug|Win32.Build.0 = Debug|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Debug|x64.ActiveCfg = Debug|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Debug|x64.Build.0 = Debug|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Release|Win32.ActiveCfg = Release|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Release|Win32.Build.0 = Release|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Release|x64.ActiveCfg = Release|Win32
+		{E811346D-0655-4F6B-AA49-8937A65F195A}.Release|x64.Build.0 = Release|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Debug|Win32.ActiveCfg = Debug|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Debug|Win32.Build.0 = Debug|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Debug|x64.ActiveCfg = Debug|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Debug|x64.Build.0 = Debug|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Release|Win32.ActiveCfg = Release|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Release|Win32.Build.0 = Release|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Release|x64.ActiveCfg = Release|Win32
+		{7D107240-FD02-4C18-9705-C9B839702587}.Release|x64.Build.0 = Release|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Debug|Win32.ActiveCfg = Debug|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Debug|Win32.Build.0 = Debug|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Debug|x64.ActiveCfg = Debug|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Debug|x64.Build.0 = Debug|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Release|Win32.ActiveCfg = Release|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Release|Win32.Build.0 = Release|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Release|x64.ActiveCfg = Release|Win32
+		{87355A7F-D69F-4BBA-B076-592730B67655}.Release|x64.Build.0 = Release|Win32
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Debug|Win32.Build.0 = Debug|Win32
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Debug|x64.ActiveCfg = Debug|x64
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Debug|x64.Build.0 = Debug|x64
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Release|Win32.ActiveCfg = Release|Win32
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Release|Win32.Build.0 = Release|Win32
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Release|x64.ActiveCfg = Release|x64
+		{DFD9E47C-2C50-4D80-A38F-70954969E55D}.Release|x64.Build.0 = Release|x64
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Debug|x64.ActiveCfg = Debug|x64
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Release|Win32.ActiveCfg = Release|Win32
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Release|Win32.Build.0 = Release|Win32
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Release|x64.ActiveCfg = Release|x64
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5}.Release|x64.Build.0 = Release|x64
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Debug|Win32.Build.0 = Debug|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Debug|x64.ActiveCfg = Debug|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Debug|x64.Build.0 = Debug|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Release|Win32.ActiveCfg = Release|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Release|Win32.Build.0 = Release|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Release|x64.ActiveCfg = Release|Win32
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9}.Release|x64.Build.0 = Release|Win32
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Debug|Win32.Build.0 = Debug|Win32
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Debug|x64.ActiveCfg = Debug|x64
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Debug|x64.Build.0 = Debug|x64
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Release|Win32.ActiveCfg = Release|Win32
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Release|Win32.Build.0 = Release|Win32
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Release|x64.ActiveCfg = Release|x64
+		{6D1967F8-6C5C-46F1-BCC0-FFE2A573BF62}.Release|x64.Build.0 = Release|x64
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Debug|Win32.Build.0 = Debug|Win32
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Debug|x64.ActiveCfg = Debug|x64
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Debug|x64.Build.0 = Debug|x64
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Release|Win32.ActiveCfg = Release|Win32
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Release|Win32.Build.0 = Release|Win32
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Release|x64.ActiveCfg = Release|x64
+		{BAE98BDC-F0B5-43A3-A74B-C6FDF58B323A}.Release|x64.Build.0 = Release|x64
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Debug|Win32.ActiveCfg = Debug|Win32
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Debug|Win32.Build.0 = Debug|Win32
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Debug|x64.ActiveCfg = Debug|x64
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Debug|x64.Build.0 = Debug|x64
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Release|Win32.ActiveCfg = Release|Win32
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Release|Win32.Build.0 = Release|Win32
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Release|x64.ActiveCfg = Release|x64
+		{D8F524A8-7E3B-4244-B7E8-FF37FF66B5BB}.Release|x64.Build.0 = Release|x64
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Debug|Win32.Build.0 = Debug|Win32
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Debug|x64.ActiveCfg = Debug|x64
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Debug|x64.Build.0 = Debug|x64
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Release|Win32.ActiveCfg = Release|Win32
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Release|Win32.Build.0 = Release|Win32
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Release|x64.ActiveCfg = Release|x64
+		{B039892C-B727-4A29-949F-74395DFAB68D}.Release|x64.Build.0 = Release|x64
+		{97D43765-F574-442C-B38D-078C96EC5949}.Debug|Win32.ActiveCfg = Debug|Win32
+		{97D43765-F574-442C-B38D-078C96EC5949}.Debug|Win32.Build.0 = Debug|Win32
+		{97D43765-F574-442C-B38D-078C96EC5949}.Debug|x64.ActiveCfg = Debug|x64
+		{97D43765-F574-442C-B38D-078C96EC5949}.Debug|x64.Build.0 = Debug|x64
+		{97D43765-F574-442C-B38D-078C96EC5949}.Release|Win32.ActiveCfg = Release|Win32
+		{97D43765-F574-442C-B38D-078C96EC5949}.Release|Win32.Build.0 = Release|Win32
+		{97D43765-F574-442C-B38D-078C96EC5949}.Release|x64.ActiveCfg = Release|x64
+		{97D43765-F574-442C-B38D-078C96EC5949}.Release|x64.Build.0 = Release|x64
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Debug|Win32.Build.0 = Debug|Win32
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Debug|x64.ActiveCfg = Debug|Win32
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Release|Win32.ActiveCfg = Release|Win32
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Release|Win32.Build.0 = Release|Win32
+		{6B706544-AA95-4B5D-9690-529009A7E9D0}.Release|x64.ActiveCfg = Release|Win32
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Debug|Win32.ActiveCfg = Debug|Win32
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Debug|Win32.Build.0 = Debug|Win32
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Debug|x64.ActiveCfg = Debug|x64
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Debug|x64.Build.0 = Debug|x64
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Release|Win32.ActiveCfg = Release|Win32
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Release|Win32.Build.0 = Release|Win32
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Release|x64.ActiveCfg = Release|x64
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD}.Release|x64.Build.0 = Release|x64
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Debug|Win32.ActiveCfg = Debug|Win32
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Debug|Win32.Build.0 = Debug|Win32
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Debug|x64.ActiveCfg = Debug|x64
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Debug|x64.Build.0 = Debug|x64
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Release|Win32.ActiveCfg = Release|Win32
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Release|Win32.Build.0 = Release|Win32
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Release|x64.ActiveCfg = Release|x64
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3}.Release|x64.Build.0 = Release|x64
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Debug|Win32.ActiveCfg = Debug|Win32
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Debug|Win32.Build.0 = Debug|Win32
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Debug|x64.ActiveCfg = Debug|Win32
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Release|Win32.ActiveCfg = Release|Win32
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Release|Win32.Build.0 = Release|Win32
+		{03D91954-003F-44E4-A8E2-E79512AC6983}.Release|x64.ActiveCfg = Release|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Debug|Win32.ActiveCfg = Debug|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Debug|Win32.Build.0 = Debug|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Debug|x64.ActiveCfg = Debug|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Release|Win32.ActiveCfg = Release|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Release|Win32.Build.0 = Release|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Release|x64.ActiveCfg = Release|Win32
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006}.Release|x64.Build.0 = Release|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Debug|Win32.ActiveCfg = Debug|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Debug|Win32.Build.0 = Debug|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Debug|x64.ActiveCfg = Debug|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Release|Win32.ActiveCfg = Release|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Release|Win32.Build.0 = Release|Win32
+		{2727B558-AA54-4838-931E-99FD23FB4729}.Release|x64.ActiveCfg = Release|Win32
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Debug|Win32.Build.0 = Debug|Win32
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Debug|x64.ActiveCfg = Debug|x64
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Debug|x64.Build.0 = Debug|x64
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Release|Win32.ActiveCfg = Release|Win32
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Release|Win32.Build.0 = Release|Win32
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Release|x64.ActiveCfg = Release|x64
+		{A3D4B74C-69FF-4452-919B-19687262D61E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{3F0C1CB1-753B-4813-8034-21C45EBBD130} = {4C82BD93-6EA0-4085-8F23-1BE3D9FDCBB8}
+		{50D1B171-9D7C-41F5-85B9-13A09668B430} = {4C82BD93-6EA0-4085-8F23-1BE3D9FDCBB8}
+		{F820EA6D-9293-4D13-9502-95F719A5D9C3} = {4C82BD93-6EA0-4085-8F23-1BE3D9FDCBB8}
+		{489BFD56-A5DE-42D3-A38A-49487CF11AAD} = {6DE7A31C-1C91-4782-9893-60979CB0E016}
+		{981D98EB-5CC6-43D5-9122-328B8BA3274F} = {6DE7A31C-1C91-4782-9893-60979CB0E016}
+		{E811346D-0655-4F6B-AA49-8937A65F195A} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{7D107240-FD02-4C18-9705-C9B839702587} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{87355A7F-D69F-4BBA-B076-592730B67655} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{AF8688D6-2E83-4803-BA3C-021D5CAFC4A5} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{74F6DE45-F7E3-42DE-979D-6242ABA7F9A9} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{715C3265-FC3C-4A1F-8F22-16340DFC9884} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{B039892C-B727-4A29-949F-74395DFAB68D} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{03D91954-003F-44E4-A8E2-E79512AC6983} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{3D1DBC9C-68DF-4AC8-AEA6-42DA07E37006} = {B7FE12F2-CE08-402F-A009-E0236277709D}
+		{2D1E0EDA-C710-46D6-8A00-CFD368ADED8A} = {42DDED62-B377-4334-A671-92CD1CDB7837}
+		{945ACE97-DD3E-4011-BD0A-FEAF70CED8AB} = {42DDED62-B377-4334-A671-92CD1CDB7837}
+		{51F32E5D-03AE-41B7-9A4E-750098C790D8} = {715C3265-FC3C-4A1F-8F22-16340DFC9884}
+		{6B706544-AA95-4B5D-9690-529009A7E9D0} = {3B232531-6FB5-4AAE-9391-2B0BA2655D26}
+		{2727B558-AA54-4838-931E-99FD23FB4729} = {6295E90F-7D39-4946-8C56-4F5B8C8DC66A}
+		{A3D4B74C-69FF-4452-919B-19687262D61E} = {6295E90F-7D39-4946-8C56-4F5B8C8DC66A}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Cache">	
+</OBJECT>
+
+<script language="javascript">PageHeader("Compression Cache");</script>
+
+<p>
+The compression cache helps to speed up processing of static data (HTML, JS, CSS, XML, etc.) files on your 
+web server. When the cache is enabled all compressed static response data is cached to allow it to be retrieved 
+as quickly as possible.
+</p>
+
+<p>
+<img src="images/cache_miss.png" alt="The request resulted in a cache miss. The response data was compressed and then stored in the cache for next time." /><br />
+The diagram above shows a request from a client. Firstly the cache is queried to determine whether it contains the correct 
+response data. In this example the cache is empty, the request is passed to the compression engine which compresses the response.
+The compressed response data is placed in the cache and then returned to the client. The next request for this same data can now be 
+resolved solely from the cache.
+</p>
+
+<p>
+<img src="images/cache_hit.png" alt="The request resulted in a cache hit. The response data was retrieved directly from the cache." /><br />
+The diagram above shows a request from a client being resolved by the cache. In this example the compressed data is retrieved from 
+the cache and not compressed again. Retrieving compressed data from the cache is significantly faster than re-compressing it.
+</p>
+
+<p>
+When compressed response data is held in the cache all requests for that data from all clients are resolved by the cache. For example, 
+if 100 clients request the same compressed response data only the first request will result in the data being compressed. 
+The subsequent 99 clients will receive the cached compressed data.
+</p>
+
+<span class="seealso">See also</span><br>
+<a href="configure_cache.htm">Configuration - Cache</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

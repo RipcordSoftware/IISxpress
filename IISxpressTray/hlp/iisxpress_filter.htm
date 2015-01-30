@@ -1,0 +1,70 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Filter">
+	<PARAM NAME="Keyword" VALUE="ISAPI filter">
+	<PARAM NAME="Keyword" VALUE="IISxpress filter">
+	<PARAM NAME="Keyword" VALUE="Compression filter">
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress ISAPI Filter for IIS 5.1 and 6.0");</script>
+
+<p>
+The IISxpress ISAPI Filter provides the interface between IIS and the IISxpress Server. When IIS starts it loads the IISxpress filter into memory, the 
+filter then intercepts all responses and passes them to the IISxpress Server where the exclusion rules are applied, compression is performed and 
+then the response is returned to the client.
+</p>
+
+<img src="images/iisadmin_filterdlg.png" style="float: right;"/>
+
+<p>
+For IISxpress to function the filter must be installed correctly in IIS. This will have been done during the IISxpress installation process. 
+However if you experience problems you can check that the filter is installed using the following methods: 
+</p>
+
+<ul class="squareitem" style="margin-left: 20px;">
+
+<li>
+Open the <b>IISxpress Status Window</b> and select the <b>General</b> tab if it not already displayed. The status of the 
+filter should be <b>Installed</b>.
+</li>
+
+<li>
+If you are running Windows XP, Windows 2003 or better then you can run the IIS Administration plugin, 
+right click on the 'Web Sites' item in the tree on the left of the main window and select the properties menu item. 
+Now select the <b>ISAPI Filters</b> tab, IISxpress should appear at the <b>bottom</b> of the list of installed 
+filters. When you click on IISxpress in the filter list the <b>Details</b> area of the window should show that the 
+<b>Status</b> is <b>Loaded</b>.
+</li>
+
+</ul>
+
+<p>
+The IISxpress filter should always appear last in the IIS filter list since this will be the last filter to run before 
+the data is returned to the client.
+</p>
+
+<p>
+If you continue to experience problems you can use the 'Repair' option on the Configuration tab of the IISxpress 
+status window to reset the IISxpress filter installation to the default settings.
+</p>
+
+<span style="clear: right;"/>
+
+<span class="seealso">See also</span><br>
+<a href="HIDD_PAGE_GENERAL.htm">General tab</a><br>
+<a href="HIDD_PAGE_CONFIG.htm">Configuration tab</a><br>
+<a href="iisxpress_module7.htm">IISxpress Module for IIS 7</a><br>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>

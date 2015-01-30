@@ -1,0 +1,1206 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Neutral resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_NEU)
+#ifdef _WIN32
+LANGUAGE LANG_NEUTRAL, SUBLANG_NEUTRAL
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_IISXPRESSTRAY       REGISTRY                "IISxpressTray.rgs"
+IDR_HTTPNOTIFY          REGISTRY                "HTTPNotify.rgs"
+#endif    // Neutral resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_DIALOG_ADDUSERAGENTRULE DIALOGEX 0, 0, 252, 235
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add User Agent Rule"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "&Predefined",IDC_RADIO_UA_PREDEFINED,"Button",BS_AUTORADIOBUTTON | WS_GROUP,13,47,51,10
+    COMBOBOX        IDC_COMBO_UA_PREDEFINED,23,61,210,92,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "C&ustom",IDC_RADIO_UA_CUSTOM,"Button",BS_AUTORADIOBUTTON,13,83,40,10
+    COMBOBOX        IDC_COMBO_UA_CUSTOM,23,97,210,104,CBS_DROPDOWN | CBS_AUTOHSCROLL | CBS_SORT | WS_DISABLED | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "Enable Compression for this User Agent",IDC_CHECK_UA_INCLUDE,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,16,189,143,10
+    DEFPUSHBUTTON   "OK",IDOK,132,214,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,191,214,50,14
+    LTEXT           "To exclude a user agent from compression select from the predefined list or enter your own custom string.",IDC_STATIC,15,17,227,20
+    LTEXT           "Select Enable Compression for this User Agent to override other agent rules and compress responses sent to this user agent. This option is useful when another rule would prevent a response from being compressed because it has a broad matching criteria.",IDC_STATIC,16,147,217,35
+    GROUPBOX        "Define User Agent",IDC_STATIC,5,4,240,121
+    GROUPBOX        "Advanced",IDC_STATIC,6,135,240,73
+END
+
+IDD_IISXPRESSTRAY_DIALOG DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "IISxpressTray"
+FONT 8, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,263,7,50,16
+    PUSHBUTTON      "Cancel",IDCANCEL,263,25,50,16
+    PUSHBUTTON      "&Help",ID_HELP,263,44,50,16
+    CTEXT           "TODO: Place dialog controls here.",IDC_STATIC,10,96,300,8
+END
+
+IDD_PAGE_GENERAL DIALOGEX 0, 0, 320, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "General"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_IISSTATUS,206,26,82,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_FILTER_STATUS,206,45,82,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_SERVER_STATUS,206,65,82,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NUM_COMPRESSED,203,121,74,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_NUM_CACHEHITS,203,143,74,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DATAIN_VALUE,203,166,74,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_DATAOUT_VALUE,203,189,74,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_COMPRESSION_RATIO,203,212,74,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    GROUPBOX        "Status",IDC_STATIC,8,9,303,81
+    GROUPBOX        "Activity",IDC_STATIC,8,99,303,134
+    LTEXT           "IIS:",IDC_STATIC,20,28,13,8
+    LTEXT           "IISxpress Filter:",IDC_STATIC,20,46,52,8
+    LTEXT           "IISxpress Server:",IDC_STATIC,20,66,58,8
+    LTEXT           "Number of compressed responses:",IDC_STATIC,20,122,112,8
+    LTEXT           "Uncompressed data in:",IDC_STATIC,20,167,74,8
+    LTEXT           "Compressed data out:",IDC_STATIC,20,190,72,8
+    LTEXT           "Compression ratio:",IDC_STATIC,20,213,61,8
+    LTEXT           "Static",IDC_STATIC_DATAIN_UNITS,281,166,15,8
+    LTEXT           "Static",IDC_STATIC_DATAOUT_UNITS,281,189,15,8
+    LTEXT           "%",IDC_STATIC,281,212,8,8
+    LTEXT           "Number of cache hits:",IDC_STATIC,20,144,71,8
+END
+
+IDD_PAGE_HISTORY DIALOGEX 0, 0, 320, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "History"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_HISTORY,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,6,8,310,129
+    EDITTEXT        IDC_EDIT_URI,63,161,242,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_QUERYSTRING,63,181,118,12,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_HOSTNAME,63,202,110,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_LOCATION,225,202,80,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CONTENTTYPE,63,222,110,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATIC_CLIENTBROWSER,225,222,80,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    GROUPBOX        "Details",IDC_STATIC,5,146,309,92
+    LTEXT           "Location:",IDC_STATIC,191,202,30,8
+    LTEXT           "Hostname:",IDC_STATIC,13,202,36,8
+    LTEXT           "Content type:",IDC_STATIC,13,222,46,8
+    LTEXT           "Browser:",IDC_STATIC,191,222,30,8
+    LTEXT           "URI:",IDC_STATIC,13,162,16,8
+    LTEXT           "Query String:",IDC_STATIC,13,182,44,8
+    EDITTEXT        IDC_EDIT_CLIENTIP,225,182,80,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    LTEXT           "Client IP:",IDC_STATIC,191,182,30,8
+END
+
+IDD_PAGE_CONFIG DIALOGEX 0, 0, 320, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Configuration"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_CONFIGTYPES,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSCROLL | WS_BORDER | WS_TABSTOP,5,7,58,234
+    CONTROL         "",IDC_CHILDFRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,71,7,240,233
+END
+
+IDD_PAGE_SYSTEM DIALOGEX 0, 0, 320, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "System"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_WINDOWSVER,18,18,262,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_PHYSICALMEMORY,52,34,27,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_CPUTYPE,140,34,162,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_IISVERSION,56,68,67,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_ASPNETVERSION,217,68,71,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATIC_IISCPULOAD,56,85,29,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_STATIC_IISMEMORYUSAGE,217,85,48,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_IISXPRESSCPULOAD,56,121,29,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_IISXPRESSMEMORYUSAGE,216,121,48,12,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | ES_NUMBER | NOT WS_BORDER | NOT WS_TABSTOP
+    GROUPBOX        "Platform",IDC_STATIC,7,5,305,44
+    GROUPBOX        "IIS",IDC_STATIC,7,54,305,48
+    GROUPBOX        "IISxpress",IDC_STATIC,7,109,305,130,0,WS_EX_TRANSPARENT
+    LTEXT           "Memory:",IDC_STATIC,20,34,29,8
+    LTEXT           "CPU:",IDC_STATIC,119,34,17,8
+    LTEXT           "MB",IDC_STATIC,84,34,10,8
+    LTEXT           "Version:",IDC_STATIC,20,68,27,8
+    LTEXT           "ASP.NET version:",IDC_STATIC,154,68,57,8
+    LTEXT           "CPU Load:",IDC_STATIC,20,85,34,8
+    LTEXT           "%",IDC_STATIC,89,85,8,8
+    LTEXT           "Memory usage:",IDC_STATIC,154,85,50,8
+    LTEXT           "KB",IDC_STATIC,269,85,9,8
+    LTEXT           "CPU Load:",IDC_STATIC,20,121,34,8
+    LTEXT           "%",IDC_STATIC,90,121,8,8
+    LTEXT           "Memory usage:",IDC_STATIC,154,121,50,8
+    LTEXT           "KB",IDC_STATIC,268,121,9,8
+    CONTROL         "",IDC_STATIC_CPULOADCHARTPLACEHOLDER,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,14,137,290,93
+END
+
+IDD_PAGE_ABOUT DIALOGEX 0, 0, 323, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+EXSTYLE WS_EX_TRANSPARENT
+CAPTION "About IISxpress"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         210,IDC_STATIC,"Static",SS_BITMAP,0,0,323,232
+    PUSHBUTTON      "&Purchase",IDC_BUTTON_PURCHASE,92,155,51,14,WS_DISABLED
+    PUSHBUTTON      "&Enter key",IDC_BUTTON_ENTERKEY,154,155,50,14,WS_DISABLED
+    PUSHBUTTON      "&Check for updates",IDC_BUTTON_CHECKFORUPDATES,13,155,69,14
+    CONTROL         "",IDC_STATIC_RIPCORDSOFTWAREHOTSPOT,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,96,52,62,9
+    GROUPBOX        "Trademarks and Acknowledgements",IDC_STATIC,10,176,302,62
+    LTEXT           "This evaluation copy will expire on the last day of MM/YYYY. ",IDC_STATIC_REGSTATUS,16,73,156,73,NOT WS_VISIBLE
+    EDITTEXT        IDC_EDIT_COPYRIGHTWARNING,14,185,296,51,ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | NOT WS_BORDER | WS_VSCROLL | NOT WS_TABSTOP
+END
+
+IDD_DIALOG_ADDCONTENTTYPERULE DIALOGEX 0, 0, 186, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add Content Type"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_CONTENTRULE,6,18,110,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,131,9,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,26,50,14
+    LTEXT           "Content Type:",IDC_STATIC,7,6,48,8
+END
+
+IDD_DIALOG_ADDEXTENSIONRULE DIALOGEX 0, 0, 186, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add Extension"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_EXTENSIONRULE,6,18,111,14,ES_AUTOHSCROLL
+    DEFPUSHBUTTON   "OK",IDOK,131,9,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,26,50,14
+    LTEXT           "Extension:",IDC_STATIC,7,6,35,8
+END
+
+IDD_PAGE_EXCLUSIONS DIALOGEX 0, 0, 320, 246
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_CAPTION
+CAPTION "Exclusions"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_EXCLUSIONTYPES,"SysListView32",LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSCROLL | WS_BORDER | WS_TABSTOP,5,7,58,234
+    CONTROL         "",IDC_CHILDFRAME,"Static",SS_BLACKFRAME | NOT WS_VISIBLE,71,7,240,234
+END
+
+IDD_DIALOG_CONFIGGENERAL DIALOGEX 0, 0, 240, 217
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FILTER_STATUS,36,20,82,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    CONTROL         "Allow &filter to process responses",IDC_CHECK_FILTERENABLE,
+                    "Button",BS_AUTOCHECKBOX | BS_MULTILINE | WS_TABSTOP,118,17,117,14
+    EDITTEXT        IDC_EDIT_SERVER_STATUS,45,79,100,14,ES_AUTOHSCROLL | ES_READONLY | NOT WS_BORDER | NOT WS_TABSTOP
+    PUSHBUTTON      "&Start",IDC_BUTTON_IISXPRESSSERVERSTART,145,76,41,14
+    PUSHBUTTON      "S&top",IDC_BUTTON_IISXPRESSSERVERSTOP,192,76,41,14
+    COMBOBOX        IDC_COMBO_IISXPRESSSERVERCOMPLEVEL,160,103,72,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_IISXPRESSSERVERBZIP2MODE,160,130,72,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Reset",IDC_BUTTON_RESETCOMPSTAT,190,159,41,14
+    GROUPBOX        "IISxpress Filter",IDC_STATIC,0,0,239,47
+    LTEXT           "Status:",IDC_STATIC,7,20,24,8
+    GROUPBOX        "IISxpress Server",IDC_STATIC,0,58,239,131
+    LTEXT           "Status:",IDC_STATIC,7,79,24,8
+    LTEXT           "Select the compression level for the server.",IDC_STATIC,7,106,151,12
+    LTEXT           "To reset the server compression statistics click the reset button.",IDC_STATIC,7,157,149,23
+    LTEXT           "Select the BZIP2 compression mode.",IDC_STATIC,7,133,151,12
+END
+
+IDD_DIALOG_EXCLUDECONTENTTYPES DIALOGEX 0, 0, 240, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_CONTENTTYPES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,13,222,192
+    PUSHBUTTON      "&Add...",IDC_BUTTON_ADDCONTENTTYPERULE,140,212,40,14
+    PUSHBUTTON      "&Delete",IDC_BUTTON_DELETECONTENTTYPERULE,190,212,40,14,WS_DISABLED
+    GROUPBOX        "Excluded Content Types",IDC_STATIC,0,0,239,233
+END
+
+IDD_DIALOG_EXCLUDEFOLDERS DIALOGEX 0, 0, 240, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBO_INSTANCES,44,16,160,101,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "Refresh",IDC_BUTTONREFRESH,214,15,16,16,BS_ICON
+    CONTROL         "",IDC_TREE_EXCLUDEDURIS,"SysTreeView32",TVS_HASBUTTONS | TVS_DISABLEDRAGDROP | TVS_SHOWSELALWAYS | TVS_NOTOOLTIPS | TVS_TRACKSELECT | WS_BORDER | WS_TABSTOP,8,35,222,190
+    GROUPBOX        "Excluded URIs",IDC_STATIC,0,0,239,234
+    LTEXT           "Site:",IDC_STATIC,11,18,25,8
+END
+
+IDD_DIALOG_ADDFOLDER DIALOGEX 0, 0, 207, 78
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add URI"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_FOLDERRULE,6,18,191,14,ES_AUTOHSCROLL
+    CONTROL         "Use URI path as wildcard",IDC_CHECKWILDCARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,39,96,10
+    DEFPUSHBUTTON   "OK",IDOK,88,58,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,146,58,50,14
+    LTEXT           "URI:",IDC_STATIC,7,6,16,8
+END
+
+IDD_DIALOG_ENTERPRODKEY DIALOGEX 0, 0, 319, 198
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION
+CAPTION "Enter Product Key"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_PRODUCTKEY,61,177,128,14
+    DEFPUSHBUTTON   "OK",IDOK,206,178,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,263,178,50,14
+    CONTROL         "",IDC_RICHEDIT2_LICENSE,"RichEdit20A",ES_MULTILINE | ES_AUTOVSCROLL | ES_READONLY | WS_VSCROLL | WS_TABSTOP,11,16,296,123
+    LTEXT           "Product Key:",IDC_STATIC,11,179,42,8
+    GROUPBOX        "License Agreement",IDC_STATIC,9,6,300,135
+    LTEXT           "Please read the license agreement carefully. By entering the product key and clicking the OK button you are accepting the license agreement shown above.",IDC_STATIC,11,151,291,19
+END
+
+IDD_DIALOGREPAIRINGFILTER DIALOGEX 0, 0, 104, 26
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Repairing...",IDC_STATIC,32,8,39,8
+END
+
+IDD_DIALOG_EXCLUDENETWORK DIALOGEX 0, 0, 240, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | DS_CONTROL | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CHECKBOX        "&Exclude compression requests from the local computer",IDC_CHECKCOMPRESSLOCALHOST,10,16,218,16,BS_LEFTTEXT
+    CONTROL         "",IDC_LISTNETWORKS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,46,222,159
+    PUSHBUTTON      "&Add...",IDC_BUTTONNETWORKADD,140,212,40,14
+    PUSHBUTTON      "&Delete",IDC_BUTTONNETWORKDELETE,190,212,40,14,WS_DISABLED
+    GROUPBOX        "Excluded Networks",IDC_STATIC,0,0,239,233
+    LTEXT           "Subnets:",IDC_STATIC,11,36,30,8
+END
+
+IDD_DIALOG_ADDIPRULE DIALOGEX 0, 0, 186, 52
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_CONTEXTHELP
+CAPTION "Add IP Address"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDIT_IPRULE,6,18,111,14
+    DEFPUSHBUTTON   "OK",IDOK,131,9,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,131,26,50,14
+    LTEXT           "IP Address:",IDC_STATIC,7,6,38,8
+END
+
+IDD_WIZARDPAGE_ADDEXTN_WELCOME DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Welcome to the Extension Exclusion Wizard",IDC_STATICWIZARDHEADER1,115,8,195,24
+    CONTROL         "I want to &search for extensions in my web site directories",IDC_RADIOSEARCHEXTNS,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP,120,99,184,21
+    CONTROL         "I know the extensions I want to exclude and I want to enter them &manually now",IDC_RADIOMANUALEXTNS,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,120,125,183,26
+    LTEXT           "To continue select one of the options below:",IDC_STATIC,115,80,143,8
+    LTEXT           "This wizard allows you to add new extension exclusion rules. Requests for files that have a matching extension rule will be excluded from compression.",IDC_STATIC,115,44,185,26
+END
+
+IDD_WIZARDPAGE_ADDEXTN_MANUALADD DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_COMBOBOXEX_EXTENSIONS,"ComboBoxEx32",CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP,149,9,106,200
+    DEFPUSHBUTTON   "&Add",IDC_BUTTONMANUALADD,265,8,50,14
+    CONTROL         "",IDC_LISTMANUALADDEXTENSIONS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,2,32,255,110
+    PUSHBUTTON      "&Remove",IDC_BUTTONMANUALADD_REMOVE,265,90,50,14,WS_DISABLED
+    PUSHBUTTON      "&Clear",IDC_BUTTONMANUALADD_CLEAR,265,115,50,14,WS_DISABLED
+    LTEXT           "Enter the extension you wish to exclude:",IDC_STATIC,6,11,132,8
+END
+
+IDD_WIZARDPAGE_ADDEXTN_AUTOADD_SELECTEXTN DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LISTSELECTEXTNS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,23,306,116
+    LTEXT           "Select the extensions you wish to exclude:",IDC_STATIC,7,7,138,8
+END
+
+IDD_WIZARDPAGE_ADDEXTN_AUTOADD_WEBSITESEL DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "All",IDC_RADIO_ALLWEBSITES,"Button",BS_AUTORADIOBUTTON | WS_GROUP,222,9,23,10
+    CONTROL         "Select from the list",IDC_RADIO_SELECTWEBSITES,"Button",BS_AUTORADIOBUTTON,222,25,75,10
+    CONTROL         "",IDC_LISTWEBSITES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,4,46,307,84
+    LTEXT           "Select the web site you wish to probe for available extensions:",IDC_STATIC,10,10,202,8
+END
+
+IDD_WIZARDPAGE_ADDEXTN_FINISH DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Completed Add Extension Wizard",IDC_STATICWIZARDHEADER1,115,8,195,24
+    LTEXT           "The extensions you selected have now been excluded from compression.",IDC_STATIC,120,77,189,33
+    LTEXT           "The new settings are already 'live', you do not need to restart IISxpress for them to take effect.",IDC_STATIC,155,164,162,25
+    ICON            IDI_ICONINFO,IDC_STATIC,123,161,21,20
+END
+
+IDD_WIZARDPAGE_ADDEXTN_CONFIRM DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "You have selected the extensions below to be excluded by IISxpress. If you click Next to proceed they will be added to your configuration. You can click Back to return to previous pages to modify your selection.",-1,6,5,304,26
+    CONTROL         "",IDC_LISTEXTENSIONS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,3,35,307,107
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_WELCOME DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Welcome to the Content Type Exclusion Wizard",IDC_STATICWIZARDHEADER1,115,8,195,24
+    CONTROL         "I want to &search for content types on my web server",IDC_RADIOSEARCHCONTENTTYPES,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE | WS_GROUP | WS_TABSTOP,120,99,184,21
+    CONTROL         "I know the content types I want to exclude and I want to enter them &manually now",IDC_RADIOMANUALCONTENTTYPES,
+                    "Button",BS_AUTORADIOBUTTON | BS_MULTILINE,120,125,183,26
+    LTEXT           "To continue select one of the options below:",IDC_STATIC,115,80,143,8
+    LTEXT           "This wizard allows you to add new content type exclusion rules. Requests that have a matching content type rule will be excluded from compression.",IDC_STATIC,115,44,185,26
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_MANUALADD DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    COMBOBOX        IDC_COMBOBOX_CONTENTTYPES,3,12,253,105,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    DEFPUSHBUTTON   "&Add",IDC_BUTTONMANUALADD,267,11,50,14
+    CONTROL         "",IDC_LISTMANUALADDCONTENTTYPES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_SHAREIMAGELISTS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,2,35,255,107
+    PUSHBUTTON      "&Remove",IDC_BUTTONMANUALADD_REMOVE,267,90,50,14,WS_DISABLED
+    PUSHBUTTON      "&Clear",IDC_BUTTONMANUALADD_CLEAR,267,115,50,14,WS_DISABLED
+    LTEXT           "Enter the content type to exclude:",IDC_STATIC,4,1,112,8
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_WEBSITESEL DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "All",IDC_RADIO_ALLWEBSITES,"Button",BS_AUTORADIOBUTTON | WS_GROUP,227,9,23,10
+    CONTROL         "Select from the list",IDC_RADIO_SELECTWEBSITES,"Button",BS_AUTORADIOBUTTON,227,25,75,10
+    CONTROL         "",IDC_LISTWEBSITES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | WS_DISABLED | WS_BORDER | WS_TABSTOP,4,46,307,84
+    LTEXT           "Select the web site you wish to probe for available content types:",IDC_STATIC,10,10,212,8
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_SELECTCONTENTTYPE DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LISTSELECTCONTENTTYPES,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,5,23,306,116
+    LTEXT           "Select the content types you wish to exclude:",IDC_STATIC,7,7,148,8
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_CONFIRM DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "You have selected the content types below to be excluded by IISxpress. If you click Next to proceed they will be added to your configuration. You can click Back to return to previous pages to modify your selection.",-1,6,5,304,26
+    CONTROL         "",IDC_LISTCONTENTTYPES,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,3,35,307,107
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_FINISH DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Completed Add Content Type Wizard",IDC_STATICWIZARDHEADER1,115,8,195,24
+    LTEXT           "The content types you selected have now been excluded from compression.",IDC_STATIC,120,77,189,33
+    LTEXT           "The new settings are already 'live', you do not need to restart IISxpress for them to take effect.",IDC_STATIC,155,164,162,25
+    ICON            IDI_ICONINFO,IDC_STATIC,123,161,20,20
+END
+
+IDD_WIZARDPAGE_ADDCONTENTTYPE_AUTOADD_SEARCH DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_SEARCHDIRS,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,0,7,317,135
+END
+
+IDD_WIZARDPAGE_ADDURI_WELCOME DIALOGEX 0, 0, 317, 193
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Welcome to the URI Exclusion Wizard",IDC_STATICWIZARDHEADER1,115,8,195,24
+    LTEXT           "To continue select next below.",IDC_STATIC,115,102,99,8
+    LTEXT           "This wizard allows you to add new URI exclusion rules. Requests that have a matching URI rule will be excluded from compression.",IDC_STATIC,115,56,185,26
+END
+
+IDD_WIZARDPAGE_ADDURI_MANUALADD DIALOGEX 0, 0, 317, 143
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_POPUP | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    EDITTEXT        IDC_EDITURI,8,16,266,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BUTTON_BROWSEURI,286,16,20,14
+    CONTROL         "Wildcard",IDC_CHECK_URIWILDCARD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,11,39,43,10
+    PUSHBUTTON      "Add",IDC_BUTTON_ADDURI,256,39,50,14
+    CONTROL         "",IDC_LIST_EXCLUDEURIS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,2,66,311,76
+    GROUPBOX        "Select URI",IDC_STATIC,1,2,313,58
+END
+
+IDD_DIALOG_EXCLUDEEXTENSIONS DIALOGEX 0, 0, 240, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "",IDC_LIST_EXTENSIONS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_SORTASCENDING | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,8,13,222,192
+    PUSHBUTTON      "&Add...",IDC_BUTTON_ADDEXTENSIONRULE,140,212,40,14
+    PUSHBUTTON      "&Delete",IDC_BUTTON_DELETEEXTENSIONRULE,190,212,40,14,WS_DISABLED
+    GROUPBOX        "Excluded Extensions",IDC_STATIC,0,0,239,233
+END
+
+IDD_DIALOG_CONFIGADVANCED DIALOGEX 0, 0, 240, 217
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Automatic",IDC_RADIO_AFFINITYMODE_AUTO,"Button",BS_AUTORADIOBUTTON,10,39,48,10
+    CONTROL         "Manual",IDC_RADIO_AFFINITYMODE_MANUAL,"Button",BS_AUTORADIOBUTTON,78,39,39,10
+    CONTROL         "None (not recommended)",IDC_RADIO_AFFINITYMODE_NONE,
+                    "Button",BS_AUTORADIOBUTTON,137,39,97,10
+    CONTROL         "CPU 1",IDC_CHECK_ENABLECPU1,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,57,35,10
+    CONTROL         "CPU 2",IDC_CHECK_ENABLECPU2,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,57,35,10
+    CONTROL         "CPU 3",IDC_CHECK_ENABLECPU3,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,57,35,10
+    CONTROL         "CPU 4",IDC_CHECK_ENABLECPU4,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,162,57,35,10
+    CONTROL         "CPU 5",IDC_CHECK_ENABLECPU5,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,42,72,35,10
+    CONTROL         "CPU 6",IDC_CHECK_ENABLECPU6,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,82,72,35,10
+    CONTROL         "CPU 7",IDC_CHECK_ENABLECPU7,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,122,72,35,10
+    CONTROL         "CPU 8",IDC_CHECK_ENABLECPU8,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,162,72,35,10
+    COMBOBOX        IDC_COMBO_LOGGINGLEVEL,168,108,63,61,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_IISXPRESSSERVERLOGGINGLEVEL,168,135,63,62,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "&Repair...",IDC_BUTTON_REPAIR,190,191,41,14
+    LTEXT           "Select a &logging level for the filter. 'None' is the default.",IDC_STATIC,7,110,150,23
+    LTEXT           "To fix a damaged filter installation click the repair button.",IDC_STATIC,7,190,158,17
+    GROUPBOX        "Logging",IDC_STATIC,0,95,239,67
+    LTEXT           "Select a lo&gging level for the server. 'None' is the default.",IDC_STATIC,7,137,150,21
+    GROUPBOX        "Troubleshooting",IDC_STATIC,0,170,239,45
+    GROUPBOX        "Processor Workload Model",IDC_STATIC,0,0,239,88
+    LTEXT           "Select the CPU usage model IISxpress uses to delegate the compression workload. Automatic is the default mode.",IDC_STATIC,7,14,227,20
+END
+
+IDD_DIALOG_CONFIGCACHE DIALOGEX 0, 0, 240, 217
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Enable Compression Cache",IDC_CHECK_ENABLECACHE,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,7,53,102,10
+    EDITTEXT        IDC_EDIT_MAXCACHESIZE,171,78,50,14,ES_RIGHT | ES_NUMBER
+    EDITTEXT        IDC_EDIT_MAXCACHERESPONSES,171,116,50,14,ES_RIGHT | ES_NUMBER,WS_EX_RIGHT
+    PUSHBUTTON      "Flush",IDC_BUTTON_CACHEFLUSH,171,151,50,14
+    GROUPBOX        "Compression Cache",IDC_STATIC,0,0,239,184
+    LTEXT           "Specify the maximum amount of memory used by the cache.",IDC_STATIC,7,77,138,23
+    LTEXT           "KB",IDC_STATIC,224,80,9,8
+    LTEXT           "Specify the maximum number of responses to hold in the cache.",IDC_STATIC,7,115,135,23
+    LTEXT           "To flush the compression cache click the Flush button.",IDC_STATIC,8,151,145,23
+    LTEXT           "When enabled IISxpress will store static responses in its compression cache. When a matching response is found the cache is used intead of re-compressing the response data.",IDC_STATIC,7,17,227,29
+END
+
+IDD_DIALOG_EXCLUDEUSERAGENTS DIALOGEX 0, 0, 240, 234
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Enable User Agent Rules",IDC_CHECK_ENABLE_USERAGENTRULES,
+                    "Button",BS_AUTOCHECKBOX | WS_TABSTOP,9,18,95,10
+    CONTROL         "",IDC_LIST_USERAGENTS,"SysListView32",LVS_REPORT | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_DISABLED | WS_BORDER | WS_TABSTOP,8,35,222,170
+    PUSHBUTTON      "&Add...",IDC_BUTTON_ADDUSERAGENTRULE,90,212,40,14,WS_DISABLED
+    PUSHBUTTON      "&Edit",IDC_BUTTON_EDITUSERAGENTRULE,140,212,40,14,WS_DISABLED
+    PUSHBUTTON      "&Delete",IDC_BUTTON_DELETEUSERAGENTRULE,190,212,40,14,WS_DISABLED
+    GROUPBOX        "User Agent Rules",IDC_STATIC,0,0,239,233
+END
+
+IDD_DIALOG_CONFIGAHA DIALOGEX 0, 0, 240, 240
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD | WS_SYSMENU
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "Enable Hardware Compression",IDC_CHECK_ENABLEAHA,"Button",BS_AUTOCHECKBOX | WS_DISABLED | WS_TABSTOP,16,50,125,10
+    EDITTEXT        IDC_EDIT_BOARDDESCRIPTION,74,90,155,14,ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED
+    EDITTEXT        IDC_EDIT_FPGATEMP,101,157,41,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED | NOT WS_TABSTOP
+    EDITTEXT        IDC_EDIT_BOARDTEMP,101,176,41,14,ES_RIGHT | ES_AUTOHSCROLL | ES_READONLY | WS_DISABLED | NOT WS_TABSTOP
+    GROUPBOX        "AHA Compression Settings",IDC_STATIC,0,0,239,68
+    CONTROL         "",IDC_STATIC_AHABMP,"Static",SS_BLACKFRAME,138,208,94,26
+    GROUPBOX        "Status",IDC_STATIC,0,73,239,125
+    LTEXT           "Compression Chip temp:",IDC_STATIC,16,159,78,8
+    LTEXT           "°C",IDC_STATIC,147,159,9,8
+    LTEXT           "Board temp:",IDC_STATIC,54,178,40,8
+    LTEXT           "°C",IDC_STATIC,147,178,9,8
+    LTEXT           "Board Description:",IDC_STATIC,12,92,60,8
+    LTEXT           "When enabled IISxpress will use an AHA hardware compression board if there is one available. If the box is not checked IISxpress will use only software compression.",IDC_STATIC,11,18,212,25
+    LTEXT           "These are the current temperature readings from your compression board. It is important to ensure that the temperature of the board remains in the specified operational range.",IDC_STATIC,11,118,216,32
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO 
+BEGIN
+    IDD_DIALOG_ADDUSERAGENTRULE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 245
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 228
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_ACCELERATOR_EXCLUDEEXTENSIONS ACCELERATORS 
+BEGIN
+    VK_DELETE,      IDC_BUTTON_DELETEEXTENSIONRULE, VIRTKEY, NOINVERT
+    VK_INSERT,      IDC_BUTTON_ADDEXTENSIONRULE, VIRTKEY, NOINVERT
+END
+
+IDR_ACCELERATOR_EXCLUDECONTEXTTYPES ACCELERATORS 
+BEGIN
+    VK_INSERT,      IDC_BUTTON_ADDCONTENTTYPERULE, VIRTKEY, NOINVERT
+    VK_DELETE,      IDC_BUTTON_DELETECONTENTTYPERULE, VIRTKEY, NOINVERT
+END
+
+IDR_ACCELERATOR_EXCLUDENETWORK ACCELERATORS 
+BEGIN
+    VK_INSERT,      IDC_BUTTONNETWORKADD,   VIRTKEY, NOINVERT
+    VK_DELETE,      IDC_BUTTONNETWORKDELETE, VIRTKEY, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP_ABOUT        BITMAP                  "res\\about.bmp"
+IDB_BITMAP_CONTENT      BITMAP                  "res\\content_32_32_24.bmp"
+IDB_BITMAP_FILEEXTENSIONS BITMAP                  "res\\file_extension_32_32_24.bmp"
+IDB_BITMAP_FOLDERS      BITMAP                  "res\\folder_32_32_24.bmp"
+IDB_BITMAP_URI          BITMAP                  "res\\uri_32_32_24.bmp"
+IDB_BITMAP_WIZARDCOMPASS BITMAP                  "res\\bmp00002.bmp"
+IDB_BITMAP_EARTH        BITMAP                  "res\\earth_32_32_24.bmp"
+IDB_BITMAP_COMPASSSEGMENT64 BITMAP                  "res\\bmp00003.bmp"
+IDB_BITMAP_WEBSERVER16  BITMAP                  "res\\tree_type_websrv.bmp"
+IDB_BITMAP_FOLDER16     BITMAP                  "res\\tree_type_folder.bmp"
+IDB_BITMAP_WEBDIR16     BITMAP                  "res\\tree_type_webdir.bmp"
+IDB_BITMAP_FOLDEREX16   BITMAP                  "res\\tree_type_folder_excluded.bmp"
+IDB_BITMAP_WEBDIREX16   BITMAP                  "res\\tree_type_webdir_excluded.bmp"
+IDB_BITMAP_WEBSERVEREX16 BITMAP                  "res\\tree_type_websrv_excluded.bmp"
+IDB_BITMAP_NETWORK      BITMAP                  "res\\network_32_32_24.bmp"
+IDB_BITMAP_CONFIGGENERAL BITMAP                  "res\\configgeneral_32_32_24.bmp"
+IDB_BITMAP_CONFIGADVANCED BITMAP                  "res\\configadvanced_32_32_24.bmp"
+IDB_BITMAP_CONFIGCACHE  BITMAP                  "res\\configcache_32_32_24.bmp"
+IDB_BITMAP_USERAGENT    BITMAP                  "res\\useragent_32_32_24.bmp"
+IDB_BITMAP_HWCOMPRESSION BITMAP                  "res\\chip_32_32_24.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENUTRAY MENU 
+BEGIN
+    POPUP "Tray Menu"
+    BEGIN
+        MENUITEM "&Status",                     ID_TRAYMENU_STATUS
+        MENUITEM "&Help",                       ID_TRAYMENU_HELP
+        POPUP "Advanced"
+        BEGIN
+            MENUITEM "Check for Updates",           ID_TRAYMENU_ADV_CHECKFORUPDATES
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_TRAYMENU_EXIT
+    END
+END
+
+IDR_MENU_URICONTEXT MENU 
+BEGIN
+    POPUP "URIMenu"
+    BEGIN
+        POPUP "E&xclude"
+        BEGIN
+            MENUITEM "&Folder",                     ID_URIMENU_EXCLUDE_FOLDER
+            MENUITEM "&Branch",                     ID_URIMENU_EXCLUDE_BRANCH
+        END
+        MENUITEM "&Include",                    ID_URIMENU_INCLUDE
+        MENUITEM SEPARATOR
+        MENUITEM "&Browse",                     ID_URIMENU_BROWSE
+        MENUITEM "&Explore",                    ID_URIMENU_EXPLORE
+    END
+END
+
+IDR_MENU_HISTORYCONTEXT MENU 
+BEGIN
+    POPUP "HistoryContext"
+    BEGIN
+        POPUP "E&xclude"
+        BEGIN
+            MENUITEM "Exclude this &Extension",     ID_EXCLUDE_EXCLUDETHISEXTENSION
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this Content &Type",  ID_EXCLUDE_EXCLUDETHISCONTENTTYPE
+            MENUITEM "Exclude &Matching Content Types", ID_EXCLUDE_EXCLUDEMATCHINGCONTENTTYPES
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this &Directory",     ID_EXCLUDE_EXCLUDETHISDIRECTORY
+            MENUITEM "Exclude this Directory T&ree", ID_EXCLUDE_EXCLUDETHISDIRECTORYTREE
+            MENUITEM "Exclude this &Web Site",      ID_EXCLUDE_EXCLUDETHISWEBSITE
+            MENUITEM SEPARATOR
+            MENUITEM "Exclude this &Client IP",     ID_EXCLUDE_EXCLUDETHISCLIENT
+            MENUITEM "Exclude this Client &Subnet", ID_EXCLUDE_EXCLUDETHISCLIENTSUBNET
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "C&lear",                      ID_HISTORYCONTEXT_CLEAR
+        MENUITEM "&Auto Scroll",                ID_HISTORYCONTEXT_AUTOSCROLL
+        MENUITEM SEPARATOR
+        MENUITEM "&Enable History",             ID_HISTORYCONTEXT_ENABLEHISTORY
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_ICONCOMPASS         ICON                    "res\\compass.ico"
+IDR_MAINFRAME           ICON                    "res\\idr_main.ico"
+IDI_ICONREFRESH         ICON                    "res\\icon1.ico"
+IDI_ICONINFO            ICON                    "res\\INFO.ICO"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSORHAND          CURSOR                  "res\\cursor1.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// PNG
+//
+
+HELP16.PNG              PNG                     "res\\help16.png"
+STATUS16.PNG            PNG                     "res\\status16.png"
+FOLDER16.PNG            PNG                     "res\\folder16.png"
+BROWSE16.PNG            PNG                     "res\\browse16.png"
+FOLDEROPEN16.PNG        PNG                     "res\\folderopen16.png"
+NETWORKGROUP16.PNG      PNG                     "res\\networkgroup16.png"
+GENMIXEDMEDIADOC16.PNG  PNG                     "res\\GenMixedMediaDoc16.png"
+IDRDLL16.PNG            PNG                     "res\\idr_dll16.png"
+GREENFLAG16.PNG         PNG                     "res\\Flag_greenHS.png"
+REDFLAG16.PNG           PNG                     "res\\Flag_redHS.png"
+COMTECHAHA-SMALL.PNG    PNG                     "res\\comtechaha-small.png"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#include ""res\\IISxpressTray.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)\r\n"
+    "LANGUAGE 9, 1\r\n"
+    "#pragma code_page(1252)\r\n"
+    "#include ""afxres.rc""         // Standard components\r\n"
+    "#endif\r\n"
+    "\r\n"
+    "1 TYPELIB ""IISxpressTray.tlb""\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_IISXPRESSSTATUS     "IISxpress Status"
+    IDS_CLOSEBUTTONTEXT     "&Close"
+    IDS_KB_UNITS            "KB"
+    IDS_MB_UNITS            "MB"
+    IDS_IIS_SERVERSTATE_UNKNOWN "Unknown"
+    IDS_IIS_SERVERSTATE_RUNNING "Running"
+    IDS_IIS_SERVERSTATE_STOPPED "Stopped"
+    IDS_FILTERSTATE_UNKNOWN "Unknown"
+    IDS_FILTERSTATE_INSTALLED "Installed"
+    IDS_FILTERSTATE_RUNNING "Running"
+    IDS_FILTERSTATE_NOTINSTALLED "Not installed"
+    IDS_SERVERSTATE_RUNNING "Running"
+    IDS_SERVERSTATE_STOPPED "Stopped"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_URICOLUMN           "URI"
+    IDS_ORIGSIZECOLUMN      "Orig. Size"
+    IDS_COMPSIZECOLUMN      "Comp. Size"
+    IDS_RATIOCOLUMN         "Ratio"
+    IDS_TIMECOLUMN          "Time"
+    IDS_IISVERSION_UNKNOWN  "Unknown"
+    IDS_ASPNET_VERSION_UNKNOWN "Unknown"
+    IDS_ASPNET_VERSION_NOTINSTALLED "Not installed"
+    IDS_IISVERSION_NOTINSTALLED "Not installed"
+    IDS_IIS_SERVERSTATE_STARTING "Starting..."
+    IDS_IIS_SERVERSTATE_STOPPING "Stopping..."
+    IDS_IIS_SERVERSTATE_PAUSED "Paused"
+    IDS_IIS_SERVERSTATE_CONTINUING "Continuing..."
+    IDS_LOGGINGLEVEL_NONE   "None"
+    IDS_LOGGINGLEVEL_BASIC  "Basic"
+    IDS_LOGGINGLEVEL_ENHANCED "Enhanced"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_LOGGINGLEVEL_FULL   "Full"
+    IDS_IISXPRESS_SERVERSTATE_UNKNOWN "Unknown"
+    IDS_IISXPRESS_SERVERSTATE_NOTINSTALLED "Not installed"
+    IDS_IISXPRESS_SERVERSTATE_RUNNING "Running"
+    IDS_IISXPRESS_SERVERSTATE_STOPPED "Stopped"
+    IDS_IISXPRESS_SERVERSTATE_STARTING "Starting..."
+    IDS_IISXPRESS_SERVERSTATE_STOPPING "Stopping..."
+    IDS_IISXPRESS_SERVERSTATE_PAUSED "Paused"
+    IDS_IISXPRESS_SERVERSTATE_CONTINUING "Continuing"
+    IDS_IIS_SERVERSTATE_NOTINSTALLED "Not installed"
+    IDS_COLUMN_EXTENSION    "Extension"
+    IDS_COLUMN_CONTENTTYPE  "Content Type"
+    IDS_REALLYDELETE_EXTNRULE 
+                            "Do you really want to delete the selected extension?"
+    IDS_REALLYDELETE_EXTNRULES 
+                            "Do you really want to delete the selected extensions?"
+    IDS_IISXPRESS_APPNAME   "IISxpress"
+    IDS_REALLYDELETE_CONTENTTYPERULE 
+                            "Do you really want to delete the selected content type?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_LIST_EXTENSIONS     "Files with extensions listed in this window will not be compressed by IISxpress.\nFor example to exclude 'gif' image files from compression add 'gif' to the list."
+    IDC_BUTTON_ADDEXTENSIONRULE 
+                            "Click to add new file extensions to the exclusion list."
+    IDC_BUTTON_DELETEEXTENSIONRULE 
+                            "Click to remove the selected file extensions from the exclusion list."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_LIST_HISTORY        "Displays real-time compression information.\n\nRight click on this control to add exclusion rules, clear or change the scrolling behavior."
+    IDC_STATIC_CLIENTBROWSER 
+                            "Displays the client browser type which initiated the request."
+    IDC_EDIT_URI            "Displays the full URI of the item selected in the real-time compression window."
+    IDC_EDIT_QUERYSTRING    "Displays the query string of the item selected in the real-time compression window."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EDIT_IISMEMORYUSAGE "Displays the amount of memory used by IIS."
+    IDC_EDIT_IISCPULOAD     "Displays the percentage of CPU time used by IIS."
+    IDC_BUTTON_IISSTART     "Click to start the IIS service or process."
+    IDC_BUTTON_IISSTOP      "Click to stop the running IIS service or process."
+    IDC_COMBO_LOGGINGLEVEL  "Select the logging level for the filter. You should only change this setting if you are experiencing problems and wish to send an error report to Ripcord Software. The default is none."
+    IDC_BUTTON_REPAIR       "Click to repair your IISxpress filter configuration."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_BUTTON_IISXPRESSSERVERSTART 
+                            "Click to start the IISxpress service or process."
+    IDC_BUTTON_IISXPRESSSERVERSTOP 
+                            "Click to stop the IISxpress service or process."
+    IDC_COMBO_IISXPRESSSERVERLOGGINGLEVEL 
+                            "Select the logging level for the IISxpress server. You should only change this setting if you are experiencing problems and wish to send an error report to Ripcord Software. The default is none."
+    IDC_BUTTON_RESETCOMPSTAT 
+                            "Click here to reset the server's compression statistics."
+    IDC_CHECK_FILTERENABLE  "To allow the filter to intercept and compress responses from IIS this option should be checked on. If unchecked the filter will not compress responses from IIS. The default is checked."
+    IDC_EDIT_CPUTYPE        "Displays the type of CPU installed in this computer."
+    IDC_GRAPH_IISXPRESSCPULOAD 
+                            "Displays a graph of the recent CPU load of the IISxpress process."
+    IDC_EDIT_CONTENTRULE    "Enter the content type you want to exclude from the compression process.\n\nFor example to never compress GIF files enter 'image/gif'."
+    IDC_EDIT_EXTENSIONRULE  "Enter the file extension you want to exclude from the compression process.\n\nFor example to never compress GIF files enter the word 'gif'."
+    IDC_LIST_CONTENTTYPES   "Responses with content types contained in this list will not be compressed by IISxpress.\n\nFor example to exclude 'gif' images by content type add 'image/gif' to the list. You could also exclude all images by adding 'image/*' to the list."
+    IDC_BUTTON_ADDCONTENTTYPERULE 
+                            "Click to add a new content type to the exclusion list."
+    IDC_BUTTON_DELETECONTENTTYPERULE 
+                            "Click to remove the selected content type items from the exclusion list."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_REALLYDELETE_CONTENTTYPERULES 
+                            "Do you really want to delete the selected content types?"
+    IDS_COLUMN_EXTNDESC     "Description"
+    IDS_ERROR_NEEDCONTENTTYPE "You must enter a content type string."
+    IDS_ERROR_CONTENTTYPEALREADYEXCLUDED 
+                            "You have entered a content type that is already excluded."
+    IDS_ERROR_NEEDEXTENSION "You must enter a file extension."
+    IDS_ERROR_EXTENSIONALREADYEXCLUDED 
+                            "You have entered an extension that is already excluded."
+    IDS_HELPBUTTONTEXT      "&Help"
+    IDS_SHEETBUTTONSPACERSTRING "XQXQXQXQ"
+    IDS_ERROR_CANTLOCATEFILTERDLL 
+                            "Cannot repair filter setup since unable to locate filter DLL. Please try reinstalling to fix the problem."
+    IDS_MSG_ABOUTTOREPAIR   "You are about to repair your IISxpress filter installation. The repair process will stop the\nweb server before it can proceed. The web server will be restarted when the repair is complete.\n\nWARNING: You should only continue with the repair if you are having trouble with IISxpress\nand you suspect that your IIS configuration is not correct.\n\nTo continue select YES, otherwise select NO to abort the repair operation."
+    IDS_ERROR_FILTERREPAIRFAILED 
+                            "IISxpress has been unable to repair the filter installation. If you continue to have problems please reinstall IISxpress."
+    IDS_MSG_FILTERREPAIROK  "The filter repair operation has completed successfully."
+    IDS_MSG_COPYRIGHTWARNING 
+                            "ZLib compression library Copyright © 1995-2010 Jean-loup Gailly and Mark Adler. BZIP2 compression library Copyright © 1996-2009 Julian Seward. Windows, Internet Explorer and IIS are trademarks of Microsoft Corporation. Mozilla and Firefox are trademarks of The Mozilla Organization. Opera is a trademark of Opera Software ASA. Safari is a trademark of Apple Computer, Inc. Chrome is a trademark of Google Inc. Oscilloscope control by Mark C. Malburg.\r\n\r\nWarning: this computer program is protected by copyright law and international treaties. Unauthorized reproduction or distribution of this program, or any portion of it, may result in severe civil and criminal penalties, and will be prosecuted to the maximum extent possible under the law."
+    IDS_ERROR_CANTCONNECTSERVICEMANAGER_START 
+                            "Unable to connect to the service manager to start the service.\n\nPlease check you have access rights to start the service in your system's user manager."
+    IDS_ERROR_CANTCONNECTSERVICEMANAGER_STOP 
+                            "Unable to connect to the service manager to stop the service.\n\nPlease check you have access rights to stop the service in your system's user manager."
+    IDS_EXCLUSION_EXTENSIONS "Extensions"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXCLUSION_CONTENTYPES "Content Types"
+    IDS_EXCLUSION_FOLDERS   "URIs"
+    IDS_TOOLTIP_URIEXCLUDED_MSG 
+                            "This folder has been excluded by a rule and will not be compressed by IISxpress."
+    IDS_TOOLTIP_URIEXCLUDED_CAPTION "Exclusion Rule"
+    IDS_FOLDERMATCH_EXACT   "Exact"
+    IDS_FOLDERMATCH_WILDCARD "Wildcard"
+    IDS_FOLDERMATCH_UNKNOWN "Unknown"
+    IDS_MSG_RESTARTIISFORNEWLOGSETTING 
+                            "The new logging level setting will take effect the next time IIS is started."
+    IDS_TRAYTIP_IISXPRESSSTOPPPED "IISxpress\nStatus: Stopped"
+    IDS_TRAYTIP_IISXPRESSRUNNING 
+                            "IISxpress\nRatio: %s %%\nResponses: %s\nBytes In: %s KB\nBytes Out: %s KB"
+    IDS_ERROR_ADDFOLDER_EMPTYPATH "You must enter a valid URI path."
+    IDS_ERROR_ADDFOLDER_BADPATH 
+                            "The URI path must begin with a '/' character."
+    IDS_ERROR_ADDFOLDER_ALREADYADDED 
+                            "You have entered a URI that is already in the exclusion list."
+    IDS_ERROR_ADDFOLDER_ADDFAILED "Failed to add URI path to exclusion list."
+    IDS_STRING_REALLYSTOPIIS "Are you sure you want to stop IIS?"
+    IDS_STRING_REALLYSTOPIISXPRESS "Are you sure you want to stop IISxpress?"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EDIT_IISSTATUS      "Displays the status of the IIS service."
+    IDC_EDIT_FILTER_STATUS  "Displays the installed state of the IISxpress filter."
+    IDC_EDIT_SERVER_STATUS  "Displays the status of the IISxpress service."
+    IDC_EDIT_NUM_COMPRESSED "Displays the total number of compressed responses returned by IISxpress."
+    IDC_EDIT_DATAIN_VALUE   "Displays the total number of KB or MB processed by IISxpress before compression."
+    IDC_EDIT_DATAOUT_VALUE  "Displays the total number of KB or MB compressed by IISxpress and returned to clients."
+    IDC_EDIT_COMPRESSION_RATIO 
+                            "Displays the overall compression ratio between the incoming data and the outgoing data. The higher the number the better the compression achieved."
+    IDC_EDIT_HOSTNAME       "Displays the hostname used by the client in its HTTP request to IIS."
+    IDC_EDIT_CLIENTIP       "Displays the IP address of the client which made the request to IIS."
+    IDC_EDIT_CONTENTTYPE    "Displays the content type of the response from IIS."
+    IDC_EDIT_WINDOWSVER     "Displays the version of Windows running on this computer."
+    IDC_EDIT_PHYSICALMEMORY "Displays the amount of memory installed in this computer."
+    IDC_EDIT_IISVERSION     "Displays the version of IIS installed on this computer."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EDIT_ASPNETVERSION  "Displays the ASP.NET version installed and registered with IIS."
+    IDC_EDIT_IISXPRESSCPULOAD 
+                            "Displays the percentage of CPU used by IISxpress."
+    IDC_EDIT_IISXPRESSMEMORYUSAGE 
+                            "Displays the amount of memory used by IISxpress."
+    IDC_COMBO_INSTANCES     "Select the IIS server instance to configure its URI rules. Unless you have a server version of IIS you will probably only see the default instance in the list."
+    IDC_EDIT_FOLDERRULE     "Enter a URI path you wish to exclude from the compression process.\n\nFor example to never compress files from your /images URI enter '/images'."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_CHECKWILDCARD       "Click to switch on wildcard mode.\n\nWildcard mode will match all sub-folders of the URI you specify. If unchecked IISxpress will try to exactly match the URI path.\n\nFor example if you have excluded the /images URI in wildcard mode all sub-folders will be excluded as well. In exact mode the sub-folders will still be compressed."
+    IDC_LIST_EXCLUSIONTYPES "To configure exclusion rules select the appropriate item from this window."
+    IDC_BUTTON_PURCHASE     "Click to purchase IISxpress."
+    IDC_BUTTON_ENTERKEY     "Click to register a full product key."
+    IDC_CHECKCOMPRESSLOCALHOST 
+                            "When checked IISxpress will NOT compress web server requests from the local computer.\n\nThe default setting is checked."
+    IDC_LISTNETWORKS        "Requests coming from clients on the any of the networks in this list will not be compressed.\n\nFor example if your LAN is using the IP address range 192.168.0 you could enter this address to prevent IISxpress from compressing data from these clients. Clients with IP addresses outwith this range will still receive compressed responses."
+    IDC_BUTTONNETWORKADD    "Click to add a new IP address to the exclusion list."
+    IDC_BUTTONNETWORKDELETE "Click to remove the selected IP addresses from the exclusion list."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_TREE_EXCLUDEDURIS   "Use the right mouse button or the Windows context key to select which parts of your web site to exclude from compression."
+    IDC_COMBO_IISXPRESSSERVERCOMPLEVEL 
+                            "Click here to set the server compression level.\n\nChoose from the following options:\nBest Size - results in the smallest response but will use the most CPU time\nBest Speed - results in the fastest response but will not give the best compression results\nDefault - allow the compression engine to select the best compromise between speed and size"
+    IDC_COMBO_IISXPRESSSERVERBZIP2MODE 
+                            "Click here to set the BZIP2 mode.\n\nChoose from the following options:\nDisabled - BZIP2 compression will not be used\nStatic Content - only static content like HTML, CSS and JS will be compressed\nAll Content - IISxpress will use BZIP2 to compress all content where the client supports it"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_STRING_USERDISABLEDIISXPRESSFILTER 
+                            "You have just disabled the IISxpress filter.\n\nIISxpress will not compress any responses until the filter is enabled again."
+    IDS_IISXPRESSSTATUS_COMMUNITYEDITION 
+                            "IISxpress Status - Community Edition"
+    IDS_CONFIGTYPE_GENERAL  "General"
+    IDS_CONFIGTYPE_CACHE    "Cache"
+    IDS_STRING_PRODUCTREGISTERED 
+                            "IISxpress is registered. Thank you.\n\nVisit www.ripcordsoftware.com for product updates and support."
+    IDS_CONFIGTYPE_ADVANCED "Advanced"
+    IDS_ERROR_ZEROLENGTHPRODUCTKEY 
+                            "Please enter the product key text supplied to you by Ripcord Software.\n\nIt should be in the format PPPP-QQQQ-RRRR-SSSS."
+    IDS_ERROR_FATALPRODUCTKEYERR 
+                            "An error has occurred registering your the product key, please try again.\n\nIf the problem persists please contact Ripcord Software technical support."
+    IDS_ERROR_PRODUCTKEYBADFORMAT 
+                            "The product key you have entered is invalid.\n\nPlease check this is the correct key.\n\nFor assistance please contact Ripcord Software technical support."
+    IDS_ERROR_PROUCTKEYALREADYEXPIRED 
+                            "The product key you have entered has already expired.\n\nPlease purchase a full product key to continue to use IISxpress.\n\nFor assistence please contact Ripcord Software technical support."
+    IDS_STRING_GOODPRODUCTKEY 
+                            "The product key has been accepted.\n\nThank you."
+    IDS_EXCLUSION_NETWORK   "Networks"
+    IDS_COLUMN_NETWORK      "Network"
+    IDS_STRING_INSTALLCOMPLETED 
+                            "The installation is now complete. You should click here to customise your settings."
+    IDS_ERROR_FAILEDTOWRITECOMPRESSLOCALHOST 
+                            "Unable to change the 'Compress Localhost' setting.\n\nPlease check you have sufficient access rights to the system to change this setting."
+    IDS_ERROR_INCORRECTIPADDRESS 
+                            "You must enter an IP address in the format A.B.C.D where B, C and D are optional.\n\nFor example, 192.168.0 would exclude all requests from clients on that network."
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_ERROR_IPADDRESSADDFAILED "Failed to add IP address to exculsion list."
+    IDS_REALLYDELETE_IPADDRESSRULE 
+                            "Do you really want to delete the selected item?"
+    IDS_REALLYDELETE_IPADDRESSRULES 
+                            "Do you really want to delete the selected items?"
+    IDS_EXTNEXWIZARD        "Extension Exclusion Wizard"
+    IDS_WIZHEADER_MANUALEXTNADD "Manually Add File Extensions"
+    IDS_WIZSUBHEADER_MANUALEXTNADD 
+                            "Enter the file extensions you wish to exclude and click Next"
+    IDS_COLUMN_INSTANCE     "Instance"
+    IDS_COLUMN_WEBSITEDESC  "Description"
+    IDS_COLUMN_WEBSITEPATH  "Path"
+    IDS_WIZHEADER_SELECTEXTNS "Select Extensions to Exclude"
+    IDS_WIZSUBHEADER_SELECTEXTN 
+                            "Select the extensions you wish to exclude from the list"
+    IDS_WIZHEADER_CONFIRMEXTNS "Confirm your selection"
+    IDS_WIZSUBHEADER_CONFIRMEXTNS "Review the extensions you have selected"
+    IDS_CONTENTTYPEEXWIZARD "Content Type Exclusion Wizard"
+    IDS_WIZHEADER_MANUALCTADD "Manually Add Content Types"
+    IDS_WIZSUBHEADER_MANUALCTADD 
+                            "Enter the content types you wish to exclude and click Next"
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_EDIT_IPRULE         "Enter the network or machine IP address to exclude from compression.\n\nFor example enter 10.52 to exclude all clients who have IP addresses on that network. You can also enter a full IP address to exclude a specific client, for example 192.168.0.27."
+    IDC_BUTTONREFRESH       "Click to refresh the list of web sites and the URI rules."
+    IDS_WIZHEADER_SELECTWEBSITE_EXTN "Select Web Site"
+    IDS_WIZSUBHEADER_SELECTWEBSITE_EXTN 
+                            "Select web sites to probe for extensions to exclude"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_WIZHEADER_SELECTWEBSITE_CT "Select Web Site"
+    IDS_WIZSUBHEADER_SELECTWEBSITE_CT 
+                            "Select web sites to probe for content types to exclude"
+    IDS_WIZHEADER_CONFIRM_CT "Confirm your selection"
+    IDS_WIZSUBHEADER_CONFIRM_CT "Review the content types you have selected"
+    IDS_WIZHEADER_SELECT_CT "Select Content Types to Exclude"
+    IDS_WIZSUBHEADER_SELECT_CT 
+                            "Select the content types you wish to exclude from the list"
+    IDS_WIZHEADER_SEARCH_CT "Please wait..."
+    IDS_WIZSUBHEADER_SEARCH_CT 
+                            "Searching your web directories for content types"
+    IDS_COLUMN_DIRECTORY    "Directory"
+    IDS_URIEXWIZARD         "URI Exclusion Wizard"
+    IDS_ERROR_MISSINGFOLDER "The folder '%ls' could not be located."
+    IDS_ERROR_BADCONTEXTTYPEFORMAT 
+                            "The content type you have entered is not valid.\n\nPlease enter in the form:\n\n\ttext/html\tOR\n\ttext/*"
+    IDS_COMPMODE_SIZE       "Best Size"
+    IDS_COMPMODE_SPEED      "Best Speed"
+    IDS_COMPMODE_DEFAULT    "Default"
+    IDS_ERROR_CANTSETCOMPRESSIOMODE "Unable to set compression mode."
+END
+
+STRINGTABLE 
+BEGIN
+    IDM_ALWAYSONTOP         "&Always on Top"
+    IDS_ERRORADDINGEXCLUSIONRULE 
+                            "There was an error adding the exclusion rule."
+    IDS_EXTENSIONEXCLUSIONADDED 
+                            "The extension exclusion rule '%s' has been added."
+    IDS_CONTENTTYPEEXCLUSIONADDED 
+                            "The content type exclusion rule '%s' has been added."
+    IDS_URIEXCLUSIONRULEADDED "The URI exclusion rule '%s' has been added."
+    IDS_IPEXCLUSIONRULEADDED 
+                            "The IP address exclusion rule '%s' has been added."
+    IDS_UNKNOWNLOCATION     "Unknown"
+    IDS_BZIP2MODE_DISABLED  "Disabled"
+    IDS_BZIP2MODE_STATICONLY "Static Content"
+    IDS_BZIP2MODE_ALL       "All Content"
+    IDS_ERROR_CANTSETBZIP2MODE "Unable to set the BZIP2 compression mode."
+    IDS_CONFIGTYPE_AHA      "AHA"
+    IDS_AHAEDITION          "Licensed to Comtech AHA\n\nThis software is licensed for exclusive use with the AHA family of hardware compression boards."
+    IDS_AHAEDITION_LINKED   "Licensed to <a href=""www.aha.com"">Comtech AHA</a>\n\nThis software is licensed for exclusive use with the AHA family of hardware compression boards."
+    IDS_IISXPRESSSTATUS_AHAEDITION 
+                            "IISxpress Status - Licensed to Comtech AHA"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_EXCLUSION_USERAGENTS "User Agents"
+    IDS_COLHEADER_USERAGENTSTRING "User Agent Strings"
+    IDS_MSG_REALLYDELETEUSERAGENT 
+                            "Do you really want to delete the selected user agent rule?"
+    IDS_MSG_REALLYDELETEUSERAGENTS 
+                            "Do you really want to delete the selected user agent rules?"
+    IDS_COLHEADER_HINT      "Hint"
+END
+
+STRINGTABLE 
+BEGIN
+    IDS_VERSIONCHECK_CAPTION "IISxpress Version Check"
+    IDS_VERSIONCHECK_FAILED "An error occurred while checking for a new version.\n\nError code 0x%08x.\n\nPlease try again later."
+    IDS_STRING_PRODUCTREGISTERED_LINKED 
+                            "IISxpress is registered. Thank you.\n\nVisit <a href=""http://www.ripcordsoftware.com"">www.ripcordsoftware.com</a> for product updates and support."
+    IDS_VERSIONCHECK_NOUPDATES "You have the most up to date version!"
+    IDS_GRAPH_LOADPERCENT   "Load%"
+    IDS_ERROR_BADLANGUAGE   "/lang=en or /lang=fr"
+    IDS_STRING_COMMUNITYEDITION 
+                            "Community Edition\n\nThis edition is free for non-commercial and non-governmental use. See CommunityLicense.rtf for more information. For help and support please visit www.ripcordsoftware.com."
+    IDS_STRING_COMMUNITYEDITION_NOTIFY 
+                            "Welcome to IISxpress Community Edition.\n\nYou are licensed to use this software for non-commercial and non-governmental purposes, otherwise you must purchase a license to continue to use it. Please see About or Help for more information."
+    IDS_VERSIONCHECK_UPDATEAVAILABLE 
+                            "A new version is available.\n\nSelect 'Yes' to download it now, otherwise select 'No'."
+    IDS_VERSIONCHECK_PROMPT "To check for a new version an Internet connection is required.\n\nTo proceed select 'Yes', otherwise select 'No'."
+    IDS_CACHEFLUSHOK        "The compression cache has been flushed."
+    IDS_BETA_VERSIONSTRING  " "
+    IDS_IISXPRESSSTATUS_EVALUATIONEDITION 
+                            "IISxpress Status - Evaluation Edition"
+    IDS_STRING_EVALUATIONEDITION 
+                            "Evaluation Edition\n\nYou are free to evaluate this software for up to 21 days from your first installation. To continue to use it after this period you must purchase IISxpress. For help and support please visit www.ripcordsoftware.com."
+    IDS_STRING_EVALUATIONEDITION_NOTIFY 
+                            "Welcome to IISxpress Evaluation Edition.\n\nYou are licensed to use this software for a period of 21 days from first installation. To continue to use it after this period you must purchase IISxpress. Please see About or Help for more information."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_CHECK_ENABLECACHE   "To enable the compression cache check this item. When the compression cache is enabled static content (HTML, CSS, JS, etc.) can be returned to clients without needing to be compressed each time. Compressed data can be returned from the cache up to 10 times faster than a full compression pass.\n\nThe default is checked."
+    IDC_EDIT_MAXCACHESIZE   "Here you can enter the maximum amount of memory that the cache can use. If this value is set too high your computer may start to run slowly, if the value is too low the cache may not be effective. You cannot specify a value higher than 10% of your computer's physical memory.\n\nThe default setting is 4096 KB."
+    IDC_EDIT_MAXCACHERESPONSES 
+                            "Here you can enter the maximum number of responses that the cache can hold. If the value is low the cache will not be effective, the higher the number the slower the cache will be to locate stored responses.\n\nThe default setting is 200 responses."
+    IDC_BUTTON_CACHEFLUSH   "To empty the compression cache click the Flush button."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_RADIO_AFFINITYMODE_NONE 
+                            "Setting the Processor Workload Model to None passes CPU core scheduling control to the operating system. In this mode all compression tasks execute simultaneously across all cores. This mode is not recommended in production environments."
+    IDC_RADIO_AFFINITYMODE_AUTO 
+                            "Setting the Processor Workload Model to Automatic spreads the compression workload equally between all the CPU cores in your system. Compression tasks are allocated to each CPU core on a round-robin basis, this allows for the greatest scalability and throughput for multiple client scenarios.\n\nAutomatic is the default mode for IISxpress."
+    IDC_RADIO_AFFINITYMODE_MANUAL 
+                            "Setting the Processor Workload Model to Manual allows you to specify which CPU cores are used for compression tasks. Limiting the CPU cores which can be used for compression allows other system functions greater access to free CPU time, for example Microsoft SQL Server or the ASP.NET runtime."
+    IDC_EDIT_NUM_CACHEHITS  "Displays the total number of compression cache hits."
+    IDC_EDIT_LOCATION       "Displays the name of the country where the client is located."
+    IDC_CHECK_ENABLE_USERAGENTRULES 
+                            "Click to enable or disable user agent rules. User agent rules are only applied by IISxpress when this option is enabled."
+    IDC_BUTTON_ADDUSERAGENTRULE 
+                            "Click Add to add a predefined or customer user agent rule."
+END
+
+STRINGTABLE 
+BEGIN
+    IDC_BUTTON_DELETEUSERAGENTRULE 
+                            "Click Delete to remove the selected user agent rules."
+    IDC_LIST_USERAGENTS     "IISxpress uses the user agent strings defined here to determine whether to compress responses to that client type. There are two types of agent rules, exclusion and inclusion. When a user agent is excluded responses from that client type will not be compressed. When a user agent is included the responses will be compressed. Inclusion rules are evaluated before exclusion rules."
+    IDC_BUTTON_EDITUSERAGENTRULE 
+                            "Click Edit to change the select user agent string text."
+    IDC_RADIO_UA_PREDEFINED "Click here to select from a predefined list of user agents."
+    IDC_COMBO_UA_PREDEFINED "Select one of the predefined user agent strings to exclude it."
+    IDC_RADIO_UA_CUSTOM     "Click here to enter your own customized user agent string."
+    IDC_CHECK_UA_INCLUDE    "Click here to include allow the selected user agent to be compressed."
+    IDC_COMBO_UA_CUSTOM     "Enter you own customized user agent string here. If the user agent you wish to exclude is not on the predefined list then you can add your own user agent definition here."
+    IDC_CHECK_ENABLEAHA     "Check to enable AHA hardware compression support."
+    IDC_EDIT_FPGATEMP       "Shows the temperature of the compression chip on the AHA board."
+    IDC_EDIT_BOARDTEMP      "Shows the temperature of the AHA compression board."
+    IDC_EDIT_BOARDDESCRIPTION 
+                            "Shows the name of the compression hardware that has been detected."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#include "res\IISxpressTray.rc2"  // non-Microsoft Visual C++ edited resources
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE 9, 1
+#pragma code_page(1252)
+#include "afxres.rc"         // Standard components
+#endif
+
+1 TYPELIB "IISxpressTray.tlb"
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

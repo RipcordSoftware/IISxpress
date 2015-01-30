@@ -1,0 +1,23 @@
+HKCR
+{
+	IISxpressServer.CompressionRuleManage.1 = s 'CompressionRuleManager Class'
+	{
+		CLSID = s '{B05C2A2F-E6BE-4769-BDC2-0E0C0686CFA7}'
+	}
+	IISxpressServer.CompressionRuleManager = s 'CompressionRuleManager Class'
+	{
+		CLSID = s '{B05C2A2F-E6BE-4769-BDC2-0E0C0686CFA7}'
+		CurVer = s 'IISxpressServer.CompressionRuleManage.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B05C2A2F-E6BE-4769-BDC2-0E0C0686CFA7} = s 'CompressionRuleManager Class'
+		{
+			ProgID = s 'IISxpressServer.CompressionRuleManage.1'
+			VersionIndependentProgID = s 'IISxpressServer.CompressionRuleManager'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '%APPID%'
+			'TypeLib' = s '{54EBE40E-1A09-4E5B-923B-06B8BDC1F665}'
+		}
+	}
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN">
+
+<HTML>
+<HEAD>
+<TITLE></TITLE>
+<META NAME="GENERATOR" Content="Microsoft Visual Studio .NET 7.1">
+<link rel="stylesheet" type="text/css" href="default.css">
+<script language="javascript" src="PageUtils.js"></script>
+</HEAD>
+
+<BODY>
+
+<OBJECT TYPE="application/x-oleobject" CLASSID="clsid:1e2a7bd0-dab9-11d0-b93a-00c04fc99f9e" VIEWASTEXT ID="Object1">
+	<PARAM NAME="Keyword" VALUE="Overview">
+	<PARAM NAME="Keyword" VALUE="Status">
+	<PARAM NAME="Keyword" VALUE="Service status">
+	<PARAM NAME="Keyword" VALUE="Filter status">
+	<PARAM NAME="Keyword" VALUE="Compression ratio">
+	<PARAM NAME="Keyword" VALUE="Compression statistics">
+	<PARAM NAME="Keyword" VALUE="Compressed bytes">
+	<PARAM NAME="Keyword" VALUE="Compressed files">
+	<PARAM NAME="Keyword" VALUE="Compressed responses">
+</OBJECT>
+
+<script language="javascript">PageHeader("IISxpress Status Window - General Tab");</script>
+
+<p> 
+The general tab gives an overview of the status of IISxpress.
+</p>
+
+<table class="border-style: none; border-width: 0px;">
+<tr>
+<td width="500px" valign="top">
+<div class="paragraphheading">Status</div>
+
+<p>
+The <b>Status</b> area shows the state of IIS and the IISxpress components.
+
+When IISxpress is running correctly IIS, the IISxpress Filter and the IISxpress Server will be 
+shown as <b>Running</b>. On IIS 6 and above the filter will show as <b>Installed</b> until the 
+first request for compression is processed.
+</p>
+
+<p>You can enable/disable the IISxpress Filter and start/stop the IISxpress Server from the 
+<a href="HIDD_PAGE_CONFIG.htm">Configuration</a> page.</p>
+
+<div class="paragraphheading">Activity</div>
+
+<p>
+The <b>Activity</b> area shows the real-time overall compression performance of IISxpress. You can 
+view the total number of responses that have been compressed, the total size of the data before compression, 
+the total size of the data after compression and the compression ratio.
+</p>
+
+<p>
+For example, if the compression ratio is 75% then the data has been <i>reduced</i> by 75% to occupy only 25% 
+of its original size.
+</p>
+
+<br/>
+
+</td>
+<td width="30px"></td>
+<td valign="top">
+<img src="images/general_tab.png"/>
+</td>
+</tr>
+</table>
+
+<script language="javascript">PageFooter();</script>
+
+</BODY>
+</HTML>
